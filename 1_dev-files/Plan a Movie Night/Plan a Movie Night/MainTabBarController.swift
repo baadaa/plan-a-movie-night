@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class MainTabBarController: UITabBarController, UITabBarControllerDelegate, UITabBarDelegate {
     
