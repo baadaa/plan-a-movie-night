@@ -4,6 +4,7 @@
 target 'Plan a Movie Night' do
 
 pod 'Alamofire'
+pod 'SwiftyJSON'
 
 end
 

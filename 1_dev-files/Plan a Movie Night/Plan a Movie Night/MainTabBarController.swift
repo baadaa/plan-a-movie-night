@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftJSON
 
 class MainTabBarController: UITabBarController, UITabBarControllerDelegate, UITabBarDelegate {
     
