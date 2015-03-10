@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+<<<<<<< HEAD
 		3F098EE62E29EF2D3EC3E30B /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
@@ -19,12 +20,27 @@
 			sourceTree = "<group>";
 		};
 		D9655BF5186F486BA84A4B2B /* Targets Support Files */ = {
+=======
+		11D3267D47F602FF433207F9 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		098D2516FFD2191178AC94B9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		945C11C37310E0E88FC2EC99 /* Targets Support Files */ = {
+>>>>>>> 374fba9333d85d2e076208e40ec765c3689a774a
 			isa = PBXGroup;
 			children = (
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		DEEA9BB7A937741942478F4C = {
 			isa = PBXGroup;
 			children = (
@@ -40,25 +56,55 @@
 			children = (
 			);
 			name = Products;
+=======
+		B40360ACB859DD022D7314BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E8856596996E3422FAB87ADD = {
+			isa = PBXGroup;
+			children = (
+				11D3267D47F602FF433207F9 /* Podfile */,
+				B40360ACB859DD022D7314BA /* Frameworks */,
+				098D2516FFD2191178AC94B9 /* Products */,
+				945C11C37310E0E88FC2EC99 /* Targets Support Files */,
+			);
+>>>>>>> 374fba9333d85d2e076208e40ec765c3689a774a
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXProject section */
+<<<<<<< HEAD
 		A6A7B29ECDB8E28ABB7DD34D /* Project object */ = {
+=======
+		CBBCAF591F45C3221DF607BC /* Project object */ = {
+>>>>>>> 374fba9333d85d2e076208e40ec765c3689a774a
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
+<<<<<<< HEAD
 			buildConfigurationList = 2B1AAA508EFF9F50DB4E87BE /* Build configuration list for PBXProject "Pods" */;
+=======
+			buildConfigurationList = 9BAFBBA39725157A932150F9 /* Build configuration list for PBXProject "Pods" */;
+>>>>>>> 374fba9333d85d2e076208e40ec765c3689a774a
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
+<<<<<<< HEAD
 			mainGroup = DEEA9BB7A937741942478F4C;
 			productRefGroup = E1A7FE810F40992DE33AD596 /* Products */;
+=======
+			mainGroup = E8856596996E3422FAB87ADD;
+			productRefGroup = 098D2516FFD2191178AC94B9 /* Products */;
+>>>>>>> 374fba9333d85d2e076208e40ec765c3689a774a
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -67,7 +113,11 @@
 /* End PBXProject section */
 
 /* Begin XCBuildConfiguration section */
+<<<<<<< HEAD
 		C11F5C89AB1D1169187603CF /* Release */ = {
+=======
+		0B5AAACE44DC538DB10BEB87 /* Debug */ = {
+>>>>>>> 374fba9333d85d2e076208e40ec765c3689a774a
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -84,40 +134,12 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+<<<<<<< HEAD
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		DD050D442DEB86ACE3A07D2D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+=======
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -127,6 +149,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+>>>>>>> 374fba9333d85d2e076208e40ec765c3689a774a
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -134,25 +157,101 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+<<<<<<< HEAD
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DD050D442DEB86ACE3A07D2D /* Debug */ = {
+=======
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
+		7A71727BEA35B4A232379E22 /* Release */ = {
+>>>>>>> 374fba9333d85d2e076208e40ec765c3689a774a
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+<<<<<<< HEAD
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+=======
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+>>>>>>> 374fba9333d85d2e076208e40ec765c3689a774a
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+<<<<<<< HEAD
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+=======
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+>>>>>>> 374fba9333d85d2e076208e40ec765c3689a774a
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+<<<<<<< HEAD
 		2B1AAA508EFF9F50DB4E87BE /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD050D442DEB86ACE3A07D2D /* Debug */,
 				C11F5C89AB1D1169187603CF /* Release */,
+=======
+		9BAFBBA39725157A932150F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B5AAACE44DC538DB10BEB87 /* Debug */,
+				7A71727BEA35B4A232379E22 /* Release */,
+>>>>>>> 374fba9333d85d2e076208e40ec765c3689a774a
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
+<<<<<<< HEAD
 	rootObject = A6A7B29ECDB8E28ABB7DD34D /* Project object */;
+=======
+	rootObject = CBBCAF591F45C3221DF607BC /* Project object */;
+>>>>>>> 374fba9333d85d2e076208e40ec765c3689a774a
 }
