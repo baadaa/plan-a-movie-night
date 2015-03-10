@@ -6,68 +6,465 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		20983AAE7CC53B8498971765 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CA260FAC6C463A2CCEC7D4 /* Foundation.framework */; };
+		2B5C51387A4B1BE8DBB4E016 /* Pods-Plan a Movie Night-Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F16DD1A2344E671362FE48 /* Pods-Plan a Movie Night-Alamofire-dummy.m */; };
+		3B82EEEDCE61F1DED8414990 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23465319FD0EAE7533BAFF42 /* SwiftyJSON.swift */; };
+		3BAF624B8ED1485D3BD0A30F /* Pods-Plan a Movie Night-SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3BA61F95227C9D24543D7C3 /* Pods-Plan a Movie Night-SwiftyJSON-dummy.m */; };
+		4E0EFBEAE3BDCC85FB1A1FF4 /* Pods-Plan a Movie Night-Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ADA230A4AC2E95DA1BA66BBF /* Pods-Plan a Movie Night-Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5945EDB4470511B40C4C3DD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CA260FAC6C463A2CCEC7D4 /* Foundation.framework */; };
+		6791F04F46651B334563CDCE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24CA260FAC6C463A2CCEC7D4 /* Foundation.framework */; };
+		AB4DBEC617134E10BDEC165A /* Pods-Plan a Movie Night-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2087153D880956942C392072 /* Pods-Plan a Movie Night-dummy.m */; };
+		ACE49B231FBE60CCF1221519 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79913D8247BF340EFBBAFBE /* Alamofire.swift */; };
+		E6876DE1C6C8AA3597247FE1 /* Pods-Plan a Movie Night-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D92B0E688D58BD765BFAD1AC /* Pods-Plan a Movie Night-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBD4C6D44E8EBD0B00C31D59 /* Pods-Plan a Movie Night-SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D31B12D55A5A48C327946D5 /* Pods-Plan a Movie Night-SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B56B31FFAF76B7D8117B55B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6258D6E5C336002DDFFBE62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13948749327F470EFC01B1FF;
+			remoteInfo = "Pods-Plan a Movie Night-Alamofire";
+		};
+		A97D07336D188C3786E51D54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D6258D6E5C336002DDFFBE62 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 085C90F4F6C75BCCBA86E7EE;
+			remoteInfo = "Pods-Plan a Movie Night-SwiftyJSON";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		11D3267D47F602FF433207F9 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0C8DE0037C58682943B80C83 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		206006B702D1ADCB08A0B88F /* Pods-Plan a Movie Night-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Plan a Movie Night-acknowledgements.plist"; sourceTree = "<group>"; };
+		2087153D880956942C392072 /* Pods-Plan a Movie Night-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Plan a Movie Night-dummy.m"; sourceTree = "<group>"; };
+		23465319FD0EAE7533BAFF42 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
+		24CA260FAC6C463A2CCEC7D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2B43579A658410E42A3C8F67 /* Pods-Plan a Movie Night-Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Plan a Movie Night-Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		471F2F3BAEE7CA32ABDC66C9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47BA871B0A79FAF0218ED414 /* Pods-Plan a Movie Night.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Plan a Movie Night.debug.xcconfig"; sourceTree = "<group>"; };
+		4EBB2F6DF4043FBA18168F2D /* Pods-Plan a Movie Night-SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Plan a Movie Night-SwiftyJSON.modulemap"; sourceTree = "<group>"; };
+		593AC02E57566EAF0127AFA3 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6919FD9DDC12320AEA2B31C9 /* Pods-Plan a Movie Night.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Plan a Movie Night.modulemap"; sourceTree = "<group>"; };
+		6C9D7FAFD38F11F30314E10B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		782741B0D55A3595725160FF /* Pods-Plan a Movie Night-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Plan a Movie Night-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7AFC4BEEA586DA0C71DC84A7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7D5EF599490BFB3675E4DEBA /* Pods-Plan a Movie Night-SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Plan a Movie Night-SwiftyJSON.xcconfig"; sourceTree = "<group>"; };
+		7F77C3FE39644917064FA833 /* Pods_Plan_a_Movie_Night.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_a_Movie_Night.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D31B12D55A5A48C327946D5 /* Pods-Plan a Movie Night-SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Plan a Movie Night-SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
+		8F7F9663207BD5D07799387F /* Pods-Plan a Movie Night-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Plan a Movie Night-frameworks.sh"; sourceTree = "<group>"; };
+		94E2B6D2B100FF4D33E8E76E /* Pods-Plan a Movie Night-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Plan a Movie Night-resources.sh"; sourceTree = "<group>"; };
+		99C9F7F32DE2FEA2A0D742E1 /* Pods-Plan a Movie Night-Alamofire-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Plan a Movie Night-Alamofire-Private.xcconfig"; sourceTree = "<group>"; };
+		9A95AEBE2FBCC174D1F431BF /* Pods-Plan a Movie Night.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Plan a Movie Night.release.xcconfig"; sourceTree = "<group>"; };
+		A3F16DD1A2344E671362FE48 /* Pods-Plan a Movie Night-Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Plan a Movie Night-Alamofire-dummy.m"; sourceTree = "<group>"; };
+		A79913D8247BF340EFBBAFBE /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		ADA230A4AC2E95DA1BA66BBF /* Pods-Plan a Movie Night-Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Plan a Movie Night-Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		B2EACDD3A21D5968704EDCB2 /* Pods-Plan a Movie Night-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Plan a Movie Night-environment.h"; sourceTree = "<group>"; };
+		BF06F3741C871D691D66FDB5 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D3BA61F95227C9D24543D7C3 /* Pods-Plan a Movie Night-SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Plan a Movie Night-SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		D92B0E688D58BD765BFAD1AC /* Pods-Plan a Movie Night-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Plan a Movie Night-umbrella.h"; sourceTree = "<group>"; };
+		E30A623110EE7DD176969F49 /* Pods-Plan a Movie Night-SwiftyJSON-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Plan a Movie Night-SwiftyJSON-Private.xcconfig"; sourceTree = "<group>"; };
+		F65D07C81BD335036C2BCCCF /* Pods-Plan a Movie Night-SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Plan a Movie Night-SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		FDDCBFB298DE040BDE58C82F /* Pods-Plan a Movie Night-Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Plan a Movie Night-Alamofire.modulemap"; sourceTree = "<group>"; };
+		FE41A36CEDE3FAC55EBEC380 /* Pods-Plan a Movie Night-Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Plan a Movie Night-Alamofire.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFrameworksBuildPhase section */
+		26E90B7B59C0876E2352B8E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6791F04F46651B334563CDCE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3943DC08330ADDCCDF5337AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5945EDB4470511B40C4C3DD6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9867162BD1339AD52B9CCDB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20983AAE7CC53B8498971765 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
-		098D2516FFD2191178AC94B9 /* Products */ = {
+		0B80A8DA288DD2E9EC42F48D = {
 			isa = PBXGroup;
 			children = (
+				BF06F3741C871D691D66FDB5 /* Podfile */,
+				B661DA5E52D38A9171E4BF06 /* Frameworks */,
+				ECB7D23E1CCFC2E83C649D84 /* Pods */,
+				0F8937753EBBDBFED3DE401A /* Products */,
+				835782EB3288C804E57A8387 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		0F8937753EBBDBFED3DE401A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0C8DE0037C58682943B80C83 /* Alamofire.framework */,
+				7F77C3FE39644917064FA833 /* Pods_Plan_a_Movie_Night.framework */,
+				593AC02E57566EAF0127AFA3 /* SwiftyJSON.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		945C11C37310E0E88FC2EC99 /* Targets Support Files */ = {
+		126C2FD7BE80C67FF8DFB7D3 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				6C9D7FAFD38F11F30314E10B /* Info.plist */,
+				4EBB2F6DF4043FBA18168F2D /* Pods-Plan a Movie Night-SwiftyJSON.modulemap */,
+				7D5EF599490BFB3675E4DEBA /* Pods-Plan a Movie Night-SwiftyJSON.xcconfig */,
+				E30A623110EE7DD176969F49 /* Pods-Plan a Movie Night-SwiftyJSON-Private.xcconfig */,
+				D3BA61F95227C9D24543D7C3 /* Pods-Plan a Movie Night-SwiftyJSON-dummy.m */,
+				F65D07C81BD335036C2BCCCF /* Pods-Plan a Movie Night-SwiftyJSON-prefix.pch */,
+				8D31B12D55A5A48C327946D5 /* Pods-Plan a Movie Night-SwiftyJSON-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Plan a Movie Night-SwiftyJSON";
+			sourceTree = "<group>";
+		};
+		49EB279A39C4F754474FAA08 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7AFC4BEEA586DA0C71DC84A7 /* Info.plist */,
+				FDDCBFB298DE040BDE58C82F /* Pods-Plan a Movie Night-Alamofire.modulemap */,
+				FE41A36CEDE3FAC55EBEC380 /* Pods-Plan a Movie Night-Alamofire.xcconfig */,
+				99C9F7F32DE2FEA2A0D742E1 /* Pods-Plan a Movie Night-Alamofire-Private.xcconfig */,
+				A3F16DD1A2344E671362FE48 /* Pods-Plan a Movie Night-Alamofire-dummy.m */,
+				2B43579A658410E42A3C8F67 /* Pods-Plan a Movie Night-Alamofire-prefix.pch */,
+				ADA230A4AC2E95DA1BA66BBF /* Pods-Plan a Movie Night-Alamofire-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-Plan a Movie Night-Alamofire";
+			sourceTree = "<group>";
+		};
+		835782EB3288C804E57A8387 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				871CB289DBA1918E0A4594D6 /* Pods-Plan a Movie Night */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		B40360ACB859DD022D7314BA /* Frameworks */ = {
+		871CB289DBA1918E0A4594D6 /* Pods-Plan a Movie Night */ = {
 			isa = PBXGroup;
 			children = (
+				471F2F3BAEE7CA32ABDC66C9 /* Info.plist */,
+				6919FD9DDC12320AEA2B31C9 /* Pods-Plan a Movie Night.modulemap */,
+				782741B0D55A3595725160FF /* Pods-Plan a Movie Night-acknowledgements.markdown */,
+				206006B702D1ADCB08A0B88F /* Pods-Plan a Movie Night-acknowledgements.plist */,
+				2087153D880956942C392072 /* Pods-Plan a Movie Night-dummy.m */,
+				B2EACDD3A21D5968704EDCB2 /* Pods-Plan a Movie Night-environment.h */,
+				8F7F9663207BD5D07799387F /* Pods-Plan a Movie Night-frameworks.sh */,
+				94E2B6D2B100FF4D33E8E76E /* Pods-Plan a Movie Night-resources.sh */,
+				D92B0E688D58BD765BFAD1AC /* Pods-Plan a Movie Night-umbrella.h */,
+				47BA871B0A79FAF0218ED414 /* Pods-Plan a Movie Night.debug.xcconfig */,
+				9A95AEBE2FBCC174D1F431BF /* Pods-Plan a Movie Night.release.xcconfig */,
+			);
+			name = "Pods-Plan a Movie Night";
+			path = "Target Support Files/Pods-Plan a Movie Night";
+			sourceTree = "<group>";
+		};
+		9B61882ACA9F47C510E799FC /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				A79913D8247BF340EFBBAFBE /* Alamofire.swift */,
+				49EB279A39C4F754474FAA08 /* Support Files */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		B661DA5E52D38A9171E4BF06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C6218471A90518F48D0B54AA /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E8856596996E3422FAB87ADD = {
+		C6218471A90518F48D0B54AA /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				11D3267D47F602FF433207F9 /* Podfile */,
-				B40360ACB859DD022D7314BA /* Frameworks */,
-				098D2516FFD2191178AC94B9 /* Products */,
-				945C11C37310E0E88FC2EC99 /* Targets Support Files */,
+				24CA260FAC6C463A2CCEC7D4 /* Foundation.framework */,
 			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DF7CA7A697B9BA5EBE26C509 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				23465319FD0EAE7533BAFF42 /* SwiftyJSON.swift */,
+				126C2FD7BE80C67FF8DFB7D3 /* Support Files */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		ECB7D23E1CCFC2E83C649D84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B61882ACA9F47C510E799FC /* Alamofire */,
+				DF7CA7A697B9BA5EBE26C509 /* SwiftyJSON */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		0D24BCBB17A8DC8F216AF122 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6876DE1C6C8AA3597247FE1 /* Pods-Plan a Movie Night-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		19CE3515EA574DAC4D24E978 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E0EFBEAE3BDCC85FB1A1FF4 /* Pods-Plan a Movie Night-Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D52F7EC9C3D3EFFC8D781ECB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBD4C6D44E8EBD0B00C31D59 /* Pods-Plan a Movie Night-SwiftyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		085C90F4F6C75BCCBA86E7EE /* Pods-Plan a Movie Night-SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CF2CDA2778226776E34D251 /* Build configuration list for PBXNativeTarget "Pods-Plan a Movie Night-SwiftyJSON" */;
+			buildPhases = (
+				121BF0B2CE43CAE2B3A46FA6 /* Sources */,
+				9867162BD1339AD52B9CCDB5 /* Frameworks */,
+				D52F7EC9C3D3EFFC8D781ECB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Plan a Movie Night-SwiftyJSON";
+			productName = "Pods-Plan a Movie Night-SwiftyJSON";
+			productReference = 593AC02E57566EAF0127AFA3 /* SwiftyJSON.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		13948749327F470EFC01B1FF /* Pods-Plan a Movie Night-Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 902DD74BD724C67D00D9402C /* Build configuration list for PBXNativeTarget "Pods-Plan a Movie Night-Alamofire" */;
+			buildPhases = (
+				C84A7D103E18E840430B1BE1 /* Sources */,
+				26E90B7B59C0876E2352B8E4 /* Frameworks */,
+				19CE3515EA574DAC4D24E978 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Plan a Movie Night-Alamofire";
+			productName = "Pods-Plan a Movie Night-Alamofire";
+			productReference = 0C8DE0037C58682943B80C83 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		1CC127B1263807B414209727 /* Pods-Plan a Movie Night */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C726676B57820DC725CF16BF /* Build configuration list for PBXNativeTarget "Pods-Plan a Movie Night" */;
+			buildPhases = (
+				0E521A8B281071D408BB2B2A /* Sources */,
+				3943DC08330ADDCCDF5337AD /* Frameworks */,
+				0D24BCBB17A8DC8F216AF122 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4288932330330396FF46183D /* PBXTargetDependency */,
+				0516337E5D0320C01EC51BEC /* PBXTargetDependency */,
+			);
+			name = "Pods-Plan a Movie Night";
+			productName = "Pods-Plan a Movie Night";
+			productReference = 7F77C3FE39644917064FA833 /* Pods_Plan_a_Movie_Night.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
 /* Begin PBXProject section */
-		CBBCAF591F45C3221DF607BC /* Project object */ = {
+		D6258D6E5C336002DDFFBE62 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 9BAFBBA39725157A932150F9 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = C8131ADC67119A5B54303AC7 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = E8856596996E3422FAB87ADD;
-			productRefGroup = 098D2516FFD2191178AC94B9 /* Products */;
+			mainGroup = 0B80A8DA288DD2E9EC42F48D;
+			productRefGroup = 0F8937753EBBDBFED3DE401A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				1CC127B1263807B414209727 /* Pods-Plan a Movie Night */,
+				13948749327F470EFC01B1FF /* Pods-Plan a Movie Night-Alamofire */,
+				085C90F4F6C75BCCBA86E7EE /* Pods-Plan a Movie Night-SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXSourcesBuildPhase section */
+		0E521A8B281071D408BB2B2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB4DBEC617134E10BDEC165A /* Pods-Plan a Movie Night-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		121BF0B2CE43CAE2B3A46FA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BAF624B8ED1485D3BD0A30F /* Pods-Plan a Movie Night-SwiftyJSON-dummy.m in Sources */,
+				3B82EEEDCE61F1DED8414990 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C84A7D103E18E840430B1BE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACE49B231FBE60CCF1221519 /* Alamofire.swift in Sources */,
+				2B5C51387A4B1BE8DBB4E016 /* Pods-Plan a Movie Night-Alamofire-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0516337E5D0320C01EC51BEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Plan a Movie Night-SwiftyJSON";
+			target = 085C90F4F6C75BCCBA86E7EE /* Pods-Plan a Movie Night-SwiftyJSON */;
+			targetProxy = A97D07336D188C3786E51D54 /* PBXContainerItemProxy */;
+		};
+		4288932330330396FF46183D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Plan a Movie Night-Alamofire";
+			target = 13948749327F470EFC01B1FF /* Pods-Plan a Movie Night-Alamofire */;
+			targetProxy = 8B56B31FFAF76B7D8117B55B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		0B5AAACE44DC538DB10BEB87 /* Debug */ = {
+		8C66440A3BF8E241EBD3B1BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A0D90D447D75C9280224AAA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99C9F7F32DE2FEA2A0D742E1 /* Pods-Plan a Movie Night-Alamofire-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Plan a Movie Night-Alamofire/Pods-Plan a Movie Night-Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Plan a Movie Night-Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Plan a Movie Night-Alamofire/Pods-Plan a Movie Night-Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AB46E6AF78EE02796AEEB759 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E30A623110EE7DD176969F49 /* Pods-Plan a Movie Night-SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Plan a Movie Night-SwiftyJSON/Pods-Plan a Movie Night-SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Plan a Movie Night-SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Plan a Movie Night-SwiftyJSON/Pods-Plan a Movie Night-SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AF3D250BE6573F8FDCA881F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -106,53 +503,158 @@
 			};
 			name = Debug;
 		};
-		7A71727BEA35B4A232379E22 /* Release */ = {
+		B23E291404C3D8B7EC5B6A92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47BA871B0A79FAF0218ED414 /* Pods-Plan a Movie Night.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Plan a Movie Night/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Plan a Movie Night/Pods-Plan a Movie Night.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Plan_a_Movie_Night;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CE4503A822BE17DF59EC618B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99C9F7F32DE2FEA2A0D742E1 /* Pods-Plan a Movie Night-Alamofire-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Plan a Movie Night-Alamofire/Pods-Plan a Movie Night-Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Plan a Movie Night-Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Plan a Movie Night-Alamofire/Pods-Plan a Movie Night-Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		EE0E305A56B98E277573C820 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A95AEBE2FBCC174D1F431BF /* Pods-Plan a Movie Night.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Plan a Movie Night/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Plan a Movie Night/Pods-Plan a Movie Night.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Plan_a_Movie_Night;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F6C678072963B8639852A0A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E30A623110EE7DD176969F49 /* Pods-Plan a Movie Night-SwiftyJSON-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-Plan a Movie Night-SwiftyJSON/Pods-Plan a Movie Night-SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-Plan a Movie Night-SwiftyJSON/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-Plan a Movie Night-SwiftyJSON/Pods-Plan a Movie Night-SwiftyJSON.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9BAFBBA39725157A932150F9 /* Build configuration list for PBXProject "Pods" */ = {
+		3CF2CDA2778226776E34D251 /* Build configuration list for PBXNativeTarget "Pods-Plan a Movie Night-SwiftyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0B5AAACE44DC538DB10BEB87 /* Debug */,
-				7A71727BEA35B4A232379E22 /* Release */,
+				F6C678072963B8639852A0A5 /* Debug */,
+				AB46E6AF78EE02796AEEB759 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		902DD74BD724C67D00D9402C /* Build configuration list for PBXNativeTarget "Pods-Plan a Movie Night-Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0D90D447D75C9280224AAA2 /* Debug */,
+				CE4503A822BE17DF59EC618B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C726676B57820DC725CF16BF /* Build configuration list for PBXNativeTarget "Pods-Plan a Movie Night" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B23E291404C3D8B7EC5B6A92 /* Debug */,
+				EE0E305A56B98E277573C820 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8131ADC67119A5B54303AC7 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF3D250BE6573F8FDCA881F3 /* Debug */,
+				8C66440A3BF8E241EBD3B1BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CBBCAF591F45C3221DF607BC /* Project object */;
+	rootObject = D6258D6E5C336002DDFFBE62 /* Project object */;
 }
