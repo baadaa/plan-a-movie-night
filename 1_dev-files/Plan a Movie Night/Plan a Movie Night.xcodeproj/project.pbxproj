@@ -20,6 +20,7 @@
 		80AE0FAF1AAC132F00A7F301 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE0FAE1AAC132F00A7F301 /* AuthenticationViewController.swift */; };
 		80AE0FB11AAC1C6C00A7F301 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE0FB01AAC1C6C00A7F301 /* MainTabBarController.swift */; };
 		BCBD8FCBDCEF70C438F07B58 /* Pods_Plan_a_Movie_Night.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		E817BC5D1AB0F38800EC4F39 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E817BC5C1AB0F38800EC4F39 /* BaseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		80AE0FB01AAC1C6C00A7F301 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8DA22134FFB59FCBC8EF8515 /* Pods-Plan a Movie Night.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie Night.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie Night/Pods-Plan a Movie Night.debug.xcconfig"; sourceTree = "<group>"; };
 		91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_a_Movie_Night.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E817BC5C1AB0F38800EC4F39 /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		E817BC5E1AB0F46900EC4F39 /* ModelTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ModelTest.playground; sourceTree = "<group>"; };
 		FF471E01B15A6850AAB3C4D5 /* Pods-Plan a Movie Night.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie Night.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie Night/Pods-Plan a Movie Night.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +108,7 @@
 		802951C11AABC75C0084FCEF /* Plan a Movie Night */ = {
 			isa = PBXGroup;
 			children = (
+				E817BC5B1AB0F34B00EC4F39 /* Model */,
 				802951E61AABCD880084FCEF /* ViewControllers */,
 				805857831AAD11C700C82B76 /* .Xibs */,
 				802951C41AABC75C0084FCEF /* AppDelegate.swift */,
@@ -168,6 +172,15 @@
 				805857891AAD160B00C82B76 /* chappie-poster.jpg */,
 			);
 			name = "sample-images";
+			sourceTree = "<group>";
+		};
+		E817BC5B1AB0F34B00EC4F39 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E817BC5E1AB0F46900EC4F39 /* ModelTest.playground */,
+				E817BC5C1AB0F38800EC4F39 /* BaseModel.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		FFB4EB1E65740FF6F822C5DA /* Frameworks */ = {
@@ -333,6 +346,7 @@
 			files = (
 				80AE0FAF1AAC132F00A7F301 /* AuthenticationViewController.swift in Sources */,
 				805857861AAD124800C82B76 /* MovieListCell.swift in Sources */,
+				E817BC5D1AB0F38800EC4F39 /* BaseModel.swift in Sources */,
 				805477B01AAD4FB500383F77 /* MovieDetailsViewController.swift in Sources */,
 				802951C51AABC75C0084FCEF /* AppDelegate.swift in Sources */,
 				80AE0FB11AAC1C6C00A7F301 /* MainTabBarController.swift in Sources */,
