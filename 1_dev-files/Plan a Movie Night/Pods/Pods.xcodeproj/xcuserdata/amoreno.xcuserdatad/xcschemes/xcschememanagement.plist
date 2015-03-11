@@ -9,6 +9,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Plan a Movie Night-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Plan a Movie Night-Facebook-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Plan a Movie Night-SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>085C90F4F6C75BCCBA86E7EE</key>
+		<key>4B491A0B259E5C6976BE1DA2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>13948749327F470EFC01B1FF</key>
+		<key>6A14E066186F3D509D995BD1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1CC127B1263807B414209727</key>
+		<key>71BD5A33E1E633CB02733D1D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F4BCF166740C927A77B74CC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FC665E5E80EDB9C56F9C4B75</key>
 		<dict>
 			<key>primary</key>
 			<true/>
