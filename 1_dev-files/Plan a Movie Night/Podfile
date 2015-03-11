@@ -7,6 +7,7 @@ target 'Plan a Movie Night' do
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'Facebook-iOS-SDK'
+pod 'Firebase'
 
 end
 
