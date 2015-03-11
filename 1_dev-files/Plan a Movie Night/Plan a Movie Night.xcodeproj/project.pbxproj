@@ -13,10 +13,21 @@
 		802951CE1AABC75C0084FCEF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 802951CD1AABC75C0084FCEF /* Images.xcassets */; };
 		802951D11AABC75C0084FCEF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 802951CF1AABC75C0084FCEF /* LaunchScreen.xib */; };
 		802951DD1AABC75C0084FCEF /* Plan_a_Movie_NightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802951DC1AABC75C0084FCEF /* Plan_a_Movie_NightTests.swift */; };
+		803E29601AB003DF00F35611 /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803E295E1AB003DF00F35611 /* EventListCell.swift */; };
+		803E29611AB003DF00F35611 /* EventListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803E295F1AB003DF00F35611 /* EventListCell.xib */; };
 		805477B01AAD4FB500383F77 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805477AF1AAD4FB500383F77 /* MovieDetailsViewController.swift */; };
 		805857861AAD124800C82B76 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805857841AAD124800C82B76 /* MovieListCell.swift */; };
 		805857871AAD124800C82B76 /* MovieListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805857851AAD124800C82B76 /* MovieListCell.xib */; };
 		8058578A1AAD160B00C82B76 /* chappie-poster.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 805857891AAD160B00C82B76 /* chappie-poster.jpg */; };
+		8059E5CA1AB0230600F8AD2D /* seol.png in Resources */ = {isa = PBXBuildFile; fileRef = 8059E5C91AB0230600F8AD2D /* seol.png */; };
+		8059E5CC1AB0259A00F8AD2D /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8059E5CB1AB0259A00F8AD2D /* FriendsViewController.swift */; };
+		80724E051AB0086400AF686D /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80724E041AB0086400AF686D /* EventListViewController.swift */; };
+		80724E071AB00C8700AF686D /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80724E061AB00C8700AF686D /* EventDetailsViewController.swift */; };
+		80724E091AB0101000AF686D /* EventCreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80724E081AB0101000AF686D /* EventCreationViewController.swift */; };
+		80724E0B1AB0159800AF686D /* InviteFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80724E0A1AB0159800AF686D /* InviteFriendsViewController.swift */; };
+		80724E0E1AB0163D00AF686D /* InviteFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80724E0C1AB0163D00AF686D /* InviteFriendsCell.swift */; };
+		80724E0F1AB0163D00AF686D /* InviteFriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80724E0D1AB0163D00AF686D /* InviteFriendsCell.xib */; };
+		80724E111AB0172E00AF686D /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80724E101AB0172E00AF686D /* Checkbox.swift */; };
 		80AE0FAF1AAC132F00A7F301 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE0FAE1AAC132F00A7F301 /* AuthenticationViewController.swift */; };
 		80AE0FB11AAC1C6C00A7F301 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE0FB01AAC1C6C00A7F301 /* MainTabBarController.swift */; };
 		BCBD8FCBDCEF70C438F07B58 /* Pods_Plan_a_Movie_Night.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -43,10 +54,21 @@
 		802951D61AABC75C0084FCEF /* Plan a Movie NightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Plan a Movie NightTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		802951DB1AABC75C0084FCEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		802951DC1AABC75C0084FCEF /* Plan_a_Movie_NightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan_a_Movie_NightTests.swift; sourceTree = "<group>"; };
+		803E295E1AB003DF00F35611 /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
+		803E295F1AB003DF00F35611 /* EventListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventListCell.xib; sourceTree = "<group>"; };
 		805477AF1AAD4FB500383F77 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		805857841AAD124800C82B76 /* MovieListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
 		805857851AAD124800C82B76 /* MovieListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieListCell.xib; sourceTree = "<group>"; };
 		805857891AAD160B00C82B76 /* chappie-poster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "chappie-poster.jpg"; path = "_image-files/sample-data/chappie-poster.jpg"; sourceTree = "<group>"; };
+		8059E5C91AB0230600F8AD2D /* seol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = seol.png; path = "_image-files/sample-data/seol.png"; sourceTree = "<group>"; };
+		8059E5CB1AB0259A00F8AD2D /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		80724E041AB0086400AF686D /* EventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
+		80724E061AB00C8700AF686D /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+		80724E081AB0101000AF686D /* EventCreationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCreationViewController.swift; sourceTree = "<group>"; };
+		80724E0A1AB0159800AF686D /* InviteFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFriendsViewController.swift; sourceTree = "<group>"; };
+		80724E0C1AB0163D00AF686D /* InviteFriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFriendsCell.swift; sourceTree = "<group>"; };
+		80724E0D1AB0163D00AF686D /* InviteFriendsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InviteFriendsCell.xib; sourceTree = "<group>"; };
+		80724E101AB0172E00AF686D /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		80AE0FAE1AAC132F00A7F301 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		80AE0FB01AAC1C6C00A7F301 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8DA22134FFB59FCBC8EF8515 /* Pods-Plan a Movie Night.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie Night.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie Night/Pods-Plan a Movie Night.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +170,11 @@
 				80AE0FB01AAC1C6C00A7F301 /* MainTabBarController.swift */,
 				802951C61AABC75C0084FCEF /* MovieListViewController.swift */,
 				805477AF1AAD4FB500383F77 /* MovieDetailsViewController.swift */,
+				80724E041AB0086400AF686D /* EventListViewController.swift */,
+				80724E061AB00C8700AF686D /* EventDetailsViewController.swift */,
+				80724E081AB0101000AF686D /* EventCreationViewController.swift */,
+				80724E0A1AB0159800AF686D /* InviteFriendsViewController.swift */,
+				8059E5CB1AB0259A00F8AD2D /* FriendsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -158,6 +185,11 @@
 				802951CF1AABC75C0084FCEF /* LaunchScreen.xib */,
 				805857841AAD124800C82B76 /* MovieListCell.swift */,
 				805857851AAD124800C82B76 /* MovieListCell.xib */,
+				803E295E1AB003DF00F35611 /* EventListCell.swift */,
+				803E295F1AB003DF00F35611 /* EventListCell.xib */,
+				80724E0C1AB0163D00AF686D /* InviteFriendsCell.swift */,
+				80724E0D1AB0163D00AF686D /* InviteFriendsCell.xib */,
+				80724E101AB0172E00AF686D /* Checkbox.swift */,
 			);
 			name = .Xibs;
 			sourceTree = "<group>";
@@ -165,6 +197,7 @@
 		805857881AAD15A800C82B76 /* sample-images */ = {
 			isa = PBXGroup;
 			children = (
+				8059E5C91AB0230600F8AD2D /* seol.png */,
 				805857891AAD160B00C82B76 /* chappie-poster.jpg */,
 			);
 			name = "sample-images";
@@ -263,8 +296,11 @@
 			files = (
 				802951CC1AABC75C0084FCEF /* Main.storyboard in Resources */,
 				802951D11AABC75C0084FCEF /* LaunchScreen.xib in Resources */,
+				80724E0F1AB0163D00AF686D /* InviteFriendsCell.xib in Resources */,
 				805857871AAD124800C82B76 /* MovieListCell.xib in Resources */,
 				8058578A1AAD160B00C82B76 /* chappie-poster.jpg in Resources */,
+				803E29611AB003DF00F35611 /* EventListCell.xib in Resources */,
+				8059E5CA1AB0230600F8AD2D /* seol.png in Resources */,
 				802951CE1AABC75C0084FCEF /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,10 +367,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				803E29601AB003DF00F35611 /* EventListCell.swift in Sources */,
 				80AE0FAF1AAC132F00A7F301 /* AuthenticationViewController.swift in Sources */,
+				80724E0B1AB0159800AF686D /* InviteFriendsViewController.swift in Sources */,
 				805857861AAD124800C82B76 /* MovieListCell.swift in Sources */,
+				8059E5CC1AB0259A00F8AD2D /* FriendsViewController.swift in Sources */,
 				805477B01AAD4FB500383F77 /* MovieDetailsViewController.swift in Sources */,
+				80724E091AB0101000AF686D /* EventCreationViewController.swift in Sources */,
 				802951C51AABC75C0084FCEF /* AppDelegate.swift in Sources */,
+				80724E051AB0086400AF686D /* EventListViewController.swift in Sources */,
+				80724E0E1AB0163D00AF686D /* InviteFriendsCell.swift in Sources */,
+				80724E071AB00C8700AF686D /* EventDetailsViewController.swift in Sources */,
+				80724E111AB0172E00AF686D /* Checkbox.swift in Sources */,
 				80AE0FB11AAC1C6C00A7F301 /* MainTabBarController.swift in Sources */,
 				802951C71AABC75C0084FCEF /* MovieListViewController.swift in Sources */,
 			);

@@ -1,0 +1,20 @@
+//
+//  EventDetailsViewController.swift
+//  Plan a Movie Night
+//
+//  Created by Bumhan Yu on 3/11/15.
+//  Copyright (c) 2015 Angel, Bumhan, Matthew, and Vishnu. All rights reserved.
+//
+
+import UIKit
+
+class EventDetailsViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+
+
+}

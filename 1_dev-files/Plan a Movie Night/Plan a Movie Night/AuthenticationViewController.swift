@@ -25,9 +25,9 @@ class AuthenticationViewController: UIViewController {
         //
         //
         //
+        // This function runs when Authentication Button is tapped.
         //
-        //
-        // Facebook Authentication process code goes here
+        // Facebook Authentication process code goes here.
         //
         //
         //
