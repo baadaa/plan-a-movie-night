@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "085C90F4F6C75BCCBA86E7EE"
+               BlueprintIdentifier = "B12D1ECB342A54BE6C1B842D"
                BuildableName = "SwiftyJSON.framework"
                BlueprintName = "Pods-Plan a Movie Night-SwiftyJSON"
                ReferencedContainer = "container:Pods.xcodeproj">

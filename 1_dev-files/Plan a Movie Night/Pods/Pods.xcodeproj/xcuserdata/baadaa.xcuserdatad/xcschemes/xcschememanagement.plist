@@ -3,8 +3,40 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
+	<dict>
+		<key>Pods-Plan a Movie Night-Alamofire.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-Plan a Movie Night-SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-Plan a Movie Night.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>085C90F4F6C75BCCBA86E7EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>13948749327F470EFC01B1FF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1CC127B1263807B414209727</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>

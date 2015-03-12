@@ -36,7 +36,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         
         //-------------------------------------
         //
-        //
+        // This code block displays movie list in a TableCell
         //
         
         cell.moviePoster = UIImage(named: "chappie-poster.jpg")!
@@ -62,7 +62,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         
         //
         //
-        //
+        // This code runs when user selects a movie.
         //
         // Back-end data access code goes here.
         // Detailed information selected movie to be displaed after segue
