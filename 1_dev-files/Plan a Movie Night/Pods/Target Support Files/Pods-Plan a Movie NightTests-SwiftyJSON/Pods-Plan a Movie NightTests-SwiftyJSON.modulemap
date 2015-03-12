@@ -1,0 +1,6 @@
+framework module SwiftyJSON {
+  umbrella header "Pods-Plan a Movie NightTests-SwiftyJSON-umbrella.h"
+
+  export *
+  module * { export * }
+}
