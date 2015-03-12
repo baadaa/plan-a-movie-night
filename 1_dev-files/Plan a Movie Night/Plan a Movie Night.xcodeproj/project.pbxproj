@@ -33,6 +33,12 @@
 		BCBD8FCBDCEF70C438F07B58 /* Pods_Plan_a_Movie_Night.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D4B71A341AAE865F005ABFFF /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B71A331AAE865F005ABFFF /* Crashlytics.framework */; };
 		D4C42E5F1AB1143B00190726 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C42E5E1AB1143B00190726 /* Fabric.framework */; };
+		E81347171AB1235B00C770F2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81347161AB1235B00C770F2 /* Movie.swift */; };
+		E81347191AB1237900C770F2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81347181AB1237900C770F2 /* User.swift */; };
+		E813471B1AB1238C00C770F2 /* Insight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813471A1AB1238C00C770F2 /* Insight.swift */; };
+		E813471D1AB123A000C770F2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813471C1AB123A000C770F2 /* Event.swift */; };
+		E813471F1AB1241000C770F2 /* Invitee.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813471E1AB1241000C770F2 /* Invitee.swift */; };
+		E81347211AB1242D00C770F2 /* MovieLineUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81347201AB1242D00C770F2 /* MovieLineUp.swift */; };
 		E8D313F91AB12093004699AC /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D313F81AB12093004699AC /* BaseModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +84,12 @@
 		91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_a_Movie_Night.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B71A331AAE865F005ABFFF /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		D4C42E5E1AB1143B00190726 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		E81347161AB1235B00C770F2 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E81347181AB1237900C770F2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E813471A1AB1238C00C770F2 /* Insight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insight.swift; sourceTree = "<group>"; };
+		E813471C1AB123A000C770F2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		E813471E1AB1241000C770F2 /* Invitee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invitee.swift; sourceTree = "<group>"; };
+		E81347201AB1242D00C770F2 /* MovieLineUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieLineUp.swift; sourceTree = "<group>"; };
 		E8D313F81AB12093004699AC /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		FF471E01B15A6850AAB3C4D5 /* Pods-Plan a Movie Night.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie Night.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie Night/Pods-Plan a Movie Night.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +230,12 @@
 			isa = PBXGroup;
 			children = (
 				E8D313F81AB12093004699AC /* BaseModel.swift */,
+				E81347161AB1235B00C770F2 /* Movie.swift */,
+				E81347181AB1237900C770F2 /* User.swift */,
+				E813471A1AB1238C00C770F2 /* Insight.swift */,
+				E813471C1AB123A000C770F2 /* Event.swift */,
+				E813471E1AB1241000C770F2 /* Invitee.swift */,
+				E81347201AB1242D00C770F2 /* MovieLineUp.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -401,15 +419,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				803E29601AB003DF00F35611 /* EventListCell.swift in Sources */,
+				E81347211AB1242D00C770F2 /* MovieLineUp.swift in Sources */,
 				80AE0FAF1AAC132F00A7F301 /* AuthenticationViewController.swift in Sources */,
 				80724E0B1AB0159800AF686D /* InviteFriendsViewController.swift in Sources */,
 				805857861AAD124800C82B76 /* MovieListCell.swift in Sources */,
 				8059E5CC1AB0259A00F8AD2D /* FriendsViewController.swift in Sources */,
 				805477B01AAD4FB500383F77 /* MovieDetailsViewController.swift in Sources */,
+				E813471D1AB123A000C770F2 /* Event.swift in Sources */,
+				E81347171AB1235B00C770F2 /* Movie.swift in Sources */,
+				E813471F1AB1241000C770F2 /* Invitee.swift in Sources */,
+				E81347191AB1237900C770F2 /* User.swift in Sources */,
 				80724E091AB0101000AF686D /* EventCreationViewController.swift in Sources */,
 				802951C51AABC75C0084FCEF /* AppDelegate.swift in Sources */,
 				80724E051AB0086400AF686D /* EventListViewController.swift in Sources */,
 				E8D313F91AB12093004699AC /* BaseModel.swift in Sources */,
+				E813471B1AB1238C00C770F2 /* Insight.swift in Sources */,
 				80724E0E1AB0163D00AF686D /* InviteFriendsCell.swift in Sources */,
 				80724E071AB00C8700AF686D /* EventDetailsViewController.swift in Sources */,
 				80724E111AB0172E00AF686D /* Checkbox.swift in Sources */,

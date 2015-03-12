@@ -8,20 +8,35 @@
 
 import UIKit
 
-class BaseModel: NSObject {
-    class public func fetchOne(){
-        println("Fetching One")
+protocol PAMNModelProtocol {
+    
+    init()
+    class func fetchOne()  -> BasePAMNModel
+    class func fetchMany()  -> [BasePAMNModel]
+    func save()  -> String
+    class func create(data: NSDictionary) -> BasePAMNModel
+}
+
+class BasePAMNModel: PAMNModelProtocol {
+    
+    required init(){
+
     }
     
-    class public func fetchMany(){
-        println("Fetching Many")
+    class func fetchOne() -> BasePAMNModel {
+        return BasePAMNModel()
     }
     
-    public func save(){
-        println("saving")
+    class func fetchMany() -> [BasePAMNModel]{
+        return [BasePAMNModel()]
     }
     
-    public func create(){
-        println("creating")
+    func save() -> String {
+        return String()
+    }
+    
+    class func create(data: NSDictionary) -> BasePAMNModel {
+        return BasePAMNModel()
     }
 }
+
