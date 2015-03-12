@@ -37,7 +37,8 @@ class InviteFriendsViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseID, forIndexPath: indexPath) as InviteFriendsCell
         
-        
+        cell.selectionStyle = .None // disable cell highlight when selecting a cell
+
         //-------------------------------------
         //
         //
