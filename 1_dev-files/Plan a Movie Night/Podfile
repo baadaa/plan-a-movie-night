@@ -7,11 +7,16 @@ target 'Plan a Movie Night' do
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'Facebook-iOS-SDK'
-pod 'Firebase'
+pod 'Firebase', '>= 2.2.0'
 
 end
 
 target 'Plan a Movie NightTests' do
+
+pod 'Alamofire'
+pod 'SwiftyJSON'
+pod 'Facebook-iOS-SDK'
+pod 'Firebase', '>= 2.2.0'
 
 end
 
