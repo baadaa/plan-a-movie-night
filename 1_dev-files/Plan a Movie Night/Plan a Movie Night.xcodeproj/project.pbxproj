@@ -31,7 +31,8 @@
 		80AE0FAF1AAC132F00A7F301 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE0FAE1AAC132F00A7F301 /* AuthenticationViewController.swift */; };
 		80AE0FB11AAC1C6C00A7F301 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE0FB01AAC1C6C00A7F301 /* MainTabBarController.swift */; };
 		BCBD8FCBDCEF70C438F07B58 /* Pods_Plan_a_Movie_Night.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		C5B9F2BB1F4428ED29B4ABA3 /* Pods_Plan_a_Movie_NightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7AD93B65C2DFDD3A956BBC7 /* Pods_Plan_a_Movie_NightTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D4B71A341AAE865F005ABFFF /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B71A331AAE865F005ABFFF /* Crashlytics.framework */; };
+		D4C42E5F1AB1143B00190726 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C42E5E1AB1143B00190726 /* Fabric.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,8 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1AE3B024672866C219BC2498 /* Pods-Plan a Movie NightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie NightTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie NightTests/Pods-Plan a Movie NightTests.release.xcconfig"; sourceTree = "<group>"; };
-		4521985BF3CE8726BC7AFF9E /* Pods-Plan a Movie NightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie NightTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie NightTests/Pods-Plan a Movie NightTests.debug.xcconfig"; sourceTree = "<group>"; };
 		802951BF1AABC75C0084FCEF /* Plan a Movie Night.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plan a Movie Night.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		802951C31AABC75C0084FCEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		802951C41AABC75C0084FCEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -76,9 +75,8 @@
 		80AE0FB01AAC1C6C00A7F301 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8DA22134FFB59FCBC8EF8515 /* Pods-Plan a Movie Night.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie Night.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie Night/Pods-Plan a Movie Night.debug.xcconfig"; sourceTree = "<group>"; };
 		91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_a_Movie_Night.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7AD93B65C2DFDD3A956BBC7 /* Pods_Plan_a_Movie_NightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_a_Movie_NightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8B5BA951AB1168F00B2A12A /* Plan a Movie NightTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plan a Movie NightTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		E8D48C141AB11A560042D2D4 /* Plan a Movie Night-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plan a Movie Night-Bridging-Header.h"; sourceTree = "<group>"; };
+		D4B71A331AAE865F005ABFFF /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		D4C42E5E1AB1143B00190726 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		FF471E01B15A6850AAB3C4D5 /* Pods-Plan a Movie Night.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie Night.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie Night/Pods-Plan a Movie Night.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B71A341AAE865F005ABFFF /* Crashlytics.framework in Frameworks */,
 				BCBD8FCBDCEF70C438F07B58 /* Pods_Plan_a_Movie_Night.framework in Frameworks */,
+				D4C42E5F1AB1143B00190726 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5B9F2BB1F4428ED29B4ABA3 /* Pods_Plan_a_Movie_NightTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,8 +106,6 @@
 			children = (
 				8DA22134FFB59FCBC8EF8515 /* Pods-Plan a Movie Night.debug.xcconfig */,
 				FF471E01B15A6850AAB3C4D5 /* Pods-Plan a Movie Night.release.xcconfig */,
-				4521985BF3CE8726BC7AFF9E /* Pods-Plan a Movie NightTests.debug.xcconfig */,
-				1AE3B024672866C219BC2498 /* Pods-Plan a Movie NightTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -116,12 +113,13 @@
 		802951B61AABC75B0084FCEF = {
 			isa = PBXGroup;
 			children = (
+				D4C42E5E1AB1143B00190726 /* Fabric.framework */,
+				D4B71A331AAE865F005ABFFF /* Crashlytics.framework */,
 				802951C11AABC75C0084FCEF /* Plan a Movie Night */,
 				802951D91AABC75C0084FCEF /* Plan a Movie NightTests */,
 				802951C01AABC75C0084FCEF /* Products */,
 				774A38A36375B18184EB18D5 /* Pods */,
 				FFB4EB1E65740FF6F822C5DA /* Frameworks */,
-				E8D48C141AB11A560042D2D4 /* Plan a Movie Night-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,7 +167,6 @@
 			isa = PBXGroup;
 			children = (
 				802951DB1AABC75C0084FCEF /* Info.plist */,
-				E8B5BA951AB1168F00B2A12A /* Plan a Movie NightTests-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -218,7 +215,6 @@
 			isa = PBXGroup;
 			children = (
 				91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */,
-				D7AD93B65C2DFDD3A956BBC7 /* Pods_Plan_a_Movie_NightTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -236,6 +232,7 @@
 				802951BD1AABC75C0084FCEF /* Resources */,
 				6D061D95D8AB6C3A0E6C67FB /* Embed Pods Frameworks */,
 				B5D64002DECE58EDC0674417 /* Copy Pods Resources */,
+				D4B71A321AAE8571005ABFFF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,12 +247,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 802951E31AABC75C0084FCEF /* Build configuration list for PBXNativeTarget "Plan a Movie NightTests" */;
 			buildPhases = (
-				F4F53ADA4AAFFB6C1F6EACF5 /* Check Pods Manifest.lock */,
 				802951D21AABC75C0084FCEF /* Sources */,
 				802951D31AABC75C0084FCEF /* Frameworks */,
 				802951D41AABC75C0084FCEF /* Resources */,
-				2742F63F36022F5A9692EFA0 /* Embed Pods Frameworks */,
-				F8B577003193B8C59D6E822A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -345,21 +339,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		2742F63F36022F5A9692EFA0 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plan a Movie NightTests/Pods-Plan a Movie NightTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6D061D95D8AB6C3A0E6C67FB /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,35 +369,18 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plan a Movie Night/Pods-Plan a Movie Night-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F4F53ADA4AAFFB6C1F6EACF5 /* Check Pods Manifest.lock */ = {
+		D4B71A321AAE8571005ABFFF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F8B577003193B8C59D6E822A /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plan a Movie NightTests/Pods-Plan a Movie NightTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "./Fabric.framework/run 0e1e0c3be52819b2769633e11f6ddd48d038b5a9 051a044f694589ae3b4184cbe1ea20da8a37d77603a74d3b1281b0a28b326702";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -564,16 +526,14 @@
 			baseConfigurationReference = 8DA22134FFB59FCBC8EF8515 /* Pods-Plan a Movie Night.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/**",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "Plan a Movie Night/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Plan a Movie Night-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -582,7 +542,6 @@
 			baseConfigurationReference = FF471E01B15A6850AAB3C4D5 /* Pods-Plan a Movie Night.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -590,16 +549,13 @@
 				INFOPLIST_FILE = "Plan a Movie Night/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Plan a Movie Night-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		802951E41AABC75C0084FCEF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4521985BF3CE8726BC7AFF9E /* Pods-Plan a Movie NightTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -611,18 +567,14 @@
 				INFOPLIST_FILE = "Plan a Movie NightTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Plan a Movie NightTests/Plan a Movie NightTests-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plan a Movie Night.app/Plan a Movie Night";
 			};
 			name = Debug;
 		};
 		802951E51AABC75C0084FCEF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AE3B024672866C219BC2498 /* Pods-Plan a Movie NightTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -630,7 +582,6 @@
 				INFOPLIST_FILE = "Plan a Movie NightTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Plan a Movie NightTests/Plan a Movie NightTests-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Plan a Movie Night.app/Plan a Movie Night";
 			};
 			name = Release;
