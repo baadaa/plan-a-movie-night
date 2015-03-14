@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		195A7BFB67B2B912C70F9DE8 /* Pods_Plan_a_Movie_NightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD64B20437B420CFE3D833C7 /* Pods_Plan_a_Movie_NightTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		802951C51AABC75C0084FCEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802951C41AABC75C0084FCEF /* AppDelegate.swift */; };
 		802951C71AABC75C0084FCEF /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802951C61AABC75C0084FCEF /* MovieListViewController.swift */; };
 		802951CC1AABC75C0084FCEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802951CA1AABC75C0084FCEF /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		440363883BCC674BA88B5EDD /* Pods-Plan a Movie NightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie NightTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie NightTests/Pods-Plan a Movie NightTests.release.xcconfig"; sourceTree = "<group>"; };
 		802951BF1AABC75C0084FCEF /* Plan a Movie Night.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plan a Movie Night.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		802951C31AABC75C0084FCEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		802951C41AABC75C0084FCEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,8 @@
 		80AE0FB01AAC1C6C00A7F301 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8DA22134FFB59FCBC8EF8515 /* Pods-Plan a Movie Night.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie Night.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie Night/Pods-Plan a Movie Night.debug.xcconfig"; sourceTree = "<group>"; };
 		91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_a_Movie_Night.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44015D11B2A729D792FEEB7 /* Pods-Plan a Movie NightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie NightTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie NightTests/Pods-Plan a Movie NightTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD64B20437B420CFE3D833C7 /* Pods_Plan_a_Movie_NightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_a_Movie_NightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B71A331AAE865F005ABFFF /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		D4C42E5E1AB1143B00190726 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		E81347161AB1235B00C770F2 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				195A7BFB67B2B912C70F9DE8 /* Pods_Plan_a_Movie_NightTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +125,8 @@
 			children = (
 				8DA22134FFB59FCBC8EF8515 /* Pods-Plan a Movie Night.debug.xcconfig */,
 				FF471E01B15A6850AAB3C4D5 /* Pods-Plan a Movie Night.release.xcconfig */,
+				A44015D11B2A729D792FEEB7 /* Pods-Plan a Movie NightTests.debug.xcconfig */,
+				440363883BCC674BA88B5EDD /* Pods-Plan a Movie NightTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -244,6 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */,
+				BD64B20437B420CFE3D833C7 /* Pods_Plan_a_Movie_NightTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -276,9 +284,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 802951E31AABC75C0084FCEF /* Build configuration list for PBXNativeTarget "Plan a Movie NightTests" */;
 			buildPhases = (
+				EAA205696108BE9FE91C208A /* Check Pods Manifest.lock */,
 				802951D21AABC75C0084FCEF /* Sources */,
 				802951D31AABC75C0084FCEF /* Frameworks */,
 				802951D41AABC75C0084FCEF /* Resources */,
+				392FE9C13DA6FD0A46584533 /* Embed Pods Frameworks */,
+				F09B627A5F576D3F5FC3DD1D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -368,6 +379,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		392FE9C13DA6FD0A46584533 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plan a Movie NightTests/Pods-Plan a Movie NightTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6D061D95D8AB6C3A0E6C67FB /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,6 +436,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 0e1e0c3be52819b2769633e11f6ddd48d038b5a9 051a044f694589ae3b4184cbe1ea20da8a37d77603a74d3b1281b0a28b326702";
+		};
+		EAA205696108BE9FE91C208A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F09B627A5F576D3F5FC3DD1D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plan a Movie NightTests/Pods-Plan a Movie NightTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -590,6 +646,7 @@
 		};
 		802951E41AABC75C0084FCEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A44015D11B2A729D792FEEB7 /* Pods-Plan a Movie NightTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -609,6 +666,7 @@
 		};
 		802951E51AABC75C0084FCEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 440363883BCC674BA88B5EDD /* Pods-Plan a Movie NightTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
