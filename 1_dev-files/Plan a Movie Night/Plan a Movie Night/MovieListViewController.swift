@@ -14,6 +14,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     
     let items = [1,2,3,4,5,6]
         // arrays of movies to be displayed in the table.
+        // CODE HERE
     
     let cellReuseID = "cell"
     
@@ -22,9 +23,9 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.registerNib(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: cellReuseID)
         
         // Create a reference to a Firebase location
-        var myRootRef = Firebase(url:"https://pamn.firebaseio.com/test")
+        //var myRootRef = Firebase(url:"https://pamn.firebaseio.com/test")
         // Write data to Firebase
-        myRootRef.setValue("Do you have data? You'll love Firebase.")
+        //myRootRef.setValue("Do you have data? You'll love Firebase.")
         
     }
     
