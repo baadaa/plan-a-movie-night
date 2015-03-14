@@ -42,6 +42,7 @@
 		E813471D1AB123A000C770F2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813471C1AB123A000C770F2 /* Event.swift */; };
 		E813471F1AB1241000C770F2 /* Invitee.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813471E1AB1241000C770F2 /* Invitee.swift */; };
 		E81347211AB1242D00C770F2 /* MovieLineUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81347201AB1242D00C770F2 /* MovieLineUp.swift */; };
+		E8CE37B61AB4E31600E75A70 /* temp.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE37B51AB4E31600E75A70 /* temp.m */; };
 		E8D313F91AB12093004699AC /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D313F81AB12093004699AC /* BaseModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,9 @@
 		E813471C1AB123A000C770F2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		E813471E1AB1241000C770F2 /* Invitee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invitee.swift; sourceTree = "<group>"; };
 		E81347201AB1242D00C770F2 /* MovieLineUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieLineUp.swift; sourceTree = "<group>"; };
+		E8B1E8A31AB4E0FA00591133 /* Plan a Movie Night-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Plan a Movie Night-Bridging-Header.h"; sourceTree = "<group>"; };
+		E8CE37B41AB4E31600E75A70 /* Plan a Movie Night-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plan a Movie Night-Bridging-Header.h"; sourceTree = "<group>"; };
+		E8CE37B51AB4E31600E75A70 /* temp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = temp.m; sourceTree = "<group>"; };
 		E8D313F81AB12093004699AC /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		FF471E01B15A6850AAB3C4D5 /* Pods-Plan a Movie Night.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie Night.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie Night/Pods-Plan a Movie Night.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +142,7 @@
 		802951B61AABC75B0084FCEF = {
 			isa = PBXGroup;
 			children = (
+				E8CE37B51AB4E31600E75A70 /* temp.m */,
 				D4C42E5E1AB1143B00190726 /* Fabric.framework */,
 				D4B71A331AAE865F005ABFFF /* Crashlytics.framework */,
 				802951C11AABC75C0084FCEF /* Plan a Movie Night */,
@@ -145,6 +150,7 @@
 				802951C01AABC75C0084FCEF /* Products */,
 				774A38A36375B18184EB18D5 /* Pods */,
 				FFB4EB1E65740FF6F822C5DA /* Frameworks */,
+				E8CE37B41AB4E31600E75A70 /* Plan a Movie Night-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +166,7 @@
 		802951C11AABC75C0084FCEF /* Plan a Movie Night */ = {
 			isa = PBXGroup;
 			children = (
+				E8B1E8A31AB4E0FA00591133 /* Plan a Movie Night-Bridging-Header.h */,
 				E8D313FA1AB120D7004699AC /* Models */,
 				802951E61AABCD880084FCEF /* ViewControllers */,
 				805857831AAD11C700C82B76 /* .Xibs */,
@@ -496,6 +503,7 @@
 				8045BBD11AB3FBCC00B858BA /* FriendsListCell.swift in Sources */,
 				802951C51AABC75C0084FCEF /* AppDelegate.swift in Sources */,
 				80724E051AB0086400AF686D /* EventListViewController.swift in Sources */,
+				E8CE37B61AB4E31600E75A70 /* temp.m in Sources */,
 				E8D313F91AB12093004699AC /* BaseModel.swift in Sources */,
 				E813471B1AB1238C00C770F2 /* Insight.swift in Sources */,
 				80724E0E1AB0163D00AF686D /* InviteFriendsCell.swift in Sources */,
@@ -626,6 +634,7 @@
 			baseConfigurationReference = 8DA22134FFB59FCBC8EF8515 /* Pods-Plan a Movie Night.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/**",
@@ -634,6 +643,8 @@
 				INFOPLIST_FILE = "Plan a Movie Night/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Plan a Movie Night-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -642,6 +653,7 @@
 			baseConfigurationReference = FF471E01B15A6850AAB3C4D5 /* Pods-Plan a Movie Night.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -649,6 +661,7 @@
 				INFOPLIST_FILE = "Plan a Movie Night/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Plan a Movie Night-Bridging-Header.h";
 			};
 			name = Release;
 		};
