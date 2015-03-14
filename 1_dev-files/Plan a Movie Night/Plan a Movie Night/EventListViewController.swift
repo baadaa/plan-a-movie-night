@@ -13,7 +13,8 @@ class EventListViewController: UIViewController, UITableViewDataSource, UITableV
     @IBOutlet weak var tableView: UITableView!
     
     let items = [1,2,3,4,5,6]
-    // arrays of events to be displayed in the table.
+    // array of events to be displayed in the table.
+    // CODE HERE
     
     let cellReuseID = "cell"
     

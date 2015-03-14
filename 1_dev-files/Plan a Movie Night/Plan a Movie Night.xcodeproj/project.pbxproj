@@ -15,6 +15,8 @@
 		802951DD1AABC75C0084FCEF /* Plan_a_Movie_NightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802951DC1AABC75C0084FCEF /* Plan_a_Movie_NightTests.swift */; };
 		803E29601AB003DF00F35611 /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803E295E1AB003DF00F35611 /* EventListCell.swift */; };
 		803E29611AB003DF00F35611 /* EventListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 803E295F1AB003DF00F35611 /* EventListCell.xib */; };
+		8045BBD11AB3FBCC00B858BA /* FriendsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8045BBCF1AB3FBCC00B858BA /* FriendsListCell.swift */; };
+		8045BBD21AB3FBCC00B858BA /* FriendsListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8045BBD01AB3FBCC00B858BA /* FriendsListCell.xib */; };
 		805477B01AAD4FB500383F77 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805477AF1AAD4FB500383F77 /* MovieDetailsViewController.swift */; };
 		805857861AAD124800C82B76 /* MovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805857841AAD124800C82B76 /* MovieListCell.swift */; };
 		805857871AAD124800C82B76 /* MovieListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 805857851AAD124800C82B76 /* MovieListCell.xib */; };
@@ -59,6 +61,8 @@
 		802951DC1AABC75C0084FCEF /* Plan_a_Movie_NightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan_a_Movie_NightTests.swift; sourceTree = "<group>"; };
 		803E295E1AB003DF00F35611 /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
 		803E295F1AB003DF00F35611 /* EventListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventListCell.xib; sourceTree = "<group>"; };
+		8045BBCF1AB3FBCC00B858BA /* FriendsListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsListCell.swift; sourceTree = "<group>"; };
+		8045BBD01AB3FBCC00B858BA /* FriendsListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsListCell.xib; sourceTree = "<group>"; };
 		805477AF1AAD4FB500383F77 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		805857841AAD124800C82B76 /* MovieListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
 		805857851AAD124800C82B76 /* MovieListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieListCell.xib; sourceTree = "<group>"; };
@@ -201,6 +205,8 @@
 				80724E0C1AB0163D00AF686D /* InviteFriendsCell.swift */,
 				80724E0D1AB0163D00AF686D /* InviteFriendsCell.xib */,
 				80724E101AB0172E00AF686D /* Checkbox.swift */,
+				8045BBCF1AB3FBCC00B858BA /* FriendsListCell.swift */,
+				8045BBD01AB3FBCC00B858BA /* FriendsListCell.xib */,
 			);
 			name = .Xibs;
 			sourceTree = "<group>";
@@ -316,6 +322,7 @@
 			files = (
 				802951CC1AABC75C0084FCEF /* Main.storyboard in Resources */,
 				802951D11AABC75C0084FCEF /* LaunchScreen.xib in Resources */,
+				8045BBD21AB3FBCC00B858BA /* FriendsListCell.xib in Resources */,
 				80724E0F1AB0163D00AF686D /* InviteFriendsCell.xib in Resources */,
 				805857871AAD124800C82B76 /* MovieListCell.xib in Resources */,
 				8058578A1AAD160B00C82B76 /* chappie-poster.jpg in Resources */,
@@ -407,6 +414,7 @@
 				8059E5CC1AB0259A00F8AD2D /* FriendsViewController.swift in Sources */,
 				805477B01AAD4FB500383F77 /* MovieDetailsViewController.swift in Sources */,
 				80724E091AB0101000AF686D /* EventCreationViewController.swift in Sources */,
+				8045BBD11AB3FBCC00B858BA /* FriendsListCell.swift in Sources */,
 				802951C51AABC75C0084FCEF /* AppDelegate.swift in Sources */,
 				80724E051AB0086400AF686D /* EventListViewController.swift in Sources */,
 				E8D313F91AB12093004699AC /* BaseModel.swift in Sources */,
