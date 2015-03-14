@@ -9,12 +9,12 @@
 import UIKit
 
 class User: BasePAMNModel {
-    var name: String
-    var facebook_id: String
-    var profile_image_url: String
-    var profile_image: UIImage
-    var friends: [User]
-    
+//    var name: String
+//    var facebook_id: String
+//    var profile_image_url: String
+//    var profile_image: UIImage
+//    var friends: [User]
+//    
 //    init(data: NSDictionary) {
 //        if name = data.name {
 //            let self.name = data.name

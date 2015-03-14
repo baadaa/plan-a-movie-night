@@ -10,11 +10,11 @@ import UIKit
 
 protocol PAMNModelProtocol {
     
-    init()
-    class func fetchOne()  -> BasePAMNModel
-    class func fetchMany()  -> [BasePAMNModel]
-    func save()  -> String
-    class func create(data: NSDictionary) -> BasePAMNModel
+//    init()
+//    class func fetchOne()  -> BasePAMNModel
+//    class func fetchMany()  -> [BasePAMNModel]
+//    func save()  -> String
+//    class func create(data: NSDictionary) -> BasePAMNModel
 }
 
 class BasePAMNModel: PAMNModelProtocol {
