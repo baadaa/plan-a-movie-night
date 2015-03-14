@@ -22,9 +22,9 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.registerNib(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: cellReuseID)
         
         // Create a reference to a Firebase location
-        var myRootRef = Firebase(url:"https://pamn.firebaseio.com/test")
+        //var myRootRef = Firebase(url:"https://pamn.firebaseio.com/test")
         // Write data to Firebase
-        myRootRef.setValue("Do you have data? You'll love Firebase.")
+        //myRootRef.setValue("Do you have data? You'll love Firebase.")
         
     }
     
