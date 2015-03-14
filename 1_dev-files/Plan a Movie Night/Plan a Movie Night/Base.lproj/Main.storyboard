@@ -788,9 +788,68 @@
                     <view key="view" contentMode="scaleToFill" id="6pt-2y-F9J">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f11-NA-sy1">
+                                <rect key="frame" x="36" y="461" width="249" height="40"/>
+                                <color key="backgroundColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="DwG-ch-WKg"/>
+                                    <constraint firstAttribute="width" constant="249" id="goN-BI-VpK"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="pzT-TY-CEp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="  Invite More Friends!" image="facebook-icon">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookButtonTapped:" destination="B6e-A2-GY6" eventType="touchUpInside" id="0Tc-dW-4GS"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="0.0" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="2g2-3z-1Yx">
+                                <rect key="frame" x="0.0" y="110" width="320" height="333"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="0.0" id="LTY-a1-sJk">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LTY-a1-sJk" id="vX8-sO-M1y">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="B6e-A2-GY6" id="hlY-y7-V5S"/>
+                                    <outlet property="delegate" destination="B6e-A2-GY6" id="Sdc-od-0bk"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who's on Plan a Movie Night?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnG-Cp-3aM">
+                                <rect key="frame" x="16" y="78" width="288" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cQg-Wj-uf4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.23137254900000001" green="0.34901960780000002" blue="0.59607843140000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2g2-3z-1Yx" firstAttribute="top" secondItem="mnG-Cp-3aM" secondAttribute="bottom" constant="11" id="3rD-uJ-gSg"/>
+                            <constraint firstItem="mnG-Cp-3aM" firstAttribute="trailing" secondItem="6pt-2y-F9J" secondAttribute="trailingMargin" id="8P5-Y3-eYF"/>
+                            <constraint firstItem="2g2-3z-1Yx" firstAttribute="leading" secondItem="6pt-2y-F9J" secondAttribute="leadingMargin" constant="-16" id="9GI-gv-DTC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2g2-3z-1Yx" secondAttribute="trailing" constant="-16" id="Anp-E7-9BG"/>
+                            <constraint firstItem="mnG-Cp-3aM" firstAttribute="leading" secondItem="6pt-2y-F9J" secondAttribute="leadingMargin" id="HMh-Gp-QAS"/>
+                            <constraint firstItem="mnG-Cp-3aM" firstAttribute="top" secondItem="Ob2-At-HOJ" secondAttribute="bottom" constant="14" id="OPA-jq-8cG"/>
+                            <constraint firstAttribute="centerX" secondItem="f11-NA-sy1" secondAttribute="centerX" id="ojI-YU-xGt"/>
+                            <constraint firstItem="xO0-B6-vak" firstAttribute="top" secondItem="f11-NA-sy1" secondAttribute="bottom" constant="18" id="uwq-fr-RUj"/>
+                            <constraint firstItem="f11-NA-sy1" firstAttribute="top" secondItem="2g2-3z-1Yx" secondAttribute="bottom" constant="18" id="zYI-xG-h1K"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Friends" id="jJm-8i-IAZ"/>
+                    <connections>
+                        <outlet property="tableView" destination="2g2-3z-1Yx" id="W8D-SV-b8P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uou-P3-rdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

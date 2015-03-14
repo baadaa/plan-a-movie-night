@@ -14,6 +14,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     
     let items = [1,2,3,4,5,6]
         // arrays of movies to be displayed in the table.
+        // CODE HERE
     
     let cellReuseID = "cell"
     

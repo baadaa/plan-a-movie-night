@@ -17,7 +17,8 @@ class InviteFriendsViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet weak var tableView: UITableView!
     
     let items = [1,2,3,4,5,6]
-    // arrays of movies to be displayed in the table.
+    // arrays of friends to be displayed in the table.
+    // CODE HERE
     
     let cellReuseID = "cell"
     
