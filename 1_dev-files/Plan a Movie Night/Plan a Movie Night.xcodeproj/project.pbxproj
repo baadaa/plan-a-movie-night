@@ -33,6 +33,7 @@
 		BCBD8FCBDCEF70C438F07B58 /* Pods_Plan_a_Movie_Night.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D4B71A341AAE865F005ABFFF /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B71A331AAE865F005ABFFF /* Crashlytics.framework */; };
 		D4C42E5F1AB1143B00190726 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C42E5E1AB1143B00190726 /* Fabric.framework */; };
+		E8D313F91AB12093004699AC /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D313F81AB12093004699AC /* BaseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_a_Movie_Night.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B71A331AAE865F005ABFFF /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		D4C42E5E1AB1143B00190726 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		E8D313F81AB12093004699AC /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		FF471E01B15A6850AAB3C4D5 /* Pods-Plan a Movie Night.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie Night.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie Night/Pods-Plan a Movie Night.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +137,7 @@
 		802951C11AABC75C0084FCEF /* Plan a Movie Night */ = {
 			isa = PBXGroup;
 			children = (
+				E8D313FA1AB120D7004699AC /* Models */,
 				802951E61AABCD880084FCEF /* ViewControllers */,
 				805857831AAD11C700C82B76 /* .Xibs */,
 				802951C41AABC75C0084FCEF /* AppDelegate.swift */,
@@ -209,6 +212,14 @@
 				805857891AAD160B00C82B76 /* chappie-poster.jpg */,
 			);
 			name = "sample-images";
+			sourceTree = "<group>";
+		};
+		E8D313FA1AB120D7004699AC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E8D313F81AB12093004699AC /* BaseModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		FFB4EB1E65740FF6F822C5DA /* Frameworks */ = {
@@ -398,6 +409,7 @@
 				80724E091AB0101000AF686D /* EventCreationViewController.swift in Sources */,
 				802951C51AABC75C0084FCEF /* AppDelegate.swift in Sources */,
 				80724E051AB0086400AF686D /* EventListViewController.swift in Sources */,
+				E8D313F91AB12093004699AC /* BaseModel.swift in Sources */,
 				80724E0E1AB0163D00AF686D /* InviteFriendsCell.swift in Sources */,
 				80724E071AB00C8700AF686D /* EventDetailsViewController.swift in Sources */,
 				80724E111AB0172E00AF686D /* Checkbox.swift in Sources */,

@@ -33,6 +33,7 @@ class EventListViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseID, forIndexPath: indexPath) as EventListCell
         
+        cell.selectionStyle = .None // disable cell highlight when selecting a cell
         
         //-------------------------------------
         //

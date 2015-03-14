@@ -9,7 +9,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Facebook-iOS-SDK
-  - Firebase
+  - Firebase (>= 2.2.0)
   - SwiftyJSON
 
 SPEC CHECKSUMS:

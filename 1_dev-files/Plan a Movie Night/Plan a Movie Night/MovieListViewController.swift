@@ -20,6 +20,12 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerNib(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: cellReuseID)
+        
+        // Create a reference to a Firebase location
+        var myRootRef = Firebase(url:"https://pamn.firebaseio.com/test")
+        // Write data to Firebase
+        myRootRef.setValue("Do you have data? You'll love Firebase.")
+        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -33,6 +39,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseID, forIndexPath: indexPath) as MovieListCell
         
+        cell.selectionStyle = .None // disable cell highlight when selecting a cell
         
         //-------------------------------------
         //
