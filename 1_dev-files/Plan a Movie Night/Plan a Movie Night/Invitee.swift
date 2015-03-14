@@ -8,6 +8,6 @@
 
 import UIKit
 
-class Invitee: BaseModel {
+class Invitee: BasePAMNModel {
    
 }

@@ -15,11 +15,11 @@ class User: BasePAMNModel {
     var profile_image: UIImage
     var friends: [User]
     
-    init(data: NSDictionary) {
-        if name = data.name {
-            let self.name = data.name
-        }
-        self.facebook_id = data.id
-    }
+//    init(data: NSDictionary) {
+//        if name = data.name {
+//            let self.name = data.name
+//        }
+//        self.facebook_id = data.id
+//    }
 
 }

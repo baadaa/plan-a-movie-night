@@ -8,6 +8,6 @@
 
 import UIKit
 
-class Movie: BaseModel {
+class Movie: BasePAMNModel {
    
 }

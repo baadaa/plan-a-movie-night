@@ -8,6 +8,6 @@
 
 import UIKit
 
-class Insight: BaseModel {
+class Insight: BasePAMNModel {
    
 }

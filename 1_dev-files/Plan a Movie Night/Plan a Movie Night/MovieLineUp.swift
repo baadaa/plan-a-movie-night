@@ -8,6 +8,6 @@
 
 import UIKit
 
-class MovieLineUp: BaseModel {
+class MovieLineUp: BasePAMNModel {
    
 }

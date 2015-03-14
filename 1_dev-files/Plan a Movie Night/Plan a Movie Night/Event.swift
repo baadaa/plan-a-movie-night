@@ -8,6 +8,6 @@
 
 import UIKit
 
-class Event: BaseModel {
+class Event: BasePAMNModel {
    
 }
