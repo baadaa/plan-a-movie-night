@@ -8,40 +8,48 @@
 
 import UIKit
 
-class User: Serializable  {
-    var id: String
+class User: BasePAMNModel  {
+    //    var id: String
     var name: String
     var facebook_id: String
     var profile_image_url: String
     var friends: [String]
     
     init(name: String, facebook_id: String, profile_image_url: String, friends: [String]) {
-        self.id = facebook_id
+        
         self.name = name
         self.facebook_id = facebook_id
         self.profile_image_url = profile_image_url
         self.friends = friends
+        super.init(id: facebook_id)
     }
     
-    func save() -> Bool {
-        var data = self.toDictionary()
-        data.removeObjectForKey("id")
-        getFirebase().childByAppendingPath(self.id).setValue(data)
-        
-        //@otodo we need to return if the saving was successful or not
-        return Bool()
-    }
     
-    private func getFirebase() -> Firebase {
-        return Firebase(url: getFirebaseUrl()).childByAppendingPath(getDbname())
-    }
-    
-    private func getFirebaseUrl() -> String {
-        return "https://pamn.firebaseio.com/"
-    }
-    
-    private func getDbname() -> String {
+    override func getDbname() -> String {
         return "users"
+    }
+    
+}
+
+//folowing singleton implementation http://stackoverflow.com/a/24073016/372875
+class CurrentUser {
+    var user: User?
+    
+    init(){}
+    
+    func getData() -> User? {
+        return self.user
+    }
+    
+    func setData(user: User) {
+        self.user = user
+    }
+    
+    class var sharedInstance: CurrentUser {
+        struct Singleton {
+            static let instance = CurrentUser()
+        }
+        return Singleton.instance
     }
     
 }
