@@ -36,7 +36,6 @@ public class Serializable : NSObject{
             } else if propValue is Bool {
                 propertiesDictionary.setValue((propValue as Bool).boolValue, forKey: propName)
             } else {
-                println(propName)
                 propertiesDictionary.setValue(propValue, forKey: propName)
             }
         }

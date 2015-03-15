@@ -9,7 +9,11 @@
 import UIKit
 
 class Insight: Serializable {
-    var id: String
+    var id: String {
+        get {
+            return "\(user_id)-\(movie_id)"
+        }
+    }
     var user_id: String
     var movie_id: String
     var is_seen: Bool
@@ -17,7 +21,6 @@ class Insight: Serializable {
     var interest_level: Int
     
     init(user_id: String, movie_id: String, is_seen: Bool, would_see: Bool, interest_level: Int) {
-        self.id = "\(user_id)-\(movie_id)"
         self.user_id = user_id
         self.movie_id = movie_id
         self.is_seen = is_seen
