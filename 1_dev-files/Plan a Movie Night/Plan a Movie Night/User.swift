@@ -53,26 +53,3 @@ class CurrentUser {
     }
     
 }
-
-//folowing singleton implementation http://stackoverflow.com/a/24073016/372875
-class CurrentUser {
-    var user: User?
-   
-    init(){}
-    
-    func getData() -> User? {
-        return self.user
-    }
-    
-    func setData(user: User) {
-        self.user = user
-    }
-    
-    class var sharedInstance: CurrentUser {
-        struct Singleton {
-            static let instance = CurrentUser()
-        }
-        return Singleton.instance
-    }
-    
-}
