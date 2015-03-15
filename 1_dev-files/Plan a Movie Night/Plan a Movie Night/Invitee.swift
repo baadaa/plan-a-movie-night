@@ -8,8 +8,17 @@
 
 import UIKit
 
-enum Attendance {
+enum Attendance: Printable {
     case Pending, Going, NotGoing, MaybeGoing
+    
+    var description : String {
+        switch self {
+        case .Pending: return "Pending";
+        case .Going: return "Going";
+        case .NotGoing: return "NotGoing";
+        case .MaybeGoing: return "MaybeGoing";
+        }
+    }
 }
 class Invitee: Serializable {
     var id: String {
@@ -19,7 +28,7 @@ class Invitee: Serializable {
     }
     var event_id: String
     var user_id: String
-    var status: Attendance
+    var status: String
     
     //@todo make these non optionals fetch in the init
     private var user: User?
@@ -28,6 +37,8 @@ class Invitee: Serializable {
     init(event_id: String, user_id: String, status: Attendance){
         self.event_id = event_id
         self.user_id = user_id
-        self.status = status
+        self.status = status.description
     }
+    
+    
 }

@@ -46,7 +46,7 @@ class Insight: Serializable {
     }
     
     private func getDbname() -> String {
-        return "users"
+        return "insights"
     }
     
 }
