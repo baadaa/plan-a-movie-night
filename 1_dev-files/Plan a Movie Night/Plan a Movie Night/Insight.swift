@@ -8,6 +8,42 @@
 
 import UIKit
 
-class Insight: BasePAMNModel {
-   
+class Insight: Serializable {
+    var id: String
+    var user_id: String
+    var movie_id: String
+    var is_seen: Bool
+    var would_see: Bool
+    var interest_level: Int
+    
+    init(user_id: String, movie_id: String, is_seen: Bool, would_see: Bool, interest_level: Int) {
+        self.id = "\(user_id)-\(movie_id)"
+        self.user_id = user_id
+        self.movie_id = movie_id
+        self.is_seen = is_seen
+        self.would_see = would_see
+        self.interest_level = interest_level
+    }
+    
+    func save() -> Bool {
+        var data = self.toDictionary()
+        data.removeObjectForKey("id")
+        getFirebase().childByAppendingPath(self.id).setValue(data)
+        
+        //@otodo we need to return if the saving was successful or not
+        return Bool()
+    }
+    
+    private func getFirebase() -> Firebase {
+        return Firebase(url: getFirebaseUrl()).childByAppendingPath(getDbname())
+    }
+    
+    private func getFirebaseUrl() -> String {
+        return "https://pamn.firebaseio.com/"
+    }
+    
+    private func getDbname() -> String {
+        return "users"
+    }
+    
 }
