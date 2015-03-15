@@ -17,6 +17,9 @@ class AuthenticationViewController: UIViewController {
         super.viewDidLoad()
         authenticationButton.layer.cornerRadius = 5
             // change the corner radius
+        
+        var user = User(name: "Angel S. Moreno", facebook_id: "001", profile_image_url: "", friends: ["002","004"])
+        user.save()
     }
     
     

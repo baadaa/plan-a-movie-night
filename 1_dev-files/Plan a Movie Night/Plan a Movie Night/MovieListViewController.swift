@@ -23,9 +23,13 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.registerNib(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: cellReuseID)
         
         // Create a reference to a Firebase location
-        var myRootRef = Firebase(url:"https://pamn.firebaseio.com/test")
+        var myRootRef = Firebase(url:"https://pamn.firebaseio.com/calls/")
         // Write data to Firebase
-        myRootRef.setValue("Do you have data? You'll love Firebase.")
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd 'at' h:mm a" // superset of OP's format
+        let date_str = dateFormatter.stringFromDate(NSDate())
+        
+        myRootRef.childByAutoId().setValue(["name": "test", "time": date_str])
         
     }
     
