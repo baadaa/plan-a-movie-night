@@ -22,7 +22,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         tableView.registerNib(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: cellReuseID)
         
-        println(CurrentUser.sharedInstance.getData()!.id)
+        runTestStuff()
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -75,6 +75,14 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         //
             
         performSegueWithIdentifier("movieDetailsFromList", sender: nil)
+    }
+    
+    func runTestStuff(){
+        let current_user_id = CurrentUser.sharedInstance.getData()!.id
+        //create an event
+        let event1 = Event(title: "Angel's Horror Movie Night", body: "We will be watching 6 horror flicks overnight.", event_date: "2015-03-25 at 6:00 PM", creator_id: current_user_id)
+        event1.addInvite(current_user_id)
+        event1.save()
     }
 }
 

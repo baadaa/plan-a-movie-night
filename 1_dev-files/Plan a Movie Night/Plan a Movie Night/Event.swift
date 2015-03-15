@@ -66,6 +66,16 @@ class Event: Serializable {
         self.invitees[user_id] = invite
     }
     
+    override func toDictionary() -> NSMutableDictionary {
+        let dict = super.toDictionary()
+        //invitees
+        var invite_dict = NSMutableDictionary()
+        for (invited_user_id, invite) in self.invitees {
+            invite_dict[invited_user_id] = invite.toDictionary()
+        }
+        dict["invitees"] = invite_dict
+        return dict
+    }
     func save() -> Bool {
         var data = self.toDictionary()
         data.removeObjectForKey("id")
@@ -84,7 +94,7 @@ class Event: Serializable {
     }
     
     private func getDbname() -> String {
-        return "users"
+        return "events"
     }
     
 }

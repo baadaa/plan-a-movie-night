@@ -60,66 +60,36 @@ public class Serializable : NSObject{
 }
 
 protocol PAMNModelProtocol {
-    var id: String {
-        get
-    }
     
-    var dbname: String {
-        get
-    }
-    
-    
-//    init()
 //    class func fetchOne()  -> BasePAMNModel
 //    class func fetchMany()  -> [BasePAMNModel]
-    func save()  -> Bool
-    func getFirebase() -> Firebase
-//    class func create(data: NSDictionary) -> BasePAMNModel
+    func save()
+    func getDbname()
+    //    class func create(data: NSDictionary) -> BasePAMNModel
 }
 
 class BasePAMNModel: Serializable {
-    let firebase_url_prefix = "https://pamn.firebaseio.com/calls/"
-    var firebase_ref: Firebase!
+    private let firebase_url_prefix = "https://pamn.firebaseio.com/"
+    var id: String
     
-    var dbname: String!
-    
-    var id: String!
-    
-    override init(){
-        //@todo idk why but i must call super.init() prior to using self? why?
-        super.init()
-        
-        //ensure the model class has a dbname
-        if self.dbname == "" {
-            self.dbname = _stdlib_getDemangledTypeName(self)
-        }
-        
-        //ensure the model class has an id
-        if self.id == "" {
-            self.id = NSUUID().UUIDString
-        }
-        
-        let firebase_ref = Firebase(url:self.firebase_url_prefix).childByAppendingPath(self.dbname)
+    init(id: String){
+        self.id = id
     }
     
-//    class func fetchOne() -> BasePAMNModel {
-//        return BasePAMNModel()
-//    }
-//    
-//    class func fetchMany() -> [BasePAMNModel]{
-//        return [BasePAMNModel()]
-//    }
-//    
-    func save() -> Bool {
+    func save() {
         var data = self.toDictionary()
-        self.firebase_ref.childByAppendingPath(self.id).setValue(data)
+        data.removeObjectForKey("id")
+        getFirebase().childByAppendingPath(self.id).setValue(data)
         
-        //@otodo we need to return if the saving was successful or not
-        return Bool()
     }
-//
-//    class func create(data: NSDictionary) -> BasePAMNModel {
-//        return BasePAMNModel()
-//    }
+    
+    private func getFirebase() -> Firebase {
+        return Firebase(url: self.firebase_url_prefix).childByAppendingPath(getDbname())
+    }
+    
+    func getDbname() -> String{
+        return "test"
+    }
+    
 }
 
