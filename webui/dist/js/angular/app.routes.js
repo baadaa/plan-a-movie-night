@@ -43,8 +43,22 @@ app.config(['$routeProvider', function($routeProvider) {
       }
     }).when('/', {
       // the rest is the same for ui-router and ngRoute...
-      controller: 'HomeCtrl',
-      templateUrl: '/pages/home.html',
+      controller: 'DashboardCtrl',
+      templateUrl: '/pages/main.html',
+      resolve: {
+        // controller will not be loaded until $requireAuth resolves
+        // Auth refers to our $firebaseAuth wrapper in the example above
+        'currentAuth': ['FirebaseAuthService', function(FirebaseAuthService) {
+          // $requireAuth returns a promise so the resolve waits for it to complete
+          // If the promise is rejected, it will throw a $stateChangeError (see above)
+          return FirebaseAuthService.auth.$requireAuth();
+        }]
+      }
+    }).when('/movies/:subtype?', {
+      // the rest is the same for ui-router and ngRoute...
+      controller: 'MoviesCtrl',
+      templateUrl: '/pages/main.html',
+      atk: 'falcon kick',
       resolve: {
         // controller will not be loaded until $requireAuth resolves
         // Auth refers to our $firebaseAuth wrapper in the example above
@@ -56,7 +70,7 @@ app.config(['$routeProvider', function($routeProvider) {
       }
     }).
     otherwise({
-        templateUrl: '/pages/404.html',
+        templateUrl: '/pages/main.html',
     });
 }]);
 

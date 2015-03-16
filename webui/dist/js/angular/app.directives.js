@@ -23,13 +23,30 @@ app.directive('liUser', function() {
     templateUrl: '/partials/navigation/li-user.html',
     controller: function($scope, $element, FirebaseAuthService, $location){
     	$scope.authData = FirebaseAuthService.auth.$getAuth();
-    	$scope.name = $scope.authData.facebook.displayName;
+      if($scope.authData){
+        $scope.name = $scope.authData.facebook.displayName;
+      } else {
+        $scope.name = 'Guest';
+      }
     	
     	$scope.logout = function(){
-			FirebaseAuthService.auth.$unauth();
-			$location.path('/login');
-		}
+        FirebaseAuthService.auth.$unauth();
+        $location.path('/login');
+  		}
+    },
+    link: function(scope, el, attr) {}
+  }
+});
+
+app.directive('sideMenu', function() {
+  return {
+    replace: true,
+    restrict: 'E',
+    templateUrl: '/partials/navigation/side-menu.html',
+    controller: function($scope, $element,$location){
+      
     },
     link: function(scope, el, attr) {}
   }
 })
+

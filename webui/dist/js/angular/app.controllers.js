@@ -37,13 +37,44 @@ var app = angular.module('appControllers', [
 // ]);
 
 
-app.controller('HomeCtrl', ['currentAuth', function(currentAuth) {
+app.controller('DashboardCtrl', ['$scope', 'currentAuth', function($scope, currentAuth) {
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
+
+  $scope.title = 'Dashboard';
+  $scope.subview = 'dashboard';
 }]);
 
-app.controller('AuthCtrl', ['$scope', '$location', 'currentAuth', 'FirebaseAuthService',
- function($scope, $location, currentAuth, FirebaseAuthService) {
+app.controller('MoviesCtrl', ['$scope', '$routeParams', 'currentAuth', 
+  function($scope, $routeParams, currentAuth) {
+    // currentAuth (provided by resolve) will contain the
+    // authenticated user or null if not logged in
+
+    switch($routeParams.subtype){
+      case 'upcoming':
+        $scope.title = 'Upcoming Movies';
+        break;
+
+      default:
+        $scope.title = 'Movies';
+        break;
+    }
+    
+    $scope.subview = 'movies';
+    $scope.movies = [
+      {
+        id: 'avg2',
+        title: 'Avengers 2',
+      },
+      {
+        id: ' spdrmn3',
+        title: 'Spiderman 3',
+      }
+    ];
+}]);
+
+app.controller('AuthCtrl', ['$rootScope', '$scope', '$location', 'currentAuth', 'FirebaseAuthService',
+ function($rootScope, $scope, $location, currentAuth, FirebaseAuthService) {
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
   $scope.login = function(){
@@ -68,6 +99,8 @@ app.controller('AuthCtrl', ['$scope', '$location', 'currentAuth', 'FirebaseAuthS
       	$location.path('/');
       }
     });
+
+    $rootScope.single_view = true;
 }]);
 
 
