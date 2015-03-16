@@ -44,9 +44,17 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         //
         
         cell.moviePoster = UIImage(named: "chappie-poster.jpg")!
-        cell.movieTitle.text = "Chappie (2015)"
-        cell.movieDirector.text = "Director: Neil Blomkamp"
+        cell.movieTitle.text = "Chappie"
+        cell.movieReleaseDate.text = "2015.3.10"
+        cell.movieDirector.text = "Neil Blomkamp"
         cell.runningTimeAndGenre.text = "120min • Action, Sci-fi"
+
+        
+        cell.movieChecked = UIImage(named:"movie_unchecked.png")!
+        cell.movieChecked = UIImage(named:"movie_checked.png")!
+            // Depending on whether the user insight is already provided, display the icon here.
+        
+        
         
         //
         //
@@ -59,7 +67,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 185
+        return 128
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {

@@ -12,13 +12,22 @@ class MovieListCell: UITableViewCell {
 
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieDirector: UILabel!
+    @IBOutlet weak var movieReleaseDate: UILabel!
     @IBOutlet weak var runningTimeAndGenre: UILabel!
+    
+    @IBOutlet private weak var movieIsChecked: UIImageView!
     
     @IBOutlet private weak var moviePosterView: UIImageView!
     
     var moviePoster: UIImage? {
         get { return moviePosterView.image }
         set { moviePosterView.image = newValue }
+    }
+    
+    var movieChecked: UIImage? {
+        get { return
+            movieIsChecked.image }
+        set { movieIsChecked.image = newValue }
     }
     
     override func awakeFromNib() {

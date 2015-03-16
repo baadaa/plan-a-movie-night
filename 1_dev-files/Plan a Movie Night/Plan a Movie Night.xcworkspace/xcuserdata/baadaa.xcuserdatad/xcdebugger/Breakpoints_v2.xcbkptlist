@@ -9,14 +9,100 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Plan a Movie Night/EventCreationViewController.swift"
-            timestampString = "447998107.014086"
+            filePath = "Plan a Movie Night/MovieDetailsViewController.swift"
+            timestampString = "448174646.990809"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
-            landmarkName = "textFieldShouldReturn(_:)"
-            landmarkType = "5">
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "MovieDetailsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Plan_a_Movie_Night.MovieDetailsViewController.wantThisRating.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UISlider&gt;"
+                  moduleName = "Plan a Movie Night"
+                  urlString = "file:///Users/baadaa/Documents/2_projects/_GA-iOS-course/_FINAL_/1_dev-files/Plan%20a%20Movie%20Night/Plan%20a%20Movie%20Night/MovieDetailsViewController.swift"
+                  timestampString = "448173695.148457"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Plan_a_Movie_Night.MovieDetailsViewController.wantThisRating.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UISlider&gt;"
+                  moduleName = "Plan a Movie Night"
+                  urlString = "file:///Users/baadaa/Documents/2_projects/_GA-iOS-course/_FINAL_/1_dev-files/Plan%20a%20Movie%20Night/Plan%20a%20Movie%20Night/MovieDetailsViewController.swift"
+                  timestampString = "448173695.148916"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Plan_a_Movie_Night.MovieDetailsViewController.wantThisRating.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UISlider&gt;"
+                  moduleName = "Plan a Movie Night"
+                  urlString = "file:///Users/baadaa/Documents/2_projects/_GA-iOS-course/_FINAL_/1_dev-files/Plan%20a%20Movie%20Night/Plan%20a%20Movie%20Night/MovieDetailsViewController.swift"
+                  timestampString = "448173695.149114"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Plan_a_Movie_Night.MovieDetailsViewController.init (Plan_a_Movie_Night.MovieDetailsViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Plan_a_Movie_Night.MovieDetailsViewController"
+                  moduleName = "Plan a Movie Night"
+                  urlString = "file:///Users/baadaa/Documents/2_projects/_GA-iOS-course/_FINAL_/1_dev-files/Plan%20a%20Movie%20Night/Plan%20a%20Movie%20Night/MovieDetailsViewController.swift"
+                  timestampString = "448173695.14931"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "521">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Plan_a_Movie_Night.MovieDetailsViewController.init (Plan_a_Movie_Night.MovieDetailsViewController.Type)() -&gt; Plan_a_Movie_Night.MovieDetailsViewController"
+                  moduleName = "Plan a Movie Night"
+                  urlString = "file:///Users/baadaa/Documents/2_projects/_GA-iOS-course/_FINAL_/1_dev-files/Plan%20a%20Movie%20Night/Plan%20a%20Movie%20Night/MovieDetailsViewController.swift"
+                  timestampString = "448173695.14957"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "466">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Plan_a_Movie_Night.MovieDetailsViewController.init (Plan_a_Movie_Night.MovieDetailsViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; Plan_a_Movie_Night.MovieDetailsViewController"
+                  moduleName = "Plan a Movie Night"
+                  urlString = "file:///Users/baadaa/Documents/2_projects/_GA-iOS-course/_FINAL_/1_dev-files/Plan%20a%20Movie%20Night/Plan%20a%20Movie%20Night/MovieDetailsViewController.swift"
+                  timestampString = "448173695.149894"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "486">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

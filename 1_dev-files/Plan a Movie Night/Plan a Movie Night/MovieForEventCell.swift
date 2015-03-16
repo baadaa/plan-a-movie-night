@@ -1,20 +1,20 @@
 //
-//  EventListCell.swift
+//  MovieForEventCell.swift
 //  Plan a Movie Night
 //
-//  Created by Bumhan Yu on 3/11/15.
+//  Created by Bumhan Yu on 3/15/15.
 //  Copyright (c) 2015 Angel, Bumhan, Matthew, and Vishnu. All rights reserved.
 //
 
 import UIKit
 
-class EventListCell: UITableViewCell {
+class MovieForEventCell: UITableViewCell {
 
-    @IBOutlet weak var RSVPStatus: UILabel!
-    @IBOutlet weak var eventTitle: UILabel!
-    @IBOutlet weak var dateAndTime: UILabel!
-    @IBOutlet weak var eventLocation: UILabel!
-    @IBOutlet weak var creatorName: UILabel!
+    @IBOutlet weak var movieThumbnail: UIImageView!
+    @IBOutlet weak var movieTitle: UILabel!
+
+    @IBOutlet weak var runningTimeAndGenre: UILabel!
+    @IBOutlet weak var movieIsChecked: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
