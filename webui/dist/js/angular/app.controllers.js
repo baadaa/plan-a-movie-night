@@ -45,8 +45,8 @@ app.controller('DashboardCtrl', ['$scope', 'currentAuth', function($scope, curre
   $scope.subview = 'dashboard';
 }]);
 
-app.controller('MoviesCtrl', ['$scope', '$routeParams', 'currentAuth', 
-  function($scope, $routeParams, currentAuth) {
+app.controller('MoviesCtrl', ['$scope', '$routeParams', 'currentAuth', 'TmdbService',
+  function($scope, $routeParams, currentAuth, TmdbService) {
     // currentAuth (provided by resolve) will contain the
     // authenticated user or null if not logged in
 
