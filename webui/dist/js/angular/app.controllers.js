@@ -65,7 +65,7 @@ app.controller('AuthCtrl', ['$scope', '$location', 'currentAuth', 'FirebaseAuthS
       $scope.currentAuth = authData;
       if(authData){
         FirebaseAuthService.saveUser(authData);
-      	// $location.path('/');
+      	$location.path('/');
       }
     });
 }]);

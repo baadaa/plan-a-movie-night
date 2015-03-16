@@ -2,9 +2,11 @@
 
 var app = angular.module('sbAdminApp', [
 	'FirebaseAuth',
+	'ui.bootstrap',
 	'appFilters',
 	'appRoutes',
-	'appControllers'
+	'appControllers',
+	'appDirectives'
 ]).constant('firebaseConfig', {
 	name	: 'Plan a Movie Night',
 	uri		: 'pamn',
