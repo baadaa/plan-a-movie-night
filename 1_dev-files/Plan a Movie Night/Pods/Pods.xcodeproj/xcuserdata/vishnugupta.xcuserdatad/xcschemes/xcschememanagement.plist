@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-Plan a Movie Night-Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Plan a Movie Night-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Plan a Movie Night-Facebook-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Plan a Movie Night-SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Plan a Movie Night.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Plan a Movie NightTests-Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Plan a Movie NightTests-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Plan a Movie NightTests-Facebook-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Plan a Movie NightTests-SwiftyJSON.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Plan a Movie NightTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0319188FC967FF3E29F0DE6C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>315EEA964BF074F252C9CCD8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>468D3D166C72C371144157B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>535B1DDE060DC499AE838485</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>78E9D865D72F0CCC78FB6E54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>802ABEB2A3D0F21CC673AD12</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8580EE660820060968E59C89</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9A6728A917122D24C338A188</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B0083D1B7E28CAE2F1B28CF3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DE4A322FC81A621CE4B7664C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
