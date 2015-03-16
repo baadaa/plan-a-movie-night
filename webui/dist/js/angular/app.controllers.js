@@ -40,7 +40,6 @@ var app = angular.module('appControllers', [
 app.controller('HomeCtrl', ['currentAuth', function(currentAuth) {
   // currentAuth (provided by resolve) will contain the
   // authenticated user or null if not logged in
-  console.log(currentAuth)
 }]);
 
 app.controller('AuthCtrl', ['$scope', '$location', 'currentAuth', 'FirebaseAuthService',
@@ -65,7 +64,8 @@ app.controller('AuthCtrl', ['$scope', '$location', 'currentAuth', 'FirebaseAuthS
     $scope.auth.$onAuth(function(authData) {
       $scope.currentAuth = authData;
       if(authData){
-      	$location.path('/');
+        FirebaseAuthService.saveUser(authData);
+      	// $location.path('/');
       }
     });
 }]);
