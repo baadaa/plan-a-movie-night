@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FriendsCollectionViewCell" customModule="Plan_a_Movie_Night" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seol.png" translatesAutoresizingMaskIntoConstraints="NO" id="sd8-9D-fhX">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="sd8-9D-fhX" secondAttribute="trailing" id="6ll-V3-In1"/>
+                <constraint firstAttribute="bottom" secondItem="sd8-9D-fhX" secondAttribute="bottom" id="EPX-To-ZGI"/>
+                <constraint firstItem="sd8-9D-fhX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Mlk-N6-52o"/>
+                <constraint firstItem="sd8-9D-fhX" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="rWX-OL-zRj"/>
+            </constraints>
+            <connections>
+                <outlet property="headshot" destination="sd8-9D-fhX" id="duk-VJ-um3"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="seol.png" width="160" height="160"/>
+    </resources>
+</document>

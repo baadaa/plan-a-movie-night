@@ -55,6 +55,7 @@ class EventListViewController: UIViewController, UITableViewDataSource, UITableV
         cell.eventTitle.text = "Angel's Birthday Night"
         cell.dateAndTime.text = "March 7 at 20:00"
         cell.eventLocation.text = "Bronx Somewhere"
+        cell.creatorName.text = "Angel"
         
         //
         //
@@ -67,7 +68,7 @@ class EventListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 135
+        return 116
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
