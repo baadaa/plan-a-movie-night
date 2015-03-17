@@ -53,24 +53,21 @@ app.controller('MoviesCtrl', ['$scope', '$routeParams', 'currentAuth', 'TmdbServ
     switch($routeParams.subtype){
       case 'upcoming':
         $scope.title = 'Upcoming Movies';
+        TmdbService.getUpcomingMovies().then(function(data){
+          $scope.moviesObj = data;
+        });
         break;
 
       default:
-        $scope.title = 'Movies';
+        $scope.title = 'Popular Movies';
+        TmdbService.getPopularMovies().then(function(data){
+          $scope.moviesObj = data;
+        });
         break;
     }
     
     $scope.subview = 'movies';
-    $scope.movies = [
-      {
-        id: 'avg2',
-        title: 'Avengers 2',
-      },
-      {
-        id: ' spdrmn3',
-        title: 'Spiderman 3',
-      }
-    ];
+    
 }]);
 
 app.controller('AuthCtrl', ['$rootScope', '$scope', '$location', 'currentAuth', 'FirebaseAuthService',
