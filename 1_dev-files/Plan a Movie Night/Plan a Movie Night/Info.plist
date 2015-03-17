@@ -65,10 +65,12 @@
 	<key>FacebookAppID</key>
 	<string>404746779685847</string>
 	<key>FacebookDisplayName</key>
-	<string>Login with Facebook</string>
+	<string>Plan a Movie Night</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb404746779685847</string>

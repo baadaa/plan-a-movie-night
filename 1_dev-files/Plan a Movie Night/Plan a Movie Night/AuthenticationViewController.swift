@@ -11,6 +11,8 @@ import FacebookSDK
 
 class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
     
+    //var loginsuccess: Int = 0
+    
     @IBOutlet var fbLoginView : FBLoginView!
     
     @IBOutlet weak var authenticationButton: UIButton!
@@ -42,10 +44,11 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
         println("User Email: \(userEmail)")
     }
     
+    
     func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {
         println("User Logged Out")
     }
-    
+
     func loginView(loginView : FBLoginView!, handleError:NSError) {
         println("Error: \(handleError.localizedDescription)")
     }
@@ -69,9 +72,9 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
         //
         let user = createTestUser()
         setCurrentUser(user)
-        shouldPerformSegueWithIdentifier("authenticationSegue", sender: nil)
-            // After successful authentication, this will perform segue to main app screen
         
+        shouldPerformSegueWithIdentifier("authenticationSegue", sender: nil)
+
     }
     
     func sendTestData(){

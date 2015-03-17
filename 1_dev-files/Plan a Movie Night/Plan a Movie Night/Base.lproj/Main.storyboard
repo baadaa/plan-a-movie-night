@@ -690,18 +690,18 @@
                                     <constraint firstAttribute="height" constant="40" id="X8j-x9-HDl"/>
                                     <constraint firstAttribute="width" constant="249" id="gcM-EZ-XpU"/>
                                 </constraints>
-                                <state key="normal" title="  Login with Facebook" image="facebook-icon">
+                                <state key="normal" title="Launch Application" image="facebook-icon">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="didTapAuthenticationButton:" destination="vbx-i2-izV" eventType="touchUpInside" id="eCf-6k-9tC"/>
+                                    <action selector="didTapAuthenticationButton:" destination="vbx-i2-izV" eventType="touchUpInside" id="WJR-Ox-oUy"/>
                                     <segue destination="49e-Tb-3d3" kind="modal" identifier="authenticationSegue" modalTransitionStyle="flipHorizontal" id="ccL-Da-Xtz"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lKC-UE-73j" customClass="FBLoginView">
                                 <rect key="frame" x="52" y="28" width="240" height="57"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="eb4-mx-teb" id="3EG-pk-Iv6"/>
                                 </connections>
@@ -718,8 +718,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="authenticationButton" destination="jlC-Fo-s9M" id="cnn-AE-fod"/>
-                        <outlet property="fbLoginView" destination="lKC-UE-73j" id="Iaf-wP-zdp"/>
+                        <outlet property="authenticationButton" destination="jlC-Fo-s9M" id="rtw-vk-Lck"/>
+                        <outlet property="fbLoginView" destination="lKC-UE-73j" id="EIJ-jt-ATK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Zh-x9-FWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
