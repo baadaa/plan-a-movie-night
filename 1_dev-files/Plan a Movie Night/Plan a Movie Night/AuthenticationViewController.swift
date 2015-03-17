@@ -46,7 +46,7 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
         let user = createTestUser()
         setCurrentUser(user)
         
-        shouldPerformSegueWithIdentifier("authenticationSegue", sender: nil)
+        performSegueWithIdentifier("authenticationSegue", sender: nil)
         
     }
     
