@@ -42,6 +42,12 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
         println("User Name: \(user.name)")
         var userEmail = user.objectForKey("email") as String
         println("User Email: \(userEmail)")
+        
+        let user = createTestUser()
+        setCurrentUser(user)
+        
+        shouldPerformSegueWithIdentifier("authenticationSegue", sender: nil)
+        
     }
     
     
