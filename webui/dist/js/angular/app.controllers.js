@@ -45,32 +45,29 @@ app.controller('DashboardCtrl', ['$scope', 'currentAuth', function($scope, curre
   $scope.subview = 'dashboard';
 }]);
 
-app.controller('MoviesCtrl', ['$scope', '$routeParams', 'currentAuth', 
-  function($scope, $routeParams, currentAuth) {
+app.controller('MoviesCtrl', ['$scope', '$routeParams', 'currentAuth', 'TmdbService',
+  function($scope, $routeParams, currentAuth, TmdbService) {
     // currentAuth (provided by resolve) will contain the
     // authenticated user or null if not logged in
 
     switch($routeParams.subtype){
       case 'upcoming':
         $scope.title = 'Upcoming Movies';
+        TmdbService.getUpcomingMovies().then(function(data){
+          $scope.moviesObj = data;
+        });
         break;
 
       default:
-        $scope.title = 'Movies';
+        $scope.title = 'Popular Movies';
+        TmdbService.getPopularMovies().then(function(data){
+          $scope.moviesObj = data;
+        });
         break;
     }
     
     $scope.subview = 'movies';
-    $scope.movies = [
-      {
-        id: 'avg2',
-        title: 'Avengers 2',
-      },
-      {
-        id: ' spdrmn3',
-        title: 'Spiderman 3',
-      }
-    ];
+    
 }]);
 
 app.controller('AuthCtrl', ['$rootScope', '$scope', '$location', 'currentAuth', 'FirebaseAuthService',
