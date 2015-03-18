@@ -8,11 +8,10 @@
 
 import UIKit
 
-class Event: Serializable {
-    var id: String
+class Event: BasePAMNModel {
     var title: String
     var body: String
-//    var location: Location
+    var location: String
     var event_date: String
     var creator_id: String
     var invitees: [String:Invitee] = [:]
@@ -23,33 +22,37 @@ class Event: Serializable {
         id: String,
         title: String,
         body: String,
+        location: String,
         event_date: String,
         creator_id: String,
         invitees: [String:Invitee],
         movie_list: [MovieLineUp]
         ) {
-   
-        self.id = id
-        self.title = title
-        self.body = body
-        self.event_date = event_date
-        self.creator_id = creator_id
-        self.invitees = invitees
-        self.movie_list = movie_list
+            
+            self.title = title
+            self.body = body
+            self.location = location
+            self.event_date = event_date
+            self.creator_id = creator_id
+            self.invitees = invitees
+            self.movie_list = movie_list
+            super.init(id: id)
     }
     
     //this init is mostly used for creating
     init(
         title: String,
         body: String,
+        location: String,
         event_date: String,
         creator_id: String
         ) {
-            self.id = NSUUID().UUIDString
             self.title = title
             self.body = body
+            self.location = location
             self.event_date = event_date
             self.creator_id = creator_id
+            super.init(id: NSUUID().UUIDString)
     }
     
     func addInvite(user_id: String) {
@@ -69,31 +72,14 @@ class Event: Serializable {
     override func toDictionary() -> NSMutableDictionary {
         let dict = super.toDictionary()
         //invitees
-        var invite_dict = NSMutableDictionary()
+        dict.removeObjectForKey("invitees")
         for (invited_user_id, invite) in self.invitees {
-            invite_dict[invited_user_id] = invite.toDictionary()
+            invite.save()
         }
-        dict["invitees"] = invite_dict
         return dict
     }
-    func save() -> Bool {
-        var data = self.toDictionary()
-        data.removeObjectForKey("id")
-        getFirebase().childByAppendingPath(self.id).setValue(data)
-        
-        //@otodo we need to return if the saving was successful or not
-        return Bool()
-    }
     
-    private func getFirebase() -> Firebase {
-        return Firebase(url: getFirebaseUrl()).childByAppendingPath(getDbname())
-    }
-    
-    private func getFirebaseUrl() -> String {
-        return "https://pamn.firebaseio.com/"
-    }
-    
-    private func getDbname() -> String {
+    override func getDbname() -> String{
         return "events"
     }
     

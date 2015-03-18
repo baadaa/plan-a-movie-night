@@ -71,8 +71,10 @@ protocol PAMNModelProtocol {
 class BasePAMNModel: Serializable {
     private let firebase_url_prefix = "https://pamn.firebaseio.com/"
     var id: String
+    var created: String = ""
+    var modified: String = ""
     
-    init(id: String){
+    init(id: String) {
         self.id = id
     }
     
@@ -80,7 +82,6 @@ class BasePAMNModel: Serializable {
         var data = self.toDictionary()
         data.removeObjectForKey("id")
         getFirebase().childByAppendingPath(self.id).setValue(data)
-        
     }
     
     private func getFirebase() -> Firebase {
@@ -89,6 +90,10 @@ class BasePAMNModel: Serializable {
     
     func getDbname() -> String{
         return "test"
+    }
+    
+    func getDateAsString() -> String {
+        return "\(NSDate().timeIntervalSince1970 * 1000)"
     }
     
 }
