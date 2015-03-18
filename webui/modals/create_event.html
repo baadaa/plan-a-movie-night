@@ -1,15 +1,46 @@
 <div class="modal-header">
-    <h3 class="modal-title">I'm a modal!</h3>
+    <h3 class="modal-title">Event Creation Form</h3>
 </div>
 <div class="modal-body">
-    <ul>
-        <li ng-repeat="item in items">
-            <a href ng-click="selected.item = item">{{ item }}</a>
-        </li>
-    </ul>
-    Selected: <b>{{ selected.item }}</b>
+    <div class="form-group">
+      <label for="event_name">Name</label>
+      <input id="event_name" type="text" ng-model="event.name" class="form-control">
+    </div>
+    
+    <div class="form-group">
+      <label for="event_location">Location</label>
+      <input id="event_location" type="text" ng-model="event.location" class="form-control">
+    </div>
+
+	<div class="form-group">
+		<label for="event_date">Date</label>
+		<p class="input-group">
+			<input 
+			id="event_date"
+			type="text" 
+			class="form-control" 
+			datepicker-popup="MM/dd/yyyy" 
+			ng-model="event.date" 
+			is-open="opened" 
+			min-date="minDate" 
+			datepicker-options="dateOptions" 
+			ng-required="true" 
+			close-text="Close" 
+		/>
+			<span class="input-group-btn">
+				<button type="button" class="btn btn-default" ng-click="open($event)">
+					<i class="glyphicon glyphicon-calendar"></i>
+				</button>
+			</span>
+		</p>
+	</div>
+
+    <div class="form-group">
+      <label for="event_time">Time</label>
+      <input id="event_time" type="text" ng-model="event.time" class="form-control">
+    </div>
 </div>
 <div class="modal-footer">
-    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-success" ng-click="ok()">Create Event</button>
     <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
 </div>

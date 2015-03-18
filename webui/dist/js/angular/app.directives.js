@@ -1,7 +1,8 @@
 "use strict";
 
 var app = angular.module('appDirectives', [
-	'FirebaseAuth'
+	'FirebaseAuth',
+  'ui.bootstrap'
 ]);
 
 app.directive('navigation', [function() {
@@ -101,7 +102,7 @@ app.directive('openCreateEventModal', [function () {
                     var modalInstance = $modal.open({
                         templateUrl: '/modals/create_event.html',
                         controller: 'EventCreateCtrl',
-                        size: 'sm',
+                        size: 'lg',
                         resolve: {
                             items: function () {
                                 return $scope.items;
@@ -114,12 +115,12 @@ app.directive('openCreateEventModal', [function () {
                     }, function () {
                         console.log('Modal dismissed at: ' + new Date());
                     });
-                });
+                };
             },
             link: function (scope, el, attr) {
                 el.on('click', function () {
-
-                }
+                  scope.open();
+                });
             }
         }
     }]);

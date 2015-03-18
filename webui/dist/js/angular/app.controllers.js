@@ -99,10 +99,9 @@ app.controller('EventsCtrl', ['$scope', '$routeParams', 'currentAuth', 'EventSer
 
 app.controller('EventCreateCtrl', function ($scope, $modalInstance, items) {
 
-  $scope.items = items;
-  $scope.selected = {
-    item: $scope.items[0]
-  };
+  $scope.event = {};
+  $scope.event.date = new Date();
+  $scope.minDate = $scope.minDate ? null : new Date();
 
   $scope.ok = function () {
     $modalInstance.close($scope.selected.item);
@@ -111,6 +110,19 @@ app.controller('EventCreateCtrl', function ($scope, $modalInstance, items) {
   $scope.cancel = function () {
     $modalInstance.dismiss('cancel');
   };
+
+  $scope.open = function($event) {
+    $event.preventDefault();
+    $event.stopPropagation();
+
+    $scope.opened = true;
+  };
+
+  $scope.dateOptions = {
+    formatYear: 'yy',
+    startingDay: 1
+  };
+
 });
 app.controller('AuthCtrl', ['$rootScope', '$scope', '$location', 'currentAuth', 'FirebaseAuthService',
  function($rootScope, $scope, $location, currentAuth, FirebaseAuthService) {
