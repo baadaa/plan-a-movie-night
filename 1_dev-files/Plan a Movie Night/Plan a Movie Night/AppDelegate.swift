@@ -9,6 +9,7 @@
 import UIKit
 import Fabric
 import Crashlytics
+import FacebookSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,11 +34,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBarAppearance.barTintColor = UIColor(red: 0, green: 155/255, blue: 187/255, alpha: 1)
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Selected)
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)], forState:.Normal)
-        
+        FBLoginView.self
+        FBProfilePictureView.self
+
+        //for Facebook Login
+        FBLoginView.self
+        FBProfilePictureView.self
+
         Fabric.with([Crashlytics()])
         
-
         return true
+    }
+
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: NSString?, annotation: AnyObject) -> Bool {
+    var wasHandled:Bool = FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
+    return wasHandled
     }
 
     func applicationWillResignActive(application: UIApplication) {

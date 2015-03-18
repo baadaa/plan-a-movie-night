@@ -3,3 +3,4 @@
 //
 
 #import <Firebase/Firebase.h>
+#import <FacebookSDK/FacebookSDK.h>

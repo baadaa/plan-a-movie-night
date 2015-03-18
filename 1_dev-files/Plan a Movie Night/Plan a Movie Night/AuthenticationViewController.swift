@@ -7,20 +7,58 @@
 //
 
 import UIKit
+import FacebookSDK
 
-class AuthenticationViewController: UIViewController {
+class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
+    
+    //var loginsuccess: Int = 0
+    
+    @IBOutlet var fbLoginView : FBLoginView!
     
     @IBOutlet weak var authenticationButton: UIButton!
         // This is only for corner radius. All other button properties are set in storyboard.
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.fbLoginView.delegate = self
+        self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
+
         authenticationButton.layer.cornerRadius = 5
             // change the corner radius
         sendTestData()
         
     }
     
+    // Facebook Delegate Methods
+    
+    func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
+        println("User Logged In")
+    }
+    
+    func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser) {
+        println("User: \(user)")
+        println("User ID: \(user.objectID)")
+        println("User Name: \(user.name)")
+        var userEmail = user.objectForKey("email") as String
+        println("User Email: \(userEmail)")
+        
+        let user = createTestUser()
+        setCurrentUser(user)
+        
+        performSegueWithIdentifier("authenticationSegue", sender: nil)
+        
+    }
+    
+    
+    func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {
+        println("User Logged Out")
+    }
+
+    func loginView(loginView : FBLoginView!, handleError:NSError) {
+        println("Error: \(handleError.localizedDescription)")
+    }
+
     
     @IBAction func didTapAuthenticationButton(sender: AnyObject) {
         
@@ -40,9 +78,9 @@ class AuthenticationViewController: UIViewController {
         //
         let user = createTestUser()
         setCurrentUser(user)
-        shouldPerformSegueWithIdentifier("authenticationSegue", sender: nil)
-            // After successful authentication, this will perform segue to main app screen
         
+        shouldPerformSegueWithIdentifier("authenticationSegue", sender: nil)
+
     }
     
     func sendTestData(){
