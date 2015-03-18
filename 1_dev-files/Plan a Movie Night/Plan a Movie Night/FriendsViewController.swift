@@ -72,9 +72,20 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         //
         //
         //
-        //
-        var shareToFacebook : SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-        self.presentViewController(shareToFacebook, animated: true, completion: nil)
+        // post the message on Facebook
+        
+        var message: String = "Good Morning! This is testing of an API"
+
+        
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
+            var facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            facebookSheet.setInitialText("\(message)")
+            self.presentViewController(facebookSheet, animated: true, completion: nil)
+        } else {
+            var alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
 }
