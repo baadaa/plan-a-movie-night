@@ -37,16 +37,18 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
     }
     
     func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser) {
+        /*
         println("User: \(user)")
         println("User ID: \(user.objectID)")
         println("User Name: \(user.name)")
         var userEmail = user.objectForKey("email") as String
         println("User Email: \(userEmail)")
+        */
         
-        let user = createTestUser()
-        setCurrentUser(user)
-        
-        performSegueWithIdentifier("authenticationSegue", sender: nil)
+        let currentUser = User(name: user.name, facebook_id: user.objectID, profile_image_url: "", friends: [])
+        currentUser.save()
+        setCurrentUser(currentUser)
+     performSegueWithIdentifier("authenticationSegue", sender: nil)
         
     }
     
@@ -76,12 +78,11 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
         //
         //
         //
-        let user = createTestUser()
-        setCurrentUser(user)
         
-        shouldPerformSegueWithIdentifier("authenticationSegue", sender: nil)
-
+        
+        
     }
+    
     
     func sendTestData(){
         // Create a reference to a Firebase location
