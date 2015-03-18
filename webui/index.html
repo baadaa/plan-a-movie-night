@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="sbAdminApp">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Plan a Movie Night</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="/bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="/dist/css/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="/bower_components/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- required by AngularUI due to removal of href="#" -->
+    <style type="text/css">
+        .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+    </style>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script type="text/javascript" src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+    <ng-view></ng-view>
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script type="text/javascript" src="/bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script type="text/javascript" src="/bower_components/raphael/raphael-min.js"></script>
+    <!-- // <script type="text/javascript" src="/bower_components/morrisjs/morris.min.js"></script> -->
+    <!-- // <script type="text/javascript" src="/js/morris-data.js"></script> -->
+
+    <!-- Custom Theme JavaScript -->
+    <script type="text/javascript" src="/dist/js/sb-admin-2.js"></script>
+
+    <!-- Angular lib files -->
+    <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-route/angular-route.min.js"></script>
+
+    <!-- Firebase files -->
+	<script type="text/javascript" src="/bower_components/firebase/firebase.js"></script>
+	<script type="text/javascript" src="/bower_components/angularfire/dist/angularfire.min.js"></script>    
+    <script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+
+    <!-- Angular app files -->
+	<script type="text/javascript" src="/dist/js/angular/app.routes.js"></script>
+	<script type="text/javascript" src="/dist/js/angular/app.filters.js"></script>    
+    <script type="text/javascript" src="/dist/js/angular/app.controllers.js"></script>
+    <script type="text/javascript" src="/dist/js/angular/app.directives.js"></script>
+    <script type="text/javascript" src="/dist/js/angular/services/firebase-auth.service.js"></script>
+    <script type="text/javascript" src="/dist/js/angular/services/tmdb.service.js"></script>
+    <script type="text/javascript" src="/dist/js/angular/app.js"></script>
+    
+</body>
+
+</html>

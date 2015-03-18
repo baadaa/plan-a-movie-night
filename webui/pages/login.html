@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="login-panel panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Sign In</h3>
+                </div>
+                <div class="panel-body" ng-show="currentAuth === null">
+                    <a ng-click="login()" class="btn btn-success btn-block">Sign In with Facebook</a>
+                </div>
+
+                <div class="panel-body" ng-hide="currentAuth === null">
+                    <a ng-click="logout()" class="btn btn-info btn-block">Sign Out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

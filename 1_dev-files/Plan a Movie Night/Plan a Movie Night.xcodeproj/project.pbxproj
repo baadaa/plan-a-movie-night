@@ -31,6 +31,10 @@
 		80724E0E1AB0163D00AF686D /* InviteFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80724E0C1AB0163D00AF686D /* InviteFriendsCell.swift */; };
 		80724E0F1AB0163D00AF686D /* InviteFriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80724E0D1AB0163D00AF686D /* InviteFriendsCell.xib */; };
 		80724E111AB0172E00AF686D /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80724E101AB0172E00AF686D /* Checkbox.swift */; };
+		8078E87E1AB63FEB00ADD965 /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078E87C1AB63FEB00ADD965 /* FriendsCollectionViewCell.swift */; };
+		8078E87F1AB63FEB00ADD965 /* FriendsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8078E87D1AB63FEB00ADD965 /* FriendsCollectionViewCell.xib */; };
+		8078E8861AB662A100ADD965 /* MovieForEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078E8841AB662A100ADD965 /* MovieForEventCell.swift */; };
+		8078E8871AB662A100ADD965 /* MovieForEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8078E8851AB662A100ADD965 /* MovieForEventCell.xib */; };
 		80AE0FAF1AAC132F00A7F301 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE0FAE1AAC132F00A7F301 /* AuthenticationViewController.swift */; };
 		80AE0FB11AAC1C6C00A7F301 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE0FB01AAC1C6C00A7F301 /* MainTabBarController.swift */; };
 		BCBD8FCBDCEF70C438F07B58 /* Pods_Plan_a_Movie_Night.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -76,7 +80,7 @@
 		805857841AAD124800C82B76 /* MovieListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
 		805857851AAD124800C82B76 /* MovieListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieListCell.xib; sourceTree = "<group>"; };
 		805857891AAD160B00C82B76 /* chappie-poster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "chappie-poster.jpg"; path = "_image-files/sample-data/chappie-poster.jpg"; sourceTree = "<group>"; };
-		8059E5C91AB0230600F8AD2D /* seol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = seol.png; path = "_image-files/sample-data/seol.png"; sourceTree = "<group>"; };
+		8059E5C91AB0230600F8AD2D /* seol.png */ = {isa = PBXFileReference; explicitFileType = image.png; name = seol.png; path = "_image-files/sample-data/seol.png"; sourceTree = "<group>"; };
 		8059E5CB1AB0259A00F8AD2D /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		80724E041AB0086400AF686D /* EventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		80724E061AB00C8700AF686D /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,10 @@
 		80724E0C1AB0163D00AF686D /* InviteFriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFriendsCell.swift; sourceTree = "<group>"; };
 		80724E0D1AB0163D00AF686D /* InviteFriendsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InviteFriendsCell.xib; sourceTree = "<group>"; };
 		80724E101AB0172E00AF686D /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		8078E87C1AB63FEB00ADD965 /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
+		8078E87D1AB63FEB00ADD965 /* FriendsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsCollectionViewCell.xib; sourceTree = "<group>"; };
+		8078E8841AB662A100ADD965 /* MovieForEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieForEventCell.swift; sourceTree = "<group>"; };
+		8078E8851AB662A100ADD965 /* MovieForEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieForEventCell.xib; sourceTree = "<group>"; };
 		80AE0FAE1AAC132F00A7F301 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		80AE0FB01AAC1C6C00A7F301 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8DA22134FFB59FCBC8EF8515 /* Pods-Plan a Movie Night.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie Night.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie Night/Pods-Plan a Movie Night.debug.xcconfig"; sourceTree = "<group>"; };
@@ -233,6 +241,10 @@
 				80724E101AB0172E00AF686D /* Checkbox.swift */,
 				8045BBCF1AB3FBCC00B858BA /* FriendsListCell.swift */,
 				8045BBD01AB3FBCC00B858BA /* FriendsListCell.xib */,
+				8078E87C1AB63FEB00ADD965 /* FriendsCollectionViewCell.swift */,
+				8078E87D1AB63FEB00ADD965 /* FriendsCollectionViewCell.xib */,
+				8078E8841AB662A100ADD965 /* MovieForEventCell.swift */,
+				8078E8851AB662A100ADD965 /* MovieForEventCell.xib */,
 			);
 			name = .Xibs;
 			sourceTree = "<group>";
@@ -356,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8078E87F1AB63FEB00ADD965 /* FriendsCollectionViewCell.xib in Resources */,
 				802951CC1AABC75C0084FCEF /* Main.storyboard in Resources */,
 				802951D11AABC75C0084FCEF /* LaunchScreen.xib in Resources */,
 				8045BBD21AB3FBCC00B858BA /* FriendsListCell.xib in Resources */,
@@ -365,6 +378,7 @@
 				803E29611AB003DF00F35611 /* EventListCell.xib in Resources */,
 				8059E5CA1AB0230600F8AD2D /* seol.png in Resources */,
 				802951CE1AABC75C0084FCEF /* Images.xcassets in Resources */,
+				8078E8871AB662A100ADD965 /* MovieForEventCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +506,8 @@
 				E81347211AB1242D00C770F2 /* MovieLineUp.swift in Sources */,
 				80AE0FAF1AAC132F00A7F301 /* AuthenticationViewController.swift in Sources */,
 				80724E0B1AB0159800AF686D /* InviteFriendsViewController.swift in Sources */,
+				8078E8861AB662A100ADD965 /* MovieForEventCell.swift in Sources */,
+				8078E87E1AB63FEB00ADD965 /* FriendsCollectionViewCell.swift in Sources */,
 				805857861AAD124800C82B76 /* MovieListCell.swift in Sources */,
 				8059E5CC1AB0259A00F8AD2D /* FriendsViewController.swift in Sources */,
 				805477B01AAD4FB500383F77 /* MovieDetailsViewController.swift in Sources */,
@@ -643,7 +659,7 @@
 				INFOPLIST_FILE = "Plan a Movie Night/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Plan a Movie Night-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Plan a Movie Night/Plan a Movie Night-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -661,7 +677,7 @@
 				INFOPLIST_FILE = "Plan a Movie Night/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Plan a Movie Night-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Plan a Movie Night/Plan a Movie Night-Bridging-Header.h";
 			};
 			name = Release;
 		};

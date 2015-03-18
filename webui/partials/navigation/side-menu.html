@@ -1,0 +1,65 @@
+<ul class="nav" id="side-menu">
+    <li class="sidebar-search">
+        <div class="input-group custom-search-form">
+            <input type="text" class="form-control" placeholder="Search...">
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span>
+        </div>
+        <!-- /input-group -->
+    </li>
+    <li>
+        <a href="#/">
+            <i class="fa fa-dashboard fa-fw"></i>
+            Dashboard
+        </a>
+    </li>
+
+    <li data-toggle="collapse" data-target="#menu-1" data-parent="#side-menu">
+        <a>
+            <i class="fa fa-film fa-fw"></i>
+            Movies
+            <span class="fa arrow"></span>
+        </a>
+        <ul id="menu-1" class="nav nav-second-level collapse">
+            <li>
+                <a href="#/movies/upcoming">Upcoming</a>
+            </li>
+            <li>
+                <a href="#/movies/popular">Popular</a>
+            </li>
+            <li>
+                <a href="#/">Insights</a>
+            </li>
+        </ul>
+    </li>
+    <li data-toggle="collapse" data-target="#event-sub-menu" data-parent="#side-menu">
+        <a>
+            <i class="fa fa-calendar fa-fw"></i>
+            Events
+            <span class="fa arrow"></span>
+        </a>
+        <ul id="event-sub-menu" class="nav nav-second-level collapse">
+            <li>
+                <a href="#/">All</a>
+            </li>
+            <li>
+                <a href="#/">Pending</a>
+            </li>
+            <li>
+                <a href="#/">Going</a>
+            </li>
+            <li>
+                <a href="#/">Not Going</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="/#friends">
+            <i class="fa fa-users fa-fw"></i>
+            Friends
+        </a>
+    </li>
+</ul>

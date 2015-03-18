@@ -1,0 +1,13 @@
+<div id="wrapper">
+    <!-- Navigation starts -->
+    <navigation></navigation>
+    <!-- Navigation ends -->
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">{{title}}</h1>
+            </div>
+        </div>
+        <ng-include ng-init="subview_url = '/pages/subviews/' + subview + '.html'" src="subview_url" scope="" onload=""></ng-include>
+    </div>
+</div>
