@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class FriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -72,7 +73,8 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         //
         //
         //
-        
+        var shareToFacebook : SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        self.presentViewController(shareToFacebook, animated: true, completion: nil)
     }
     
 }
