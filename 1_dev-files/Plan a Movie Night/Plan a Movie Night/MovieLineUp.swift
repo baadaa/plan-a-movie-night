@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovieLineUp: Serializable {
+class MovieLineUp: BasePAMNModel {
     var event_id: String
     var movie_id: String
     var score: Float {
@@ -24,6 +24,9 @@ class MovieLineUp: Serializable {
     init(event_id: String, movie_id: String) {
         self.event_id = event_id
         self.movie_id = movie_id
+        super.init(id: "\(event_id)-\(movie_id)")
+        self.created = getDateAsString()
+        self.modified = getDateAsString()
     }
     
     private func calculateScore() -> Float {
