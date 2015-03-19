@@ -73,6 +73,10 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         //
         //
         // post the message on Facebook
+    
+        
+        
+        
         
         var message: String = "Good Morning! This is testing of an API"
 
@@ -87,6 +91,7 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
             self.presentViewController(alert, animated: true, completion: nil)
         }
     }
+    
     
 }
 
