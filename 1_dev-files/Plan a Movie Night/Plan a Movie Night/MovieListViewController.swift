@@ -22,11 +22,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
         tableView.registerNib(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: cellReuseID)
         
-        // Create a reference to a Firebase location
-        //var myRootRef = Firebase(url:"https://pamn.firebaseio.com/test")
-        // Write data to Firebase
-        //myRootRef.setValue("Do you have data? You'll love Firebase.")
-        
+        runTestStuff()
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -48,9 +44,17 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         //
         
         cell.moviePoster = UIImage(named: "chappie-poster.jpg")!
-        cell.movieTitle.text = "Chappie (2015)"
-        cell.movieDirector.text = "Director: Neil Blomkamp"
+        cell.movieTitle.text = "Chappie"
+        cell.movieReleaseDate.text = "2015.3.10"
+        cell.movieDirector.text = "Neil Blomkamp"
         cell.runningTimeAndGenre.text = "120min • Action, Sci-fi"
+
+        
+        cell.movieChecked = UIImage(named:"movie_unchecked.png")!
+        cell.movieChecked = UIImage(named:"movie_checked.png")!
+            // Depending on whether the user insight is already provided, display the icon here.
+        
+        
         
         //
         //
@@ -63,7 +67,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 185
+        return 128
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -79,6 +83,14 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         //
             
         performSegueWithIdentifier("movieDetailsFromList", sender: nil)
+    }
+    
+    func runTestStuff(){
+        let current_user_id = CurrentUser.sharedInstance.getData()!.id
+        //create an event
+        let event1 = Event(title: "Angel's Horror Movie Night", body: "We will be watching 6 horror flicks overnight.", event_date: "2015-03-25 at 6:00 PM", creator_id: current_user_id)
+        event1.addInvite(current_user_id)
+        event1.save()
     }
 }
 

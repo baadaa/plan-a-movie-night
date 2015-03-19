@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		195A7BFB67B2B912C70F9DE8 /* Pods_Plan_a_Movie_NightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD64B20437B420CFE3D833C7 /* Pods_Plan_a_Movie_NightTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		802951C51AABC75C0084FCEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802951C41AABC75C0084FCEF /* AppDelegate.swift */; };
 		802951C71AABC75C0084FCEF /* MovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802951C61AABC75C0084FCEF /* MovieListViewController.swift */; };
 		802951CC1AABC75C0084FCEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 802951CA1AABC75C0084FCEF /* Main.storyboard */; };
@@ -30,11 +31,22 @@
 		80724E0E1AB0163D00AF686D /* InviteFriendsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80724E0C1AB0163D00AF686D /* InviteFriendsCell.swift */; };
 		80724E0F1AB0163D00AF686D /* InviteFriendsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80724E0D1AB0163D00AF686D /* InviteFriendsCell.xib */; };
 		80724E111AB0172E00AF686D /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80724E101AB0172E00AF686D /* Checkbox.swift */; };
+		8078E87E1AB63FEB00ADD965 /* FriendsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078E87C1AB63FEB00ADD965 /* FriendsCollectionViewCell.swift */; };
+		8078E87F1AB63FEB00ADD965 /* FriendsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8078E87D1AB63FEB00ADD965 /* FriendsCollectionViewCell.xib */; };
+		8078E8861AB662A100ADD965 /* MovieForEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8078E8841AB662A100ADD965 /* MovieForEventCell.swift */; };
+		8078E8871AB662A100ADD965 /* MovieForEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8078E8851AB662A100ADD965 /* MovieForEventCell.xib */; };
 		80AE0FAF1AAC132F00A7F301 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE0FAE1AAC132F00A7F301 /* AuthenticationViewController.swift */; };
 		80AE0FB11AAC1C6C00A7F301 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE0FB01AAC1C6C00A7F301 /* MainTabBarController.swift */; };
 		BCBD8FCBDCEF70C438F07B58 /* Pods_Plan_a_Movie_Night.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D4B71A341AAE865F005ABFFF /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4B71A331AAE865F005ABFFF /* Crashlytics.framework */; };
 		D4C42E5F1AB1143B00190726 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C42E5E1AB1143B00190726 /* Fabric.framework */; };
+		E81347171AB1235B00C770F2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81347161AB1235B00C770F2 /* Movie.swift */; };
+		E81347191AB1237900C770F2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81347181AB1237900C770F2 /* User.swift */; };
+		E813471B1AB1238C00C770F2 /* Insight.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813471A1AB1238C00C770F2 /* Insight.swift */; };
+		E813471D1AB123A000C770F2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813471C1AB123A000C770F2 /* Event.swift */; };
+		E813471F1AB1241000C770F2 /* Invitee.swift in Sources */ = {isa = PBXBuildFile; fileRef = E813471E1AB1241000C770F2 /* Invitee.swift */; };
+		E81347211AB1242D00C770F2 /* MovieLineUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81347201AB1242D00C770F2 /* MovieLineUp.swift */; };
+		E8CE37B61AB4E31600E75A70 /* temp.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE37B51AB4E31600E75A70 /* temp.m */; };
 		E8D313F91AB12093004699AC /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D313F81AB12093004699AC /* BaseModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		440363883BCC674BA88B5EDD /* Pods-Plan a Movie NightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie NightTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie NightTests/Pods-Plan a Movie NightTests.release.xcconfig"; sourceTree = "<group>"; };
 		802951BF1AABC75C0084FCEF /* Plan a Movie Night.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plan a Movie Night.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		802951C31AABC75C0084FCEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		802951C41AABC75C0084FCEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +80,7 @@
 		805857841AAD124800C82B76 /* MovieListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieListCell.swift; sourceTree = "<group>"; };
 		805857851AAD124800C82B76 /* MovieListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieListCell.xib; sourceTree = "<group>"; };
 		805857891AAD160B00C82B76 /* chappie-poster.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "chappie-poster.jpg"; path = "_image-files/sample-data/chappie-poster.jpg"; sourceTree = "<group>"; };
-		8059E5C91AB0230600F8AD2D /* seol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = seol.png; path = "_image-files/sample-data/seol.png"; sourceTree = "<group>"; };
+		8059E5C91AB0230600F8AD2D /* seol.png */ = {isa = PBXFileReference; explicitFileType = image.png; name = seol.png; path = "_image-files/sample-data/seol.png"; sourceTree = "<group>"; };
 		8059E5CB1AB0259A00F8AD2D /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		80724E041AB0086400AF686D /* EventListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		80724E061AB00C8700AF686D /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
@@ -76,12 +89,27 @@
 		80724E0C1AB0163D00AF686D /* InviteFriendsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InviteFriendsCell.swift; sourceTree = "<group>"; };
 		80724E0D1AB0163D00AF686D /* InviteFriendsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InviteFriendsCell.xib; sourceTree = "<group>"; };
 		80724E101AB0172E00AF686D /* Checkbox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		8078E87C1AB63FEB00ADD965 /* FriendsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsCollectionViewCell.swift; sourceTree = "<group>"; };
+		8078E87D1AB63FEB00ADD965 /* FriendsCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsCollectionViewCell.xib; sourceTree = "<group>"; };
+		8078E8841AB662A100ADD965 /* MovieForEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieForEventCell.swift; sourceTree = "<group>"; };
+		8078E8851AB662A100ADD965 /* MovieForEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieForEventCell.xib; sourceTree = "<group>"; };
 		80AE0FAE1AAC132F00A7F301 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		80AE0FB01AAC1C6C00A7F301 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		8DA22134FFB59FCBC8EF8515 /* Pods-Plan a Movie Night.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie Night.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie Night/Pods-Plan a Movie Night.debug.xcconfig"; sourceTree = "<group>"; };
 		91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_a_Movie_Night.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A44015D11B2A729D792FEEB7 /* Pods-Plan a Movie NightTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie NightTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie NightTests/Pods-Plan a Movie NightTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD64B20437B420CFE3D833C7 /* Pods_Plan_a_Movie_NightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Plan_a_Movie_NightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4B71A331AAE865F005ABFFF /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		D4C42E5E1AB1143B00190726 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		E81347161AB1235B00C770F2 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E81347181AB1237900C770F2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E813471A1AB1238C00C770F2 /* Insight.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Insight.swift; sourceTree = "<group>"; };
+		E813471C1AB123A000C770F2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		E813471E1AB1241000C770F2 /* Invitee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Invitee.swift; sourceTree = "<group>"; };
+		E81347201AB1242D00C770F2 /* MovieLineUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieLineUp.swift; sourceTree = "<group>"; };
+		E8B1E8A31AB4E0FA00591133 /* Plan a Movie Night-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Plan a Movie Night-Bridging-Header.h"; sourceTree = "<group>"; };
+		E8CE37B41AB4E31600E75A70 /* Plan a Movie Night-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Plan a Movie Night-Bridging-Header.h"; sourceTree = "<group>"; };
+		E8CE37B51AB4E31600E75A70 /* temp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = temp.m; sourceTree = "<group>"; };
 		E8D313F81AB12093004699AC /* BaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		FF471E01B15A6850AAB3C4D5 /* Pods-Plan a Movie Night.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Plan a Movie Night.release.xcconfig"; path = "Pods/Target Support Files/Pods-Plan a Movie Night/Pods-Plan a Movie Night.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				195A7BFB67B2B912C70F9DE8 /* Pods_Plan_a_Movie_NightTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +141,8 @@
 			children = (
 				8DA22134FFB59FCBC8EF8515 /* Pods-Plan a Movie Night.debug.xcconfig */,
 				FF471E01B15A6850AAB3C4D5 /* Pods-Plan a Movie Night.release.xcconfig */,
+				A44015D11B2A729D792FEEB7 /* Pods-Plan a Movie NightTests.debug.xcconfig */,
+				440363883BCC674BA88B5EDD /* Pods-Plan a Movie NightTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -119,6 +150,7 @@
 		802951B61AABC75B0084FCEF = {
 			isa = PBXGroup;
 			children = (
+				E8CE37B51AB4E31600E75A70 /* temp.m */,
 				D4C42E5E1AB1143B00190726 /* Fabric.framework */,
 				D4B71A331AAE865F005ABFFF /* Crashlytics.framework */,
 				802951C11AABC75C0084FCEF /* Plan a Movie Night */,
@@ -126,6 +158,7 @@
 				802951C01AABC75C0084FCEF /* Products */,
 				774A38A36375B18184EB18D5 /* Pods */,
 				FFB4EB1E65740FF6F822C5DA /* Frameworks */,
+				E8CE37B41AB4E31600E75A70 /* Plan a Movie Night-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +174,7 @@
 		802951C11AABC75C0084FCEF /* Plan a Movie Night */ = {
 			isa = PBXGroup;
 			children = (
+				E8B1E8A31AB4E0FA00591133 /* Plan a Movie Night-Bridging-Header.h */,
 				E8D313FA1AB120D7004699AC /* Models */,
 				802951E61AABCD880084FCEF /* ViewControllers */,
 				805857831AAD11C700C82B76 /* .Xibs */,
@@ -207,6 +241,10 @@
 				80724E101AB0172E00AF686D /* Checkbox.swift */,
 				8045BBCF1AB3FBCC00B858BA /* FriendsListCell.swift */,
 				8045BBD01AB3FBCC00B858BA /* FriendsListCell.xib */,
+				8078E87C1AB63FEB00ADD965 /* FriendsCollectionViewCell.swift */,
+				8078E87D1AB63FEB00ADD965 /* FriendsCollectionViewCell.xib */,
+				8078E8841AB662A100ADD965 /* MovieForEventCell.swift */,
+				8078E8851AB662A100ADD965 /* MovieForEventCell.xib */,
 			);
 			name = .Xibs;
 			sourceTree = "<group>";
@@ -224,6 +262,12 @@
 			isa = PBXGroup;
 			children = (
 				E8D313F81AB12093004699AC /* BaseModel.swift */,
+				E81347161AB1235B00C770F2 /* Movie.swift */,
+				E81347181AB1237900C770F2 /* User.swift */,
+				E813471A1AB1238C00C770F2 /* Insight.swift */,
+				E813471C1AB123A000C770F2 /* Event.swift */,
+				E813471E1AB1241000C770F2 /* Invitee.swift */,
+				E81347201AB1242D00C770F2 /* MovieLineUp.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -232,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				91E2D0FA23140314F7E005D5 /* Pods_Plan_a_Movie_Night.framework */,
+				BD64B20437B420CFE3D833C7 /* Pods_Plan_a_Movie_NightTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -264,9 +309,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 802951E31AABC75C0084FCEF /* Build configuration list for PBXNativeTarget "Plan a Movie NightTests" */;
 			buildPhases = (
+				EAA205696108BE9FE91C208A /* Check Pods Manifest.lock */,
 				802951D21AABC75C0084FCEF /* Sources */,
 				802951D31AABC75C0084FCEF /* Frameworks */,
 				802951D41AABC75C0084FCEF /* Resources */,
+				392FE9C13DA6FD0A46584533 /* Embed Pods Frameworks */,
+				F09B627A5F576D3F5FC3DD1D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -320,6 +368,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8078E87F1AB63FEB00ADD965 /* FriendsCollectionViewCell.xib in Resources */,
 				802951CC1AABC75C0084FCEF /* Main.storyboard in Resources */,
 				802951D11AABC75C0084FCEF /* LaunchScreen.xib in Resources */,
 				8045BBD21AB3FBCC00B858BA /* FriendsListCell.xib in Resources */,
@@ -329,6 +378,7 @@
 				803E29611AB003DF00F35611 /* EventListCell.xib in Resources */,
 				8059E5CA1AB0230600F8AD2D /* seol.png in Resources */,
 				802951CE1AABC75C0084FCEF /* Images.xcassets in Resources */,
+				8078E8871AB662A100ADD965 /* MovieForEventCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +405,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		392FE9C13DA6FD0A46584533 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plan a Movie NightTests/Pods-Plan a Movie NightTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6D061D95D8AB6C3A0E6C67FB /* Embed Pods Frameworks */ = {
@@ -400,6 +465,36 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 0e1e0c3be52819b2769633e11f6ddd48d038b5a9 051a044f694589ae3b4184cbe1ea20da8a37d77603a74d3b1281b0a28b326702";
 		};
+		EAA205696108BE9FE91C208A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F09B627A5F576D3F5FC3DD1D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Plan a Movie NightTests/Pods-Plan a Movie NightTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -408,16 +503,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				803E29601AB003DF00F35611 /* EventListCell.swift in Sources */,
+				E81347211AB1242D00C770F2 /* MovieLineUp.swift in Sources */,
 				80AE0FAF1AAC132F00A7F301 /* AuthenticationViewController.swift in Sources */,
 				80724E0B1AB0159800AF686D /* InviteFriendsViewController.swift in Sources */,
+				8078E8861AB662A100ADD965 /* MovieForEventCell.swift in Sources */,
+				8078E87E1AB63FEB00ADD965 /* FriendsCollectionViewCell.swift in Sources */,
 				805857861AAD124800C82B76 /* MovieListCell.swift in Sources */,
 				8059E5CC1AB0259A00F8AD2D /* FriendsViewController.swift in Sources */,
 				805477B01AAD4FB500383F77 /* MovieDetailsViewController.swift in Sources */,
+				E813471D1AB123A000C770F2 /* Event.swift in Sources */,
+				E81347171AB1235B00C770F2 /* Movie.swift in Sources */,
+				E813471F1AB1241000C770F2 /* Invitee.swift in Sources */,
+				E81347191AB1237900C770F2 /* User.swift in Sources */,
 				80724E091AB0101000AF686D /* EventCreationViewController.swift in Sources */,
 				8045BBD11AB3FBCC00B858BA /* FriendsListCell.swift in Sources */,
 				802951C51AABC75C0084FCEF /* AppDelegate.swift in Sources */,
 				80724E051AB0086400AF686D /* EventListViewController.swift in Sources */,
+				E8CE37B61AB4E31600E75A70 /* temp.m in Sources */,
 				E8D313F91AB12093004699AC /* BaseModel.swift in Sources */,
+				E813471B1AB1238C00C770F2 /* Insight.swift in Sources */,
 				80724E0E1AB0163D00AF686D /* InviteFriendsCell.swift in Sources */,
 				80724E071AB00C8700AF686D /* EventDetailsViewController.swift in Sources */,
 				80724E111AB0172E00AF686D /* Checkbox.swift in Sources */,
@@ -546,6 +650,7 @@
 			baseConfigurationReference = 8DA22134FFB59FCBC8EF8515 /* Pods-Plan a Movie Night.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/**",
@@ -554,6 +659,8 @@
 				INFOPLIST_FILE = "Plan a Movie Night/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Plan a Movie Night/Plan a Movie Night-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -562,6 +669,7 @@
 			baseConfigurationReference = FF471E01B15A6850AAB3C4D5 /* Pods-Plan a Movie Night.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -569,11 +677,13 @@
 				INFOPLIST_FILE = "Plan a Movie Night/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Plan a Movie Night/Plan a Movie Night-Bridging-Header.h";
 			};
 			name = Release;
 		};
 		802951E41AABC75C0084FCEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A44015D11B2A729D792FEEB7 /* Pods-Plan a Movie NightTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -593,6 +703,7 @@
 		};
 		802951E51AABC75C0084FCEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 440363883BCC674BA88B5EDD /* Pods-Plan a Movie NightTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

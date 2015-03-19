@@ -14,7 +14,8 @@ class EventListCell: UITableViewCell {
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var dateAndTime: UILabel!
     @IBOutlet weak var eventLocation: UILabel!
-
+    @IBOutlet weak var creatorName: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

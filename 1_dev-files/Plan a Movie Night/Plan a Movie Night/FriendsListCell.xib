@@ -15,7 +15,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mpg-wN-6S1">
-                        <rect key="frame" x="14" y="11" width="50" height="50"/>
+                        <rect key="frame" x="14" y="12" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="100" id="4np-dS-45j"/>
                             <constraint firstAttribute="width" constant="50" id="Ndo-G8-qcH"/>
@@ -28,7 +28,7 @@
                         </variation>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Firstname Lastname" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCu-7j-6sG">
-                        <rect key="frame" x="82" y="25" width="215" height="21"/>
+                        <rect key="frame" x="82" y="26" width="215" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="91r-Tv-dAw"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="166" id="EI9-uM-Rd7"/>
@@ -39,9 +39,9 @@
                         <nil key="highlightedColor"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="91r-Tv-dAw"/>
                                 <exclude reference="EI9-uM-Rd7"/>
                                 <exclude reference="O5M-Ez-IJk"/>
-                                <exclude reference="91r-Tv-dAw"/>
                             </mask>
                         </variation>
                     </label>
@@ -49,8 +49,8 @@
                 <constraints>
                     <constraint firstItem="zCu-7j-6sG" firstAttribute="leading" secondItem="mpg-wN-6S1" secondAttribute="trailing" constant="18" id="NxP-OR-ZEj"/>
                     <constraint firstAttribute="bottomMargin" secondItem="zCu-7j-6sG" secondAttribute="bottom" constant="15" id="afA-FS-gNK"/>
-                    <constraint firstAttribute="centerY" secondItem="mpg-wN-6S1" secondAttribute="centerY" constant="-1" id="ki2-90-RmC"/>
-                    <constraint firstItem="zCu-7j-6sG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="17" id="ltw-9f-NzU"/>
+                    <constraint firstAttribute="centerY" secondItem="mpg-wN-6S1" secondAttribute="centerY" constant="-2" id="ki2-90-RmC"/>
+                    <constraint firstItem="zCu-7j-6sG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="18" id="ltw-9f-NzU"/>
                     <constraint firstItem="mpg-wN-6S1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="6" id="q6D-Qq-edn"/>
                     <constraint firstAttribute="trailingMargin" secondItem="zCu-7j-6sG" secondAttribute="trailing" constant="15" id="ypE-dR-ApH"/>
                 </constraints>

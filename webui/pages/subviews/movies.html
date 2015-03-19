@@ -1,0 +1,22 @@
+<div class="row" ng-repeat="movie in moviesObj.results">
+	<div class="col-md-2">
+		<a class="thumbnail">
+
+			<img 
+				ng-init="img_src = movie.poster_path == null ? 'http://cyurap.com/img/no-image.jpg' : 'http://image.tmdb.org/t/p/w300/' + movie.poster_path"
+				ng-src="{{img_src}}"
+				/>
+		</a>
+	</div>
+
+	<div class="col-md-8">
+		<h2>{{movie.title}}</h2>
+		<div class="btn-group">
+			<a href class="btn btn-success">
+				Provide Insight on this movie
+			</a>
+		</div>
+	</div>
+
+	<hr />
+</div>

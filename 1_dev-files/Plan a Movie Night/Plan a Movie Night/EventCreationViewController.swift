@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventCreationViewController: UIViewController {
+class EventCreationViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var inviteButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
@@ -20,21 +20,27 @@ class EventCreationViewController: UIViewController {
     @IBOutlet weak var eventLocation: UITextField!
     @IBOutlet weak var eventDateAndTime: UIButton!
     @IBOutlet weak var dateAndTime: UITextField!
-    
-    
-    
     @IBOutlet weak var datePicker: UIDatePicker!
     // input fields
     
     
+    @IBOutlet weak var warningLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        warningLabel.hidden = true
+        // warning message is hidden by default
         
         datePicker.hidden = true
         // datePicker is hidden by default until button tapped
         datePicker.addTarget(self, action: Selector("datePickerChanged:"), forControlEvents: UIControlEvents.ValueChanged)
         
         eventDateAndTime.titleLabel?.text = "Pick Schedule"
+        
+        let backButton = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.Plain, target: self, action: nil)
+        navigationItem.backBarButtonItem = backButton
+        // Navigation Bar "Back" button should always say "BACK"
     }
     
     @IBAction func cancelEvent(sender: AnyObject) {
@@ -69,6 +75,8 @@ class EventCreationViewController: UIViewController {
             performSegueWithIdentifier("inviteFriendsWhenCreatingEvent", sender: nil)
             
         } else {
+            datePicker.hidden = true
+            warningLabel.hidden = false
             
         }
         
@@ -76,14 +84,22 @@ class EventCreationViewController: UIViewController {
     }
     
     @IBAction func pickScheduleButtonTapped(sender: AnyObject) {
-        if datePicker.hidden == false {
-            datePicker.hidden = true
-        } else {
+//        if datePicker.hidden == false {
+//            self.view.endEditing(true)
+//            datePicker.hidden = true
+//        } else {
+            self.view.endEditing(true)
             datePicker.hidden = false
-        }
+            
+//        }
+    
+        warningLabel.hidden = true
     }
     
     func datePickerChanged(datePicker:UIDatePicker) {
+        
+        warningLabel.hidden = true
+        
         var dateFormatter = NSDateFormatter()
         
         dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
@@ -92,7 +108,13 @@ class EventCreationViewController: UIViewController {
         var strDate = dateFormatter.stringFromDate(datePicker.date)
         println(datePicker.date)
         dateAndTime.text = strDate
+        
     }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        warningLabel.hidden = true
+    }
+    
     
     func textFieldShouldReturn (textField: UITextField) -> Bool {
         switch textField{
@@ -109,6 +131,7 @@ class EventCreationViewController: UIViewController {
         case eventLocation:
             if eventLocation.text != "" {
                 textField.resignFirstResponder()
+                self.view.endEditing(true)
                 datePicker.becomeFirstResponder()
                 pickScheduleButtonTapped(self.view)
             }
