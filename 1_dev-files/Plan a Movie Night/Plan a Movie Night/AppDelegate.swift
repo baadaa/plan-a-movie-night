@@ -34,9 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBarAppearance.barTintColor = UIColor(red: 0, green: 155/255, blue: 187/255, alpha: 1)
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState:.Selected)
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 1)], forState:.Normal)
-        FBLoginView.self
-        FBProfilePictureView.self
-
         //for Facebook Login
         FBLoginView.self
         FBProfilePictureView.self
