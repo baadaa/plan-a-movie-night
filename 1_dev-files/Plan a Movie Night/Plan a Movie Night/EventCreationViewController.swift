@@ -69,21 +69,15 @@ class EventCreationViewController: UIViewController, UITextFieldDelegate {
             // Code block for persisting user input goes here
             // Persisting data should happen before moving to the next view
             //
-            if let current_user_id = CurrentUser.sharedInstance.getData() {
-                var event_date: String = "Tomorrow"
-                var newEvent: Event = Event.createNew(
-                    title: eventTitle.text!,
+            if let current_user = CurrentUser.sharedInstance.getData() {
+                var newEvent = Event.createNew(
+                    eventTitle.text!,
                     body: eventDescription.text!,
                     location: eventLocation.text!,
-                    creator_id: current_user_id
+                    event_date: datePicker.date,
+                    creator_id: current_user.id
                 )
-//                var event = Event.create(
-//                    title: eventTitle.text,
-//                    body: eventDescription.text,
-//                    location: eventLocation.text,
-//                    event_date: datePicker.date,
-//                    creator_id: current_user_id
-//                )
+                newEvent.save()
                 performSegueWithIdentifier("inviteFriendsWhenCreatingEvent", sender: nil)
             }
             //

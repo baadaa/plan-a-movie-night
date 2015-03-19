@@ -37,11 +37,24 @@ class Event: BasePAMNModel {
             self.movie_list = movie_list
             super.init(id: id)
     }
-    
+    //create a new event with date being an nsobject
     class func createNew(
         title: String,
         body: String,
         location: String,
+        event_date: NSDate,
+        creator_id: String
+        ) -> Event {
+            let dateString = Event.nsdateToString(event_date)
+            return Event.createNew(title, body: body, location: location, event_date: dateString, creator_id: creator_id)
+    }
+    
+    //create a new event with date being s tring
+    class func createNew(
+        title: String,
+        body: String,
+        location: String,
+        event_date: String,
         creator_id: String
         ) -> Event {
             let event_id = NSUUID().UUIDString
@@ -50,7 +63,7 @@ class Event: BasePAMNModel {
                 title: title,
                 body: body,
                 location: location,
-                event_date: "foo",
+                event_date: event_date,
                 creator_id: creator_id,
                 invitees: [invite],
                 movie_list: []
@@ -58,7 +71,43 @@ class Event: BasePAMNModel {
             
             return newEvent
     }
-//    
+    
+    class func fetchAll(completion: ([Event]) -> ()) {
+        // Get a reference to our posts
+        var ref = Firebase(url:"https://pamn.firebaseio.com/events")
+        
+        ref.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            var events: [Event] = []
+            for childSnap in snapshot.children.allObjects as [FDataSnapshot]{
+                if let event_title = childSnap.value["title"] as? NSString {
+                    if let event_description = childSnap.value["body"] as? NSString {
+                        if let event_location = childSnap.value["location"] as? NSString {
+                            if let event_date = childSnap.value["event_date"] as? NSString {
+                                if let creator_id = childSnap.value["creator_id"] as? NSString {
+                                    let newEvent = Event.createNew(event_title, body: event_description, location: event_location, event_date: event_date, creator_id: creator_id)
+                                    
+                                        events.append(newEvent)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            completion(events)
+        })
+    }
+    
+    class func fetchAll2(){
+        println("fetching data")
+        // Get a reference to our posts
+        var ref = Firebase(url:"https://docs-examples.firebaseio.com/web/saving-data/fireblog/posts")
+        // Retrieve new posts as they are added to Firebase
+        ref.observeEventType(.ChildAdded, withBlock: { snapshot in
+            println(snapshot.value)
+        })
+    }
+//
 //    func addInvite(user_id: String) {
 //        var invite = Invitee(event_id: self.id, user_id: user_id, status: .Pending)
 //        self.invitees[user_id] = invite

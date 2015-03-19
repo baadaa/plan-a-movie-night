@@ -61,8 +61,8 @@ public class Serializable : NSObject{
 
 protocol PAMNModelProtocol {
     
-//    class func fetchOne()  -> BasePAMNModel
-//    class func fetchMany()  -> [BasePAMNModel]
+    //    class func fetchOne()  -> BasePAMNModel
+    //    class func fetchMany()  -> [BasePAMNModel]
     func save()
     func getDbname()
     //    class func create(data: NSDictionary) -> BasePAMNModel
@@ -84,7 +84,7 @@ class BasePAMNModel: Serializable {
         getFirebase().childByAppendingPath(self.id).setValue(data)
     }
     
-    private func getFirebase() -> Firebase {
+    func getFirebase() -> Firebase {
         return Firebase(url: self.firebase_url_prefix).childByAppendingPath(getDbname())
     }
     
@@ -94,6 +94,13 @@ class BasePAMNModel: Serializable {
     
     func getDateAsString() -> String {
         return "\(NSDate().timeIntervalSince1970 * 1000)"
+    }
+    
+    class func nsdateToString(dateObj: NSDate) -> String {
+        var dateFormatter: NSDateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .FullStyle
+        dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
+        return dateFormatter.stringFromDate(dateObj)
     }
     
 }

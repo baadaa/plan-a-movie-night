@@ -86,17 +86,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func runTestStuff(){
-        let current_user_id = CurrentUser.sharedInstance.getData()!.id
-        //create an event
-        let event1 = Event(
-            title: "Angel's Horror Movie Night",
-            body: "We will be watching 6 horror flicks overnight.",
-            location: "Dark Alley",
-            event_date: "2015-03-25 at 6:00 PM",
-            creator_id: current_user_id
-        )
-        event1.addInvite(current_user_id)
-        event1.save()
+        
     }
 }
 
