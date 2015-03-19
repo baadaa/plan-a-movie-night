@@ -12,15 +12,18 @@ class EventListViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var tableView: UITableView!
     
-    let items = [1,2,3,4,5,6]
-    // array of events to be displayed in the table.
-    // CODE HERE
-    
+    var items: [Event] = []
+
     let cellReuseID = "cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerNib(UINib(nibName: "EventListCell", bundle: nil), forCellReuseIdentifier: cellReuseID)
+        
+        Event.fetchAll({ (events: [Event]) in
+            self.items = events
+            self.tableView.reloadData()
+        })
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -40,7 +43,7 @@ class EventListViewController: UIViewController, UITableViewDataSource, UITableV
         //
         // This code block displays movie list in a TableCell
         //
-        
+        let event = items[indexPath.row]
         cell.RSVPStatus.text = "GOING"
         cell.RSVPStatus.backgroundColor = UIColor(red: 122/255, green: 184/255, blue: 0, alpha: 1)
         
@@ -52,10 +55,10 @@ class EventListViewController: UIViewController, UITableViewDataSource, UITableV
             // RSVP status is color coded as well as text-labeled. Depending on given event's RSVP status, choose one of the three above for text and background color
         
         
-        cell.eventTitle.text = "Angel's Birthday Night"
-        cell.dateAndTime.text = "March 7 at 20:00"
-        cell.eventLocation.text = "Bronx Somewhere"
-        cell.creatorName.text = "Angel"
+        cell.eventTitle.text = event.title
+        cell.dateAndTime.text = event.event_date
+        cell.eventLocation.text = event.location
+        cell.creatorName.text = event.creator_id
         
         //
         //
@@ -85,5 +88,17 @@ class EventListViewController: UIViewController, UITableViewDataSource, UITableV
         
         performSegueWithIdentifier("eventDetailsFromList", sender: nil)
     }
+    
+    func testStuff() {
+        Event.fetchAll(printstuff)
+    }
+    
+    func printstuff(events: [Event]){
+        for event in events {
+            println(event.title)
+        }
+        println(events)
+    }
+
 }
 

@@ -70,6 +70,60 @@ app.controller('MoviesCtrl', ['$scope', '$routeParams', 'currentAuth', 'TmdbServ
     
 }]);
 
+app.controller('EventsCtrl', ['$scope', '$routeParams', 'currentAuth', 'EventService', '$modal', '$log',
+  function($scope, $routeParams, currentAuth, EventService, $modal, $log) {
+    // currentAuth (provided by resolve) will contain the
+    // authenticated user or null if not logged in
+
+    // switch($routeParams.subtype){
+    //   case 'upcoming':
+    //     $scope.title = 'Upcoming Movies';
+    //     EventService.getUpcomingMovies().then(function(data){
+    //       $scope.moviesObj = data;
+    //     });
+    //     break;
+
+    //   default:
+    //     $scope.title = 'Popular Movies';
+    //     EventService.getPopularMovies().then(function(data){
+    //       $scope.moviesObj = data;
+    //     });
+    //     break;
+    // }
+    
+    
+
+    $scope.subview = 'events';
+    
+}]);
+
+app.controller('EventCreateCtrl', function ($scope, $modalInstance, items) {
+
+  $scope.event = {};
+  $scope.event.date = new Date();
+  $scope.minDate = $scope.minDate ? null : new Date();
+
+  $scope.ok = function () {
+    $modalInstance.close($scope.selected.item);
+  };
+
+  $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+  };
+
+  $scope.open = function($event) {
+    $event.preventDefault();
+    $event.stopPropagation();
+
+    $scope.opened = true;
+  };
+
+  $scope.dateOptions = {
+    formatYear: 'yy',
+    startingDay: 1
+  };
+
+});
 app.controller('AuthCtrl', ['$rootScope', '$scope', '$location', 'currentAuth', 'FirebaseAuthService',
  function($rootScope, $scope, $location, currentAuth, FirebaseAuthService) {
   // currentAuth (provided by resolve) will contain the

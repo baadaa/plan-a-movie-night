@@ -61,8 +61,8 @@ public class Serializable : NSObject{
 
 protocol PAMNModelProtocol {
     
-//    class func fetchOne()  -> BasePAMNModel
-//    class func fetchMany()  -> [BasePAMNModel]
+    //    class func fetchOne()  -> BasePAMNModel
+    //    class func fetchMany()  -> [BasePAMNModel]
     func save()
     func getDbname()
     //    class func create(data: NSDictionary) -> BasePAMNModel
@@ -71,8 +71,10 @@ protocol PAMNModelProtocol {
 class BasePAMNModel: Serializable {
     private let firebase_url_prefix = "https://pamn.firebaseio.com/"
     var id: String
+    var created: String = ""
+    var modified: String = ""
     
-    init(id: String){
+    init(id: String) {
         self.id = id
     }
     
@@ -80,15 +82,25 @@ class BasePAMNModel: Serializable {
         var data = self.toDictionary()
         data.removeObjectForKey("id")
         getFirebase().childByAppendingPath(self.id).setValue(data)
-        
     }
     
-    private func getFirebase() -> Firebase {
+    func getFirebase() -> Firebase {
         return Firebase(url: self.firebase_url_prefix).childByAppendingPath(getDbname())
     }
     
     func getDbname() -> String{
         return "test"
+    }
+    
+    func getDateAsString() -> String {
+        return "\(NSDate().timeIntervalSince1970 * 1000)"
+    }
+    
+    class func nsdateToString(dateObj: NSDate) -> String {
+        var dateFormatter: NSDateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .FullStyle
+        dateFormatter.timeZone = NSTimeZone(abbreviation: "UTC")
+        return dateFormatter.stringFromDate(dateObj)
     }
     
 }

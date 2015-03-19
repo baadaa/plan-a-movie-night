@@ -8,14 +8,13 @@
 
 import UIKit
 
-class Event: Serializable {
-    var id: String
+class Event: BasePAMNModel {
     var title: String
     var body: String
-//    var location: Location
+    var location: String
     var event_date: String
     var creator_id: String
-    var invitees: [String:Invitee] = [:]
+    var invitees: [Invitee] = []
     var movie_list: [MovieLineUp] = []
     
     //this init has all params; mostly used when fetching from db
@@ -23,77 +22,117 @@ class Event: Serializable {
         id: String,
         title: String,
         body: String,
+        location: String,
         event_date: String,
         creator_id: String,
-        invitees: [String:Invitee],
+        invitees: [Invitee],
         movie_list: [MovieLineUp]
         ) {
-   
-        self.id = id
-        self.title = title
-        self.body = body
-        self.event_date = event_date
-        self.creator_id = creator_id
-        self.invitees = invitees
-        self.movie_list = movie_list
-    }
-    
-    //this init is mostly used for creating
-    init(
-        title: String,
-        body: String,
-        event_date: String,
-        creator_id: String
-        ) {
-            self.id = NSUUID().UUIDString
             self.title = title
             self.body = body
+            self.location = location
             self.event_date = event_date
             self.creator_id = creator_id
+            self.invitees = invitees
+            self.movie_list = movie_list
+            super.init(id: id)
+    }
+    //create a new event with date being an nsobject
+    class func createNew(
+        title: String,
+        body: String,
+        location: String,
+        event_date: NSDate,
+        creator_id: String
+        ) -> Event {
+            let dateString = Event.nsdateToString(event_date)
+            return Event.createNew(title, body: body, location: location, event_date: dateString, creator_id: creator_id)
     }
     
-    func addInvite(user_id: String) {
-        var invite = Invitee(event_id: self.id, user_id: user_id, status: .Pending)
-        self.invitees[user_id] = invite
+    //create a new event with date being s tring
+    class func createNew(
+        title: String,
+        body: String,
+        location: String,
+        event_date: String,
+        creator_id: String
+        ) -> Event {
+            let event_id = NSUUID().UUIDString
+            let invite = Invitee(event_id: event_id, user_id: creator_id, status: Attendance.Going)
+            let newEvent = Event(id:  event_id,
+                title: title,
+                body: body,
+                location: location,
+                event_date: event_date,
+                creator_id: creator_id,
+                invitees: [invite],
+                movie_list: []
+            )
+            
+            return newEvent
     }
     
-    func delInvite(user_id: String) {
-        self.invitees[user_id] = nil
+    class func fetchAll(completion: ([Event]) -> ()) {
+        // Get a reference to our posts
+        var ref = Firebase(url:"https://pamn.firebaseio.com/events")
+        
+        ref.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            var events: [Event] = []
+            for childSnap in snapshot.children.allObjects as [FDataSnapshot]{
+                if let event_title = childSnap.value["title"] as? NSString {
+                    if let event_description = childSnap.value["body"] as? NSString {
+                        if let event_location = childSnap.value["location"] as? NSString {
+                            if let event_date = childSnap.value["event_date"] as? NSString {
+                                if let creator_id = childSnap.value["creator_id"] as? NSString {
+                                    let newEvent = Event.createNew(event_title, body: event_description, location: event_location, event_date: event_date, creator_id: creator_id)
+                                    
+                                        events.append(newEvent)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            completion(events)
+        })
     }
     
-    func updateInvite(user_id: String, status: Attendance) {
-        var invite = Invitee(event_id: self.id, user_id: user_id, status: status)
-        self.invitees[user_id] = invite
+    class func fetchAll2(){
+        println("fetching data")
+        // Get a reference to our posts
+        var ref = Firebase(url:"https://docs-examples.firebaseio.com/web/saving-data/fireblog/posts")
+        // Retrieve new posts as they are added to Firebase
+        ref.observeEventType(.ChildAdded, withBlock: { snapshot in
+            println(snapshot.value)
+        })
     }
+//
+//    func addInvite(user_id: String) {
+//        var invite = Invitee(event_id: self.id, user_id: user_id, status: .Pending)
+//        self.invitees[user_id] = invite
+//    }
+//    
+//    func delInvite(user_id: String) {
+//        self.invitees[user_id] = nil
+//    }
+//    
+//    func updateInvite(user_id: String, status: Attendance) {
+//        var invite = Invitee(event_id: self.id, user_id: user_id, status: status)
+//        self.invitees[user_id] = invite
+//    }
     
     override func toDictionary() -> NSMutableDictionary {
         let dict = super.toDictionary()
         //invitees
-        var invite_dict = NSMutableDictionary()
-        for (invited_user_id, invite) in self.invitees {
-            invite_dict[invited_user_id] = invite.toDictionary()
+        dict.removeObjectForKey("invitees")
+        for invite in self.invitees {
+            invite.save()
         }
-        dict["invitees"] = invite_dict
         return dict
     }
-    func save() -> Bool {
-        var data = self.toDictionary()
-        data.removeObjectForKey("id")
-        getFirebase().childByAppendingPath(self.id).setValue(data)
-        
-        //@otodo we need to return if the saving was successful or not
-        return Bool()
-    }
     
-    private func getFirebase() -> Firebase {
-        return Firebase(url: getFirebaseUrl()).childByAppendingPath(getDbname())
-    }
-    
-    private func getFirebaseUrl() -> String {
-        return "https://pamn.firebaseio.com/"
-    }
-    
-    private func getDbname() -> String {
+    override func getDbname() -> String{
         return "events"
     }
     
