@@ -18,6 +18,7 @@ class Movie: Serializable {
     var releaseDate = ""
     var posterImageURL = ""
     var id = ""
+    var summary = ""
     
     init(movieDict: NSDictionary) {
         
@@ -26,6 +27,7 @@ class Movie: Serializable {
         self.releaseDate = createMovieData["release_date"].stringValue
         self.posterImageURL = "http://image.tmdb.org/t/p/w500" + createMovieData["poster_path"].stringValue
         self.id = createMovieData["id"].stringValue
+        self.summary = createMovieData["overview"].stringValue
         
     }
     

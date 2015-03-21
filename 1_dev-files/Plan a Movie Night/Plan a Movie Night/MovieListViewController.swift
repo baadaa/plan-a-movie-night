@@ -12,17 +12,37 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var tableView: UITableView!
     
-    let items = [1,2,3,4,5,6]
-        // arrays of movies to be displayed in the table.
-        // CODE HERE
+    var items = [Movie]() // MM change to array of movies
+    
+    
+    
+    // arrays of movies to be displayed in the table.
+    // CODE HERE
     
     let cellReuseID = "cell"
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        tableView.registerNib(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: cellReuseID)
+    override func viewDidAppear(animated: Bool) {
+
+
+        Movie.getMovies { (movieArray) -> Void in
+            self.items = movieArray
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView.reloadData()
+           
+
+        //could put tableview loading into the closure
+        
+        self.tableView.registerNib(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: self.cellReuseID)
+        
+                 })
+                
+        }
+        
         
         runTestStuff()
+        
+        
+        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -30,8 +50,13 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+  
         return items.count
     }
+    
+    
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseID, forIndexPath: indexPath) as MovieListCell
@@ -43,16 +68,35 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         // This code block displays movie list in a TableCell
         //
         
-        cell.moviePoster = UIImage(named: "chappie-poster.jpg")!
-        cell.movieTitle.text = "Chappie"
-        cell.movieReleaseDate.text = "2015.3.10"
-        cell.movieDirector.text = "Neil Blomkamp"
-        cell.runningTimeAndGenre.text = "120min • Action, Sci-fi"
+        // MM  let movie = pull a movie from my array
+      
+         
+            
+        
+    
 
+        
+        
+        
+        // replace with properties fromt he pulled movie object
+        cell.movieTitle.text = self.items[indexPath.row].title
+        cell.movieReleaseDate.text = self.items[indexPath.row].releaseDate
+        //cell.movieDirector.text = "Neil Blomkamp"
+        //cell.runningTimeAndGenre.text = "120min • Action, Sci-fi"
+        
+        // specs did not have director and running time. will need to go back and change movie class to allow for this (only availble in single movie detail call)
+        
+ 
+        cell.moviePoster =  UIImage(named: self.items[indexPath.row].posterImageURL)  //asymc??
+        
+            
+        
+        println(self.items[indexPath.row].posterImageURL)
+        
         
         cell.movieChecked = UIImage(named:"movie_unchecked.png")!
         cell.movieChecked = UIImage(named:"movie_checked.png")!
-            // Depending on whether the user insight is already provided, display the icon here.
+        // Depending on whether the user insight is already provided, display the icon here.
         
         
         
@@ -63,8 +107,14 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         //
         //-------------------------------------
         
+        
+        
+        
+        
+        
         return cell
     }
+    
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 128
@@ -81,12 +131,14 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         //
         //
         //
-            
+        
         performSegueWithIdentifier("movieDetailsFromList", sender: nil)
     }
-    
+        
+        
+    }
     func runTestStuff(){
         
     }
-}
+
 
