@@ -19,6 +19,7 @@ class Movie: Serializable {
     var posterImageURL = ""
     var id = ""
     var summary = ""
+    var movieImage = UIImage()
     
     init(movieDict: NSDictionary) {
         
@@ -29,9 +30,20 @@ class Movie: Serializable {
         self.id = createMovieData["id"].stringValue
         self.summary = createMovieData["overview"].stringValue
         
-    }
-    
-    
+
+//        if let myPosterURL = NSURL(string: self.posterImageURL) {   // TODO: better way is to pass UI image
+//            
+//            Movie.downloadImage(myPosterURL) { image, error in
+//            self.movieImage = image
+//            
+//            }
+//            
+//        }
+
+        
+        
+   }
+
     class func getMovies(completion: (movieArray: [Movie]) ->Void) {
         var movieArray = [Movie] ()
         //var key = "0e7e1de1caeef3e82f74e1096b77f839"   // (?!) dont know how to access this from class func if outside
@@ -56,7 +68,6 @@ class Movie: Serializable {
     
     class func getOneMovie (id: String, completion: (Movie) ->Void) {
         
-        // var key = "0e7e1de1caeef3e82f74e1096b77f839"
         
         Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/\(id)?", parameters: ["api_key": key]).responseJSON {(request, reponse, data, error) -> Void in
             
@@ -71,10 +82,42 @@ class Movie: Serializable {
             
         }
         
-        
-        
-        
     }
     
     
-}
+    
+     class func downloadImage(url: NSURL, handler: ((image: UIImage, NSError!) -> Void))
+    {
+        var blankImage: UIImageView
+        var imageRequest: NSURLRequest = NSURLRequest(URL: url)
+        NSURLConnection.sendAsynchronousRequest(imageRequest,
+            queue: NSOperationQueue.mainQueue(),
+            completionHandler:{response, data, error in
+                
+                
+                if let myImage = UIImage(data: data){
+                
+                handler(image: myImage, error)
+                    
+                }
+        })
+    }
+    
+    
+    
+    
+    
+    
+    
+
+            }
+    
+
+
+    
+    
+    
+    
+    
+    
+
