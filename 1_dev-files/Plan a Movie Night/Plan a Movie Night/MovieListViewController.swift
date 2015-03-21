@@ -12,7 +12,8 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var tableView: UITableView!
     
-    let items = [1,2,3,4,5,6]
+    let items = [1,2,3,4,5,6] // MM change to array of movies
+    
         // arrays of movies to be displayed in the table.
         // CODE HERE
     
@@ -43,7 +44,9 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         // This code block displays movie list in a TableCell
         //
         
-        cell.moviePoster = UIImage(named: "chappie-poster.jpg")!
+     // MM  let movie = pull a movie from my array
+        
+        cell.moviePoster = UIImage(named: "chappie-poster.jpg")!    // replace with properties fromt he pulled movie object
         cell.movieTitle.text = "Chappie"
         cell.movieReleaseDate.text = "2015.3.10"
         cell.movieDirector.text = "Neil Blomkamp"
