@@ -20,12 +20,8 @@ enum Attendance: Printable {
         }
     }
 }
-class Invitee: Serializable {
-    var id: String {
-        get {
-            return "\(event_id)-\(user_id)"
-        }
-    }
+
+class Invitee: BasePAMNModel {
     var event_id: String
     var user_id: String
     var status: String
@@ -38,6 +34,13 @@ class Invitee: Serializable {
         self.event_id = event_id
         self.user_id = user_id
         self.status = status.description
+        super.init(id: "\(event_id)-\(user_id)")
+        self.created = getDateAsString()
+        self.modified = getDateAsString()
+    }
+    
+    override func getDbname() -> String{
+        return "invitees"
     }
     
     

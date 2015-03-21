@@ -3,6 +3,7 @@
 var app = angular.module('sbAdminApp', [
 	'FirebaseAuth',
 	'Tmdb',
+	'Events',
 	'ui.bootstrap',
 	'appFilters',
 	'appRoutes',
