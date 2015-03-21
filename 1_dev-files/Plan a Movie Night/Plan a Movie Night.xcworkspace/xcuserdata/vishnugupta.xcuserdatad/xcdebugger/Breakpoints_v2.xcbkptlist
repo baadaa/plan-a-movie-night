@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Plan a Movie Night/FriendsViewController.swift"
-            timestampString = "448587536.528101"
+            timestampString = "448652279.271645"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
+            startingLineNumber = "151"
+            endingLineNumber = "151"
             landmarkName = "facebookButtonTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>

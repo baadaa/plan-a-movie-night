@@ -90,11 +90,12 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
  
         //println(self.message)
         var friendNameList : [String] = []
-        var url: String = ""
-        var me:  FBGraphUser
+        //var url: String = ""
+        //var me:  FBGraphUser
         
         var friendsRequest : FBRequest = FBRequest.requestForMyFriends()
         friendsRequest.startWithCompletionHandler{(connection:FBRequestConnection!, result:AnyObject!, error:NSError!) -> Void in
+            if (error == nil) {
             var resultdict = result as NSDictionary
             println("Result Dict: \(resultdict)")
             var data : NSArray = resultdict.objectForKey("data") as NSArray
@@ -123,10 +124,13 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
                 } else {
                     self.message = self.message + ", " + name
                 }
+             
                 //println("friendNameList \(friendNameList) friends")
+                var friends = resultdict.objectForKey("data") as NSArray
+                //println("Found \(friends.count) friends")
+             }
+                self.message = self.message + " invited to watch the movie"                
             }
-            
-            self.message = self.message + " invited to watch the movie"
             println("\(friendNameList)")
             println("self.message = \(self.message)")
             
@@ -143,11 +147,9 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
                 self.presentViewController(alert, animated: true, completion: nil)
             }
 
-            var friends = resultdict.objectForKey("data") as NSArray
-            //println("Found \(friends.count) friends")
+         
         }
-        
-    }
+    } // end of
     
-}
+}  //end of facebookButtonTapped
 

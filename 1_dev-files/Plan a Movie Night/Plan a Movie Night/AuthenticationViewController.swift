@@ -52,6 +52,7 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
         
         var friendsRequest : FBRequest = FBRequest.requestForMyFriends()
         friendsRequest.startWithCompletionHandler{(connection:FBRequestConnection!, result:AnyObject!, error:NSError!) -> Void in
+            if (error == nil){
             var resultdict = result as NSDictionary
             println("Result Dict: \(resultdict)")
             var data : NSArray = resultdict.objectForKey("data") as NSArray
@@ -63,7 +64,7 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
                 let first_name = valueDict.objectForKey("first_name") as String
                 let last_name = valueDict.objectForKey("last_name") as String
                 */
-                
+            
                 let name = valueDict.objectForKey("name") as String
                 /*
                 println("the id value is \(id)")
@@ -75,13 +76,24 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
                 friendNameList.append(name)
                 
                 //println("friendNameList \(friendNameList) friends")
-            }
+                }
             
             var friends = resultdict.objectForKey("data") as NSArray
             //println("Found \(friends.count) friends")
+            }
+            FBRequestConnection.startForMeWithCompletionHandler { (connection, me, error) -> Void in
+                if (error == nil){
+                    url = me.objectForKey("link") as String
+                    println(me)
+                }
+            }
+            
+            let currentUser = User(name: user.name, facebook_id: user.objectID, profile_image_url: url, friends: friendNameList)
+            currentUser.save()
+            self.setCurrentUser(currentUser)
         }
-        
         // call to get user info
+        /*
         FBRequestConnection.startForMeWithCompletionHandler { (connection, me, error) -> Void in
             if (error == nil){
                 url = me.objectForKey("link") as String
@@ -92,6 +104,7 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
         let currentUser = User(name: user.name, facebook_id: user.objectID, profile_image_url: url, friends: friendNameList)
         currentUser.save()
         setCurrentUser(currentUser)
+        */
         performSegueWithIdentifier("authenticationSegue", sender: nil)
         
     }
