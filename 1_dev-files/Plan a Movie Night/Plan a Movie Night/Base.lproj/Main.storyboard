@@ -683,23 +683,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch_graphic" translatesAutoresizingMaskIntoConstraints="NO" id="vK2-0g-Vfu">
                                 <rect key="frame" x="28" y="76" width="264" height="347"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jlC-Fo-s9M">
-                                <rect key="frame" x="36" y="423" width="249" height="40"/>
-                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="X8j-x9-HDl"/>
-                                    <constraint firstAttribute="width" constant="249" id="gcM-EZ-XpU"/>
-                                </constraints>
-                                <state key="normal" title="Launch Application" image="facebook-icon">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="49e-Tb-3d3" kind="modal" identifier="authenticationSegue" modalTransitionStyle="flipHorizontal" id="ccL-Da-Xtz"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lKC-UE-73j" customClass="FBLoginView">
-                                <rect key="frame" x="52" y="28" width="240" height="57"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lKC-UE-73j" customClass="FBLoginView">
+                                <rect key="frame" x="40" y="481" width="240" height="57"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="eb4-mx-teb" id="3EG-pk-Iv6"/>
@@ -708,17 +693,17 @@
                         </subviews>
                         <color key="backgroundColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="jlC-Fo-s9M" secondAttribute="centerY" constant="-159" id="2T7-m2-Ngj"/>
+                            <constraint firstAttribute="centerX" secondItem="lKC-UE-73j" secondAttribute="centerX" id="8fc-87-jni"/>
                             <constraint firstItem="vK2-0g-Vfu" firstAttribute="top" secondItem="OzC-6u-Odv" secondAttribute="bottom" constant="56" id="AJU-We-Rt6"/>
-                            <constraint firstAttribute="centerX" secondItem="jlC-Fo-s9M" secondAttribute="centerX" id="XVa-4r-ayg"/>
+                            <constraint firstItem="mn5-cQ-1mv" firstAttribute="top" secondItem="lKC-UE-73j" secondAttribute="bottom" constant="30" id="R1H-Xa-7pd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vK2-0g-Vfu" secondAttribute="trailing" constant="12" id="iGj-ah-twX"/>
                             <constraint firstItem="vK2-0g-Vfu" firstAttribute="leading" secondItem="eb4-mx-teb" secondAttribute="leadingMargin" constant="12" id="s5e-2F-d8x"/>
                             <constraint firstItem="mn5-cQ-1mv" firstAttribute="top" secondItem="vK2-0g-Vfu" secondAttribute="bottom" constant="145" id="sLv-JA-lS5"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="authenticationButton" destination="jlC-Fo-s9M" id="rtw-vk-Lck"/>
                         <outlet property="fbLoginView" destination="lKC-UE-73j" id="EIJ-jt-ATK"/>
+                        <segue destination="49e-Tb-3d3" kind="modal" identifier="authenticationSegue" id="wD7-4E-gTd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Zh-x9-FWL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1189,7 +1174,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="NCN-21-5pf"/>
+        <segue reference="xdM-ui-XOa"/>
         <segue reference="bw7-iw-4A7"/>
     </inferredMetricsTieBreakers>
 </document>

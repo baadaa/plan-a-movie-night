@@ -15,7 +15,7 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
     
     @IBOutlet var fbLoginView : FBLoginView!
     
-    @IBOutlet weak var authenticationButton: UIButton!
+   // @IBOutlet weak var authenticationButton: UIButton!
         // This is only for corner radius. All other button properties are set in storyboard.
     
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
         self.fbLoginView.delegate = self
         self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
 
-        authenticationButton.layer.cornerRadius = 5
+        //authenticationButton.layer.cornerRadius = 5
             // change the corner radius
         sendTestData()
         
@@ -37,6 +37,7 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
     }
     
     func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser) {
+        
         /*
         println("User: \(user)")
         println("User ID: \(user.objectID)")
@@ -45,10 +46,53 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
         println("User Email: \(userEmail)")
         */
         
-        let currentUser = User(name: user.name, facebook_id: user.objectID, profile_image_url: "", friends: [])
+        var friendNameList : [String] = []
+        var url: String = ""
+        var me:  FBGraphUser
+        
+        var friendsRequest : FBRequest = FBRequest.requestForMyFriends()
+        friendsRequest.startWithCompletionHandler{(connection:FBRequestConnection!, result:AnyObject!, error:NSError!) -> Void in
+            var resultdict = result as NSDictionary
+            println("Result Dict: \(resultdict)")
+            var data : NSArray = resultdict.objectForKey("data") as NSArray
+            
+            for i in 0..<data.count {
+                let valueDict : NSDictionary = data[i] as NSDictionary
+                /*
+                let id = valueDict.objectForKey("id") as String
+                let first_name = valueDict.objectForKey("first_name") as String
+                let last_name = valueDict.objectForKey("last_name") as String
+                */
+                
+                let name = valueDict.objectForKey("name") as String
+                /*
+                println("the id value is \(id)")
+                println("the first_name value is \(first_name)")
+                println("the last_name value is \(last_name)")
+                println("the name value is \(name)")
+                */
+                
+                friendNameList.append(name)
+                
+                //println("friendNameList \(friendNameList) friends")
+            }
+            
+            var friends = resultdict.objectForKey("data") as NSArray
+            //println("Found \(friends.count) friends")
+        }
+        
+        // call to get user info
+        FBRequestConnection.startForMeWithCompletionHandler { (connection, me, error) -> Void in
+            if (error == nil){
+                url = me.objectForKey("link") as String
+                println(me)
+            }
+        }
+
+        let currentUser = User(name: user.name, facebook_id: user.objectID, profile_image_url: url, friends: friendNameList)
         currentUser.save()
         setCurrentUser(currentUser)
-     performSegueWithIdentifier("authenticationSegue", sender: nil)
+        performSegueWithIdentifier("authenticationSegue", sender: nil)
         
     }
     
@@ -61,27 +105,6 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
         println("Error: \(handleError.localizedDescription)")
     }
 
-    
-    @IBAction func didTapAuthenticationButton(sender: AnyObject) {
-        
-        //
-        //
-        //
-        // This function runs when Authentication Button is tapped.
-        //
-        // Facebook Authentication process code goes here.
-        //
-        // Facebook Authentication process code goes here
-        //
-        //
-        //
-        //
-        //
-        //
-        
-        
-        
-    }
     
     
     func sendTestData(){
@@ -108,6 +131,7 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
         return user
     }
     
+
     func setCurrentUser(user: User){
         CurrentUser.sharedInstance.setData(user)
     }

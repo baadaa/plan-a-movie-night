@@ -8,9 +8,12 @@
 
 import UIKit
 import Social
+import FacebookSDK
 
 class FriendsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+ 
+    var message: String = ""
+
     @IBOutlet weak var tableView: UITableView!
     
     let items = [1,2,3,4,5,6,7,8,9,10]
@@ -60,6 +63,17 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         return 65
     }
     
+    func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser) {
+        
+        
+        println("User: \(user)")
+        println("User ID: \(user.objectID)")
+        println("User Name: \(user.name)")
+        var userEmail = user.objectForKey("email") as String
+        println("User Email: \(userEmail)")
+        
+        self.message = user.objectID
+    }
     
     
     @IBAction func facebookButtonTapped(sender: AnyObject) {
@@ -73,19 +87,66 @@ class FriendsViewController: UIViewController, UITableViewDataSource, UITableVie
         //
         //
         // post the message on Facebook
+ 
+        //println(self.message)
+        var friendNameList : [String] = []
+        var url: String = ""
+        var me:  FBGraphUser
         
-        var message: String = "Good Morning! This is testing of an API"
+        var friendsRequest : FBRequest = FBRequest.requestForMyFriends()
+        friendsRequest.startWithCompletionHandler{(connection:FBRequestConnection!, result:AnyObject!, error:NSError!) -> Void in
+            var resultdict = result as NSDictionary
+            println("Result Dict: \(resultdict)")
+            var data : NSArray = resultdict.objectForKey("data") as NSArray
+            
+            for i in 0..<data.count {
+                let valueDict : NSDictionary = data[i] as NSDictionary
+                /*
+                let id = valueDict.objectForKey("id") as String
+                let first_name = valueDict.objectForKey("first_name") as String
+                let last_name = valueDict.objectForKey("last_name") as String
+                */
+                
+                let name = valueDict.objectForKey("name") as String
+                /*
+                println("the id value is \(id)")
+                println("the first_name value is \(first_name)")
+                println("the last_name value is \(last_name)")
+                println("the name value is \(name)")
+                */
+                
+                friendNameList.append(name)
+                
+                // form the message here
+                if self.message == "" {
+                    self.message = name
+                } else {
+                    self.message = self.message + ", " + name
+                }
+                //println("friendNameList \(friendNameList) friends")
+            }
+            
+            self.message = self.message + " invited to watch the movie"
+            println("\(friendNameList)")
+            println("self.message = \(self.message)")
+            
+            if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
+                
+                var facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+                facebookSheet.setInitialText("\(self.message)")
+                self.presentViewController(facebookSheet, animated: true, completion: nil)
+                
+            } else {
+                
+                var alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
 
-        
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook){
-            var facebookSheet:SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-            facebookSheet.setInitialText("\(message)")
-            self.presentViewController(facebookSheet, animated: true, completion: nil)
-        } else {
-            var alert = UIAlertController(title: "Accounts", message: "Please login to a Facebook account to share.", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            var friends = resultdict.objectForKey("data") as NSArray
+            //println("Found \(friends.count) friends")
         }
+        
     }
     
 }
