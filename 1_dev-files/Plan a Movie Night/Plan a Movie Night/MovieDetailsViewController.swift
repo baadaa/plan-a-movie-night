@@ -8,16 +8,18 @@
 
 import UIKit
 
-class MovieDetailsViewController: UIViewController {
+class MovieDetailsViewController: UIViewController,UIWebViewDelegate {
 
     
     
    var movieID = ""
     var singleMovie = Movie(movieDict: [:])
     var trailerURL: String?
+   
     
   //  var singleMovie = Movie()
     
+    @IBOutlet weak var watchTrailerButton: UIButton!
     @IBOutlet weak var moviePoster: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieReleaseDate: UILabel!
@@ -39,6 +41,7 @@ class MovieDetailsViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         
+     
         
         println(movieID)
         println("details")
@@ -58,9 +61,15 @@ class MovieDetailsViewController: UIViewController {
             self.movieSynopsis.text = singleMovie.summary
             
             if let myTrailerURL:String = singleMovie.trailer {
+            self.watchTrailerButton.alpha = 1
             self.trailerURL = myTrailerURL
             println(myTrailerURL)
                 println(self.trailerURL)
+                
+               
+                
+                
+                
             }
             
             if let myPosterURL = NSURL(string: self.singleMovie.posterImageURL) {
@@ -69,6 +78,8 @@ class MovieDetailsViewController: UIViewController {
                 }
             }
   
+            
+            
         
         // Back-end data access code goes here.
         // Retrieve movie data and update code block above.
@@ -143,13 +154,16 @@ class MovieDetailsViewController: UIViewController {
     
     @IBAction func watchTrailerButtonTapped(sender: AnyObject) {
         
-        //-------------------------------
-        //
-        //
-        // CODE HERE: Launch movie trailer in web view
-        //
-        //
-        //-------------------------------
+        if let urlToUse = self.trailerURL {
+            
+        
+        
+        let webV:UIWebView = UIWebView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+        webV.loadRequest(NSURLRequest(URL: NSURL(string: urlToUse)!))
+        webV.delegate = self;
+        self.view.addSubview(webV)
+        
+        }
   
     }
     
@@ -168,6 +182,8 @@ class MovieDetailsViewController: UIViewController {
         
         
         
+    
+        
     //--------------------------
     //
     //
@@ -179,5 +195,18 @@ class MovieDetailsViewController: UIViewController {
     //
     //--------------------------
     }
+    
+    func checkTrailerButton() ->Bool {
+        
+        if let urlToUse = self.trailerURL {
+            println("u can use button")
+            return true
+        }
+            println("cant use this button")
+            return false
+       
+        }
+    
 }
+
 

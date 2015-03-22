@@ -10,6 +10,17 @@ import UIKit
 
 class MovieListCell: UITableViewCell {
     
+    override func prepareForReuse() {
+        moviePoster = nil
+//        movieTitle.text = ""
+//        movieDirector.text = ""
+//        movieReleaseDate.text = ""
+//        runningTimeAndGenre.text = ""
+//        movieIsChecked = nil
+       
+        
+    }
+    
     var movieID = ""
 
     @IBOutlet weak var movieTitle: UILabel!
