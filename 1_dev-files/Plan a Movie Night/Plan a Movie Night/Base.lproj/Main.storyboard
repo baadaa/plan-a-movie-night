@@ -347,7 +347,7 @@
                         <outlet property="movieDirector" destination="8D9-vO-WXI" id="Bg7-w2-pEX"/>
                         <outlet property="moviePoster" destination="X6m-yc-e8g" id="Dvo-PN-j6T"/>
                         <outlet property="movieReleaseDate" destination="9Ua-1o-00n" id="ENQ-Q3-UUj"/>
-                        <outlet property="movieSynopsis" destination="jSK-IW-nyq" id="l8c-Mm-HKZ"/>
+                        <outlet property="movieSynopsis" destination="jSK-IW-nyq" id="7tr-zr-ZQh"/>
                         <outlet property="movieTitle" destination="LqU-sM-R6p" id="kpR-f3-zxP"/>
                         <outlet property="runningTimeAndGenre" destination="Sbd-3V-ueK" id="rP7-n9-Ha7"/>
                         <outlet property="saveMyInsight" destination="LdI-zb-KAe" id="chd-zb-gJo"/>

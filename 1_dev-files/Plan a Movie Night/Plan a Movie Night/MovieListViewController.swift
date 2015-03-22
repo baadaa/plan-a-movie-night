@@ -12,11 +12,10 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var tableView: UITableView!
     
+    
     var selectedCell: NSIndexPath?
     var items = [Movie]() // MM change to array of movies
-    var imageCache = [String]() // cache for URLs to async dl images
-    var toPass = ""
-    
+    var toPass = ""  // ID to pass to detail VC
     
     // arrays of movies to be displayed in the table.
     // CODE HERE
@@ -25,25 +24,22 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidAppear(animated: Bool) {
         
+    self.tableView.registerNib(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: self.cellReuseID)
         
         Movie.getMovies { (movieArray) -> Void in
             self.items = movieArray
             dispatch_async(dispatch_get_main_queue(), {
                 self.tableView.reloadData()
                 
-                
                 //could put tableview loading into the closure
-                
-                self.tableView.registerNib(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: self.cellReuseID)
-                
+   
             })
             
         }
         
         
   //      runTestStuff()
-        
-        
+
         
     }
     
@@ -83,8 +79,8 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         // replace with properties fromt he pulled movie object
         cell.movieTitle.text = self.items[indexPath.row].title
         cell.movieReleaseDate.text = self.items[indexPath.row].releaseDate
-        cell.movieDirector.text = "Neil Blomkamp"
-        cell.runningTimeAndGenre.text = "120min • Action, Sci-fi"
+        cell.movieDirector.text = self.items[indexPath.row].director
+        cell.runningTimeAndGenre.text = self.items[indexPath.row].runtime + self.items[indexPath.row].genre
         if let myPosterURL = NSURL(string: self.items[indexPath.row].posterImageURL) {
             Movie.downloadImage(myPosterURL) {image, error in
                 cell.moviePoster = image
@@ -94,13 +90,11 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         
         // TODO: specs did not have director and running time. will need to go back and change movie class to allow for this (only availble in single movie detail call)
         
-        
         cell.movieChecked = UIImage(named:"movie_unchecked.png")!
-        cell.movieChecked = UIImage(named:"movie_checked.png")!
+        //cell.movieChecked = UIImage(named:"movie_checked.png")!
         
         
         // Depending on whether the user insight is already provided, display the icon here.
-        
         
         
         //
@@ -134,7 +128,11 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         
         toPass = self.items[indexPath.row].id
         
-        
+        println("topass" + toPass)
+    
+
+    
+    
       performSegueWithIdentifier("movieDetailsFromList", sender: nil)
        
             

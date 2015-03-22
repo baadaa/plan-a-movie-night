@@ -13,6 +13,8 @@ import Alamofire
 
 class Movie: Serializable {
     class var key: String { return "0e7e1de1caeef3e82f74e1096b77f839" }
+    class var baseURL: String { return "https://api.themoviedb.org/3/movie" }
+    
     
     var title = ""
     var releaseDate = ""
@@ -20,6 +22,18 @@ class Movie: Serializable {
     var id = ""
     var summary = ""
     var movieImage = UIImage()
+    var director = ""
+    var genre = ""
+    var runtime = ""
+    var trailer: String?
+    
+    
+    
+    // need trailer url
+    // need director
+    
+    // need genre
+    // need runtime
     
     init(movieDict: NSDictionary) {
         
@@ -29,47 +43,125 @@ class Movie: Serializable {
         self.posterImageURL = "http://image.tmdb.org/t/p/w500" + createMovieData["poster_path"].stringValue
         self.id = createMovieData["id"].stringValue
         self.summary = createMovieData["overview"].stringValue
+        self.genre = createMovieData["genres"][0]["name"].stringValue
         
-
-//        if let myPosterURL = NSURL(string: self.posterImageURL) {   // TODO: better way is to pass UI image
-//            
-//            Movie.downloadImage(myPosterURL) { image, error in
-//            self.movieImage = image
-//            
-//            }
-//            
-//        }
-
+        self.runtime = createMovieData["runtime"].stringValue + " min"
+        
+        // Sorry :(
+        self.director = JSON("https://api.themoviedb.org/3/movie/\(id)/credits?api_key=0e7e1de1caeef3e82f74e1096b77f839" as NSString)["director"].stringValue
         
         
-   }
-
+        
+        
+        
+        
+        //        if let myPosterURL = NSURL(string: self.posterImageURL) {   // TODO: better way is to pass UI image
+        //
+        //            Movie.downloadImage(myPosterURL) { image, error in
+        //            self.movieImage = image
+        //
+        //            }
+        //
+        //        }
+        
+        
+        
+    }
+    
+    // tried to create a class (better movie class) where getMovies calls getOnce movie to fill the array of movies but coul not figur out. would have been a more elegant way, with the attibutes not in upcoming all taken care of in the get move instead of the init.
+    
     class func getMovies(completion: (movieArray: [Movie]) ->Void) {
-        var movieArray = [Movie] ()
-        //var key = "0e7e1de1caeef3e82f74e1096b77f839"   // (?!) dont know how to access this from class func if outside
+        var movieArrayToFill = [Movie] ()
+        var movieIDArray = [String]()
         
-        Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/upcoming?", parameters: ["api_key": key]).responseJSON {(request, reponse, data, error) -> Void in
+        
+        
+        Alamofire.request(.GET, "\(baseURL)/upcoming?", parameters: ["api_key": key]).responseJSON {(request, reponse, data, error) -> Void in
             
             if let myData: AnyObject = data {
                 var rawMovies = myData["results"] as NSArray?
-                
                 if let movieData = rawMovies {
                     for var i = 0; i < movieData.count; ++i {
                         
-                        movieArray.append(Movie(movieDict: movieData[i] as NSDictionary))
+                        if let mID = movieData[i]["id"] as? Int {  //WHYYY?????? APPLE WHY?
+                            
+                            
+                            movieIDArray.append("\(mID)")
+                            
+                            println(movieIDArray[i])
+                        }
+
+                        
                     }
                     
-                    completion(movieArray: movieArray)
+                    
+                    for var j = 0; j < movieIDArray.count; ++j {
+                        
+                        Movie.getOneMovie(movieIDArray[j]) { (singleMovie) -> Void in
+                            
+                            var tempMovie = singleMovie as Movie
+                            
+
+                            println("title is" + tempMovie.title)
+                        
+                            
+                            movieArrayToFill.append(singleMovie)
+                            
+                            if movieIDArray.count == movieArrayToFill.count {
+                                
+                                completion(movieArray: movieArrayToFill)
+                                
+                            }
+                            
+                        }
+                        
+                        
+                    }
                 }
             }
+            
+            
         }
     }
     
     
+    //    class func getMovies(completion: (movieArray: [Movie]) ->Void) {
+    //        var movieArray = [Movie] ()
+    //        //var key = "0e7e1de1caeef3e82f74e1096b77f839"   // (?!) dont know how to access this from class func if
+    //
+    //
+    //        Alamofire.request(.GET, "\(baseURL)/upcoming?", parameters: ["api_key": key]).responseJSON {(request, reponse, data, error) -> Void in
+    //
+    //            if let myData: AnyObject = data {
+    //                var rawMovies = myData["results"] as NSArray?
+    //                if let movieData = rawMovies {
+    //                    for var i = 0; i < movieData.count; ++i {
+    //
+    //                        movieArray.append(Movie(movieDict: movieData[i] as NSDictionary))
+    //
+    //                        // TODO just call single movie and make array of movies as long as everyhting is in details that is in main       var test = movieArray[2].id
+    //                    }
+    //
+    //                    completion(movieArray: movieArray)
+    //                }
+    //            }
+    //        }
+    //    }
+    //
+    
+    
+    
+    
+    
+    
+    
+    
+    
     class func getOneMovie (id: String, completion: (Movie) ->Void) {
         
+//        let url = "\(baseURL)/\(id)?"
         
-        Alamofire.request(.GET, "https://api.themoviedb.org/3/movie/\(id)?", parameters: ["api_key": key]).responseJSON {(request, reponse, data, error) -> Void in
+        Alamofire.request(.GET, "\(baseURL)/\(id)?", parameters: ["api_key": key]).responseJSON {(request, reponse, data, error) -> Void in
             
             if let myData: AnyObject = data {
                 
@@ -80,13 +172,15 @@ class Movie: Serializable {
                 completion(newMovie)
             }
             
+            
+            
         }
         
     }
     
     
     
-     class func downloadImage(url: NSURL, handler: ((image: UIImage, NSError!) -> Void))
+    class func downloadImage(url: NSURL, handler: ((image: UIImage, NSError!) -> Void))
     {
         var blankImage: UIImageView
         var imageRequest: NSURLRequest = NSURLRequest(URL: url)
@@ -96,28 +190,22 @@ class Movie: Serializable {
                 
                 
                 if let myImage = UIImage(data: data){
-                
-                handler(image: myImage, error)
+                    
+                    handler(image: myImage, error)
                     
                 }
         })
     }
     
     
-    
-    
-    
-    
-    
-
-            }
-    
+}
 
 
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
 

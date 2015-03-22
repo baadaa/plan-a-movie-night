@@ -12,7 +12,7 @@ class MovieDetailsViewController: UIViewController {
 
     
     
-    var movieID = ""
+   var movieID = ""
     var singleMovie = Movie(movieDict: [:])
     
   //  var singleMovie = Movie()
@@ -37,26 +37,30 @@ class MovieDetailsViewController: UIViewController {
     
     
     override func viewWillAppear(animated: Bool) {
+        
+        println(movieID)
+        println("details")
 
         
         Movie.getOneMovie(movieID) { (singleMovie) -> Void in
+            
             self.singleMovie = singleMovie
             
-        
-
-    
-    
-    
-        self.moviePoster.image = UIImage(named: "chappie-poster.jpg")!
-        
+            println("title" + singleMovie.title)
             
-        self.movieTitle.text = singleMovie.title
-        self.movieReleaseDate.text = singleMovie.releaseDate
-        self.movieDirector.text = "Niel Blomkamp"
-        self.runningTimeAndGenre.text = "120min • Action, Sci-fi"
-        self.movieSynopsis.text = singleMovie.summary
-        
-        
+            
+            self.movieTitle.text = singleMovie.title
+            self.movieReleaseDate.text = singleMovie.releaseDate
+            self.movieDirector.text = "Niel Blomkamp1234"
+            self.runningTimeAndGenre.text = "\(singleMovie.runtime) • \(singleMovie.genre)"
+            self.movieSynopsis.text = singleMovie.summary
+            
+            if let myPosterURL = NSURL(string: self.singleMovie.posterImageURL) {
+                Movie.downloadImage(myPosterURL) {image, error in
+                    self.moviePoster.image = image
+                }
+            }
+  
         
         // Back-end data access code goes here.
         // Retrieve movie data and update code block above.
