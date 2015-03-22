@@ -22,10 +22,11 @@ class Movie: Serializable {
     var id = ""
     var summary = ""
     var movieImage = UIImage()
-    var director = ""
+    var director = "Differ Rentendpoint"
     var genre = ""
     var runtime = ""
     var trailer: String?
+    
     
 
     // should have a bunch of funcs to check
@@ -68,6 +69,8 @@ class Movie: Serializable {
         }
         
 
+        
+        
         var myRuntime = createMovieData["runtime"].stringValue
         
         if myRuntime == "0" {
@@ -81,6 +84,15 @@ class Movie: Serializable {
         
     }
     
+        var trailerCode = createMovieData["trailers"]["youtube"][0]["source"].stringValue
+        
+        if trailerCode  != "" {
+
+        self.trailer = ("https://www.youtube.com/watch?v=" + trailerCode)
+        
+        }
+
+        
         // Sorry :(
         self.director = JSON("https://api.themoviedb.org/3/movie/\(id)/credits?api_key=0e7e1de1caeef3e82f74e1096b77f839" as NSString)["director"].stringValue
   
@@ -114,11 +126,9 @@ class Movie: Serializable {
                     for var i = 0; i < movieData.count; ++i {
                         
                         if let mID = movieData[i]["id"] as? Int {  //WHYYY?????? APPLE WHY?
-                            
-                            
+
                             movieIDArray.append("\(mID)")
                             
-                            println(movieIDArray[i])
                         }
 
                         
@@ -130,15 +140,13 @@ class Movie: Serializable {
                         Movie.getOneMovie(movieIDArray[j]) { (singleMovie) -> Void in
                             
                             var tempMovie = singleMovie as Movie
-                            
-
-                            println("title is" + tempMovie.title)
                         
                             
                             movieArrayToFill.append(singleMovie)
                             
                             if movieIDArray.count == movieArrayToFill.count {
                                 
+                            
                                 completion(movieArray: movieArrayToFill)
                                 
                             }
@@ -154,6 +162,8 @@ class Movie: Serializable {
         }
     }
     
+    
+    // old method of calling for movies. incomplete data
     
     //    class func getMovies(completion: (movieArray: [Movie]) ->Void) {
     //        var movieArray = [Movie] ()
@@ -183,7 +193,12 @@ class Movie: Serializable {
         
 //        let url = "\(baseURL)/\(id)?"
         
-        Alamofire.request(.GET, "\(baseURL)/\(id)?", parameters: ["api_key": key]).responseJSON {(request, reponse, data, error) -> Void in
+        let parameters =
+        ["api_key": key,
+        "append_to_response": "trailers"]
+        
+        
+        Alamofire.request(.GET, "\(baseURL)/\(id)?", parameters: parameters).responseJSON {(request, reponse, data, error) -> Void in
             
             if let myData: AnyObject = data {
                 
@@ -197,8 +212,6 @@ class Movie: Serializable {
         }
         
     }
-    
-    
     
     class func downloadImage(url: NSURL, handler: ((image: UIImage, NSError!) -> Void))
     {
@@ -216,8 +229,6 @@ class Movie: Serializable {
                 }
         })
     }
-    
-    
 }
 
 

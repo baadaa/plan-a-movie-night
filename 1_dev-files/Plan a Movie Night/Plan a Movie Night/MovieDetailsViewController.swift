@@ -14,6 +14,7 @@ class MovieDetailsViewController: UIViewController {
     
    var movieID = ""
     var singleMovie = Movie(movieDict: [:])
+    var trailerURL: String?
     
   //  var singleMovie = Movie()
     
@@ -38,6 +39,7 @@ class MovieDetailsViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         
+        
         println(movieID)
         println("details")
 
@@ -51,9 +53,15 @@ class MovieDetailsViewController: UIViewController {
             
             self.movieTitle.text = singleMovie.title
             self.movieReleaseDate.text = singleMovie.releaseDate
-            self.movieDirector.text = "Niel Blomkamp1234"
+            self.movieDirector.text = singleMovie.director
             self.runningTimeAndGenre.text = singleMovie.runtime + singleMovie.genre
             self.movieSynopsis.text = singleMovie.summary
+            
+            if let myTrailerURL:String = singleMovie.trailer {
+            self.trailerURL = myTrailerURL
+            println(myTrailerURL)
+                println(self.trailerURL)
+            }
             
             if let myPosterURL = NSURL(string: self.singleMovie.posterImageURL) {
                 Movie.downloadImage(myPosterURL) {image, error in
@@ -142,11 +150,7 @@ class MovieDetailsViewController: UIViewController {
         //
         //
         //-------------------------------
-        
-        
-        
-        
-        
+  
     }
     
     @IBAction func saveInsightButtonTapped(sender: AnyObject) {

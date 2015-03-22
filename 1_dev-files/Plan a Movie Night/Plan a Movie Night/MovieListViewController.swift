@@ -12,6 +12,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var selectedCell: NSIndexPath?
     var items = [Movie]() // MM change to array of movies
@@ -24,7 +25,11 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func viewDidAppear(animated: Bool) {
         
-    self.tableView.registerNib(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: self.cellReuseID)
+        activityIndicator.center = self.view.center
+        
+        
+        
+        self.tableView.registerNib(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: self.cellReuseID)
         
         Movie.getMovies { (movieArray) -> Void in
             self.items = movieArray
@@ -32,14 +37,14 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
                 self.tableView.reloadData()
                 
                 //could put tableview loading into the closure
-   
+                
             })
             
         }
         
         
-  //      runTestStuff()
-
+        //      runTestStuff()
+        
         
     }
     
@@ -123,22 +128,17 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         //
         //
         //
-  
+        
         
         
         toPass = self.items[indexPath.row].id
         
-        println("topass!!!!!" + toPass)
-    
-
-    
-    
-      performSegueWithIdentifier("movieDetailsFromList", sender: nil)
-       
-            
-        }
+        performSegueWithIdentifier("movieDetailsFromList", sender: nil)
         
         
+    }
+    
+    
     func runTestStuff(){
         
         
@@ -148,18 +148,21 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-     
+        
         if segue.identifier == "movieDetailsFromList" {
-        
-        let destinationVc = segue.destinationViewController as MovieDetailsViewController
-        
-        destinationVc.movieID = toPass
-        
+            
+            let destinationVc = segue.destinationViewController as MovieDetailsViewController
+            
+            destinationVc.movieID = toPass
+            
+            //TODO: all data is already available. Because of change to movielistvc, what we should be doing now is passing all the data to the detail view that we captured with getMovies.
+            
+            
         }
-   
+        
     }
-
-
+    
+    
 }
 
 
