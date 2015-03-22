@@ -52,7 +52,7 @@ class MovieDetailsViewController: UIViewController {
             self.movieTitle.text = singleMovie.title
             self.movieReleaseDate.text = singleMovie.releaseDate
             self.movieDirector.text = "Niel Blomkamp1234"
-            self.runningTimeAndGenre.text = "\(singleMovie.runtime) • \(singleMovie.genre)"
+            self.runningTimeAndGenre.text = singleMovie.runtime + singleMovie.genre
             self.movieSynopsis.text = singleMovie.summary
             
             if let myPosterURL = NSURL(string: self.singleMovie.posterImageURL) {

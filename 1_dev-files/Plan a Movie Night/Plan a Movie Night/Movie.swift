@@ -27,33 +27,63 @@ class Movie: Serializable {
     var runtime = ""
     var trailer: String?
     
-    
-    
-    // need trailer url
-    // need director
-    
-    // need genre
-    // need runtime
-    
+
+    // should have a bunch of funcs to check
     init(movieDict: NSDictionary) {
+        var dot = " • "
         
         let createMovieData = JSON(movieDict)
+        
+        if createMovieData["runtime"] == 0 {
+            
+            dot = ""
+        }
+
         self.title = createMovieData["title"].stringValue
         self.releaseDate = createMovieData["release_date"].stringValue
         self.posterImageURL = "http://image.tmdb.org/t/p/w500" + createMovieData["poster_path"].stringValue
         self.id = createMovieData["id"].stringValue
         self.summary = createMovieData["overview"].stringValue
-        self.genre = createMovieData["genres"][0]["name"].stringValue
         
-        self.runtime = createMovieData["runtime"].stringValue + " min"
+    
+        // Deal with Genres
+        if createMovieData["genres"][0]["name"].stringValue != "" {
         
+        self.genre = dot + createMovieData["genres"][0]["name"].stringValue
+        
+        var movieGenre2: String = createMovieData["genres"][1]["name"].stringValue
+
+        if movieGenre2 != "" {  //unwrapping did not work here?
+            
+           self.genre += ", " + movieGenre2
+            
+            }
+            
+            if createMovieData["genres"][0]["name"].stringValue == "" {
+               
+                self.genre = ""
+                
+            }
+            
+        }
+        
+
+        var myRuntime = createMovieData["runtime"].stringValue
+        
+        if myRuntime == "0" {
+            
+            self.runtime = ""
+        }
+        
+        if myRuntime != "0" {
+            
+            self.runtime = myRuntime + " min"
+        
+    }
+    
         // Sorry :(
         self.director = JSON("https://api.themoviedb.org/3/movie/\(id)/credits?api_key=0e7e1de1caeef3e82f74e1096b77f839" as NSString)["director"].stringValue
-        
-        
-        
-        
-        
+  
         
         //        if let myPosterURL = NSURL(string: self.posterImageURL) {   // TODO: better way is to pass UI image
         //
@@ -148,15 +178,7 @@ class Movie: Serializable {
     //        }
     //    }
     //
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     class func getOneMovie (id: String, completion: (Movie) ->Void) {
         
 //        let url = "\(baseURL)/\(id)?"
@@ -171,9 +193,7 @@ class Movie: Serializable {
                 
                 completion(newMovie)
             }
-            
-            
-            
+
         }
         
     }

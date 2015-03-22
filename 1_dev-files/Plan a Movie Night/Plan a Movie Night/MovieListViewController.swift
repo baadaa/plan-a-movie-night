@@ -128,7 +128,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         
         toPass = self.items[indexPath.row].id
         
-        println("topass" + toPass)
+        println("topass!!!!!" + toPass)
     
 
     
