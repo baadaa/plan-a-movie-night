@@ -9,6 +9,14 @@
 import UIKit
 
 class MovieDetailsViewController: UIViewController {
+
+    
+    
+   var movieID = ""
+    var singleMovie = Movie(movieDict: [:])
+    var trailerURL: String?
+    
+  //  var singleMovie = Movie()
     
     @IBOutlet weak var moviePoster: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
@@ -16,7 +24,8 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var movieDirector: UILabel!
     @IBOutlet weak var runningTimeAndGenre: UILabel!
     @IBOutlet weak var movieSynopsis: UITextView!
-        // Reference Outlets for movie information
+    
+    // Reference Outlets for movie information
     
 
     
@@ -26,27 +35,47 @@ class MovieDetailsViewController: UIViewController {
     @IBOutlet weak var saveMyInsight: UIButton!
         // Reference Outlets for user insight
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        //----------------------
-        //
-        //
-        //
-        
-        moviePoster.image = UIImage(named: "chappie-poster.jpg")!
-        movieTitle.text = "Chappie"
-        movieReleaseDate.text = "2015.3.10"
-        movieDirector.text = "Niel Blomkamp"
-        runningTimeAndGenre.text = "120min • Action, Sci-fi"
-        movieSynopsis.text = "Every child comes into the world full of promise, and none more so than Chappie: he is gifted, special, a prodigy. Like any child, Chappie will come under the influence of his surroundings—some good, some bad—and he will rely on his heart and soul to find his way in the world and become his own man. But there's one thing that makes Chappie different from any one else: he is a robot."
     
-        //
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        
+        println(movieID)
+        println("details")
+
+        
+        Movie.getOneMovie(movieID) { (singleMovie) -> Void in
+            
+            self.singleMovie = singleMovie
+            
+            println("title" + singleMovie.title)
+            
+            
+            self.movieTitle.text = singleMovie.title
+            self.movieReleaseDate.text = singleMovie.releaseDate
+            self.movieDirector.text = singleMovie.director
+            self.runningTimeAndGenre.text = singleMovie.runtime + singleMovie.genre
+            self.movieSynopsis.text = singleMovie.summary
+            
+            if let myTrailerURL:String = singleMovie.trailer {
+            self.trailerURL = myTrailerURL
+            println(myTrailerURL)
+                println(self.trailerURL)
+            }
+            
+            if let myPosterURL = NSURL(string: self.singleMovie.posterImageURL) {
+                Movie.downloadImage(myPosterURL) {image, error in
+                    self.moviePoster.image = image
+                }
+            }
+  
+        
         // Back-end data access code goes here.
         // Retrieve movie data and update code block above.
-        //
-        //-------------------------
-        
+ 
+// end view will appear
+}
+    
     }
     
     @IBAction func didYouWatchThisFilm(sender: UISegmentedControl) {
@@ -121,11 +150,7 @@ class MovieDetailsViewController: UIViewController {
         //
         //
         //-------------------------------
-        
-        
-        
-        
-        
+  
     }
     
     @IBAction func saveInsightButtonTapped(sender: AnyObject) {

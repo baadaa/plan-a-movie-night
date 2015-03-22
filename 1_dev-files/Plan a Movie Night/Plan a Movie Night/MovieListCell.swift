@@ -9,6 +9,8 @@
 import UIKit
 
 class MovieListCell: UITableViewCell {
+    
+    var movieID = ""
 
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieDirector: UILabel!
