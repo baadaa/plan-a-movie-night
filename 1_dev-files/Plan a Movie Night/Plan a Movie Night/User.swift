@@ -24,6 +24,20 @@ class User: BasePAMNModel  {
         super.init(id: facebook_id)
     }
     
+    class func fetchOne(user_id: String, completion: (User)) {
+        // Get a reference to our posts
+        let url = "https://pamn.firebaseio.com/users/\(user_id)"
+        var ref = Firebase(url: url)
+        
+        ref.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            for childSnap in snapshot.children.allObjects as [FDataSnapshot]{
+                if let user_name = childSnap.value["name"] as? NSString {
+                    let newUser: User = User(name: user_name, facebook_id: user_id, profile_image_url: "", friends: [])
+//                        completion(newUser)
+                }
+            }
+        })
+    }
     
     override func getDbname() -> String {
         return "users"
