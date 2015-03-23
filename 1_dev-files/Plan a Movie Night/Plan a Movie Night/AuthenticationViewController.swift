@@ -87,28 +87,39 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
                     println("*********************")
                     */
                 }
-
-                FBRequestConnection.startForMeWithCompletionHandler { (connection, me, error) -> Void in
-                    if (error == nil){
-                        url = me.objectForKey("link") as String
-                        //println("++++++++")
-                        println(url)
-                        //println("++++++++")
-                    var currentUser = User(name: user.name, facebook_id: user.objectID, profile_image_url: url, friends: friendNameList)
+                FBRequestConnection.startWithGraphPath("me?fields=id,name,picture", completionHandler: {(connection: FBRequestConnection!, result: AnyObject!, error: NSError!) -> Void in
+                    if (result? != nil) {
+                        //println("error = \(error)")
+                        // get login user URL
+                        println("-----Login user id, name, picture")
+                        println(result)
+                        var localUser = User(name: "", facebook_id: "", profile_image_url: "", friends: [])
+                        var picture: NSDictionary = result.objectForKey("picture") as NSDictionary
+                        var data: NSDictionary = picture.objectForKey("data") as NSDictionary
+                        var url: String = data.objectForKey("url") as String
+                        
+                        // save login user to database
+                        var currentUser = User(name: user.name, facebook_id: user.objectID, profile_image_url: url, friends: friendNameList)
                         currentUser.save()
                         self.setCurrentUser(currentUser)
-                    
-                    var friendUser = User(name: "", facebook_id: "", profile_image_url: "", friends: [])
+                        println("currentUser.profile_image_url..........")
+                        println(currentUser.profile_image_url)
+                        
+                        var friendUser = User(name: "", facebook_id: "", profile_image_url: "", friends: [])
                         
                         //saves friend's name, id and img_url as User object
                         println("inside.....")
                         println(friendsUserList.count)
+                        println("friendUser.profile_image_url..........")
                         for i in 0..<friendsUserList.count {
                             friendUser = friendsUserList[i]
                             self.setCurrentUser(friendUser)
+                            println(friendUser.profile_image_url)
+
                         }
+                        println("---------------------------------")
                     }
-                }
+                } as FBRequestHandler)  // end inner call graph API
             //println("________")
             }
         } as FBRequestHandler)
@@ -124,9 +135,7 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
     func loginView(loginView : FBLoginView!, handleError:NSError) {
         println("Error: \(handleError.localizedDescription)")
     }
-
-    
-    
+        
     func sendTestData(){
         // Create a reference to a Firebase location
         var myRootRef = Firebase(url:"https://pamn.firebaseio.com/opens/")
