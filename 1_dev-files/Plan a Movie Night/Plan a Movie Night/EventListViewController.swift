@@ -111,7 +111,8 @@ class EventListViewController: UIViewController, UITableViewDataSource, UITableV
         //
         //
         //
-        
+        let event = items[indexPath.row]
+        CurrentEvent.sharedInstance.setData(event)
         performSegueWithIdentifier("eventDetailsFromList", sender: nil)
     }
     

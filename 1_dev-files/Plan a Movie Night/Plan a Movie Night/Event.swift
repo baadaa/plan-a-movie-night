@@ -129,3 +129,27 @@ class Event: BasePAMNModel {
     }
     
 }
+
+//folowing singleton implementation http://stackoverflow.com/a/24073016/372875
+class CurrentEvent {
+    var event: Event?
+    
+    init(){}
+    
+    func getData() -> Event? {
+        return self.event
+    }
+    
+    func setData(event: Event) {
+        self.event = event
+    }
+    
+    class var sharedInstance: CurrentEvent {
+        struct Singleton {
+            static let instance = CurrentEvent()
+        }
+        return Singleton.instance
+    }
+    
+}
+

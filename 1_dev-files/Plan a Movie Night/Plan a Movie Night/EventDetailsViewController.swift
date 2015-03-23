@@ -18,6 +18,8 @@ class EventDetailsViewController: UIViewController, UICollectionViewDataSource, 
     // array of movies to be displayed in the tableView.
     // CODE HERE
     
+    var event: Event?
+    
     @IBOutlet weak var tableView: UITableView!
 
     let cellReuseID = "tableCell"
@@ -45,10 +47,18 @@ class EventDetailsViewController: UIViewController, UICollectionViewDataSource, 
         // CODE HERE: display actual event data here to replace placeholder info below
         //
         
-        eventTitle.text = "Angel's Birthday Night"
-        eventDateAndTime.text = "Mar 7, 2015, 7:00PM"
-        eventLocation.text = "Bronx Somewhere"
-        eventDescription.text = "Angel becomes 35. Let's celebrate!"
+        self.event = CurrentEvent.sharedInstance.getData()
+        if let currentEvent = self.event {
+            eventTitle.text = currentEvent.title
+            eventDateAndTime.text = currentEvent.created
+            eventLocation.text = currentEvent.location
+            eventDescription.text = currentEvent.body
+        } else {
+            eventTitle.text = "Angel's Birthday Night"
+            eventDateAndTime.text = "Mar 7, 2015, 7:00PM"
+            eventLocation.text = "Bronx Somewhere"
+            eventDescription.text = "Angel becomes 35. Let's celebrate!"
+        }
         
         //
         //------------------------------
