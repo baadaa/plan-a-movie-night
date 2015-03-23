@@ -9,15 +9,12 @@
 import UIKit
 
 class MovieDetailsViewController: UIViewController,UIWebViewDelegate {
-
     
-    
-   var movieID = ""
+    var movieID = ""
     var singleMovie = Movie(movieDict: [:])
-    var trailerURL: String?
-   
-    
-  //  var singleMovie = Movie()
+    var trailerURL = ""
+
+    //  var singleMovie = Movie()
     
     @IBOutlet weak var watchTrailerButton: UIButton!
     @IBOutlet weak var moviePoster: UIImageView!
@@ -29,23 +26,16 @@ class MovieDetailsViewController: UIViewController,UIWebViewDelegate {
     
     // Reference Outlets for movie information
     
-
-    
     @IBOutlet weak var didYouWatchThis: UISegmentedControl!
     @IBOutlet weak var wantToWatchThis: UISegmentedControl!
     @IBOutlet weak var wantThisRating: UISegmentedControl!
     @IBOutlet weak var saveMyInsight: UIButton!
-        // Reference Outlets for user insight
-    
-    
+    // Reference Outlets for user insight
     
     override func viewWillAppear(animated: Bool) {
-        
-     
-        
+        super.viewWillAppear(animated)
         println(movieID)
         println("details")
-
         
         Movie.getOneMovie(movieID) { (singleMovie) -> Void in
             
@@ -53,23 +43,16 @@ class MovieDetailsViewController: UIViewController,UIWebViewDelegate {
             
             println("title" + singleMovie.title)
             
-            
             self.movieTitle.text = singleMovie.title
             self.movieReleaseDate.text = singleMovie.releaseDate
             self.movieDirector.text = singleMovie.director
             self.runningTimeAndGenre.text = singleMovie.runtime + singleMovie.genre
             self.movieSynopsis.text = singleMovie.summary
             
-            if let myTrailerURL:String = singleMovie.trailer {
-            self.watchTrailerButton.alpha = 1
-            self.trailerURL = myTrailerURL
-            println(myTrailerURL)
-                println(self.trailerURL)
-                
-               
-                
-                
-                
+           if singleMovie.trailer != "" {
+                self.watchTrailerButton.alpha = 1
+            self.trailerURL = singleMovie.trailer
+
             }
             
             if let myPosterURL = NSURL(string: self.singleMovie.posterImageURL) {
@@ -77,16 +60,8 @@ class MovieDetailsViewController: UIViewController,UIWebViewDelegate {
                     self.moviePoster.image = image
                 }
             }
-  
-            
-            
+        }
         
-        // Back-end data access code goes here.
-        // Retrieve movie data and update code block above.
- 
-// end view will appear
-}
-    
     }
     
     @IBAction func didYouWatchThisFilm(sender: UISegmentedControl) {
@@ -144,8 +119,8 @@ class MovieDetailsViewController: UIViewController,UIWebViewDelegate {
             default:
                 break;
             }
-
-        
+            
+            
         default:
             break;
         }
@@ -154,17 +129,17 @@ class MovieDetailsViewController: UIViewController,UIWebViewDelegate {
     
     @IBAction func watchTrailerButtonTapped(sender: AnyObject) {
         
-        if let urlToUse = self.trailerURL {
+        if self.trailerURL != "" {
             
-        
-        
-        let webV:UIWebView = UIWebView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
-        webV.loadRequest(NSURLRequest(URL: NSURL(string: urlToUse)!))
-        webV.delegate = self;
-        self.view.addSubview(webV)
-        
+            
+            
+            let webV:UIWebView = UIWebView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height))
+            webV.loadRequest(NSURLRequest(URL: NSURL(string: self.trailerURL)!))
+            webV.delegate = self;
+            self.view.addSubview(webV)
+            
         }
-  
+        
     }
     
     @IBAction func saveInsightButtonTapped(sender: AnyObject) {
@@ -180,32 +155,18 @@ class MovieDetailsViewController: UIViewController,UIWebViewDelegate {
         
         // This is the final value for user input.
         
-        
-        
-    
-        
-    //--------------------------
-    //
-    //
-    //
-    // Getting user insight code block needs to be written.
-    //
-    //
-    //
-    //
-    //--------------------------
+        //--------------------------
+        //
+        //
+        //
+        // Getting user insight code block needs to be written.
+        //
+        //
+        //
+        //
+        //--------------------------
     }
     
-    func checkTrailerButton() ->Bool {
-        
-        if let urlToUse = self.trailerURL {
-            println("u can use button")
-            return true
-        }
-            println("cant use this button")
-            return false
-       
-        }
     
 }
 
