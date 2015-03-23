@@ -15,17 +15,17 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
     
     @IBOutlet var fbLoginView : FBLoginView!
     
-    // @IBOutlet weak var authenticationButton: UIButton!
-    // This is only for corner radius. All other button properties are set in storyboard.
+   // @IBOutlet weak var authenticationButton: UIButton!
+        // This is only for corner radius. All other button properties are set in storyboard.
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.fbLoginView.delegate = self
         self.fbLoginView.readPermissions = ["public_profile", "email", "user_friends"]
-        
+
         //authenticationButton.layer.cornerRadius = 5
-        // change the corner radius
+            // change the corner radius
         sendTestData()
         
     }
@@ -47,18 +47,14 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
         */
         //println(user)
         //var friendAsUser = User(name: "", facebook_id: "", profile_image_url: "", friends: [])
-        
+       
         var friendsUserList: [User] = [] //[User(name: "", facebook_id: "", profile_image_url: "", friends: [])]
         var friendNameList : [String] = []
         var url: String = ""
         var me:  FBGraphUser
-        
-        println(":::::::::::::::::::::::::::::")
-        println(friendsUserList)
-        println(":::::::::::::::::::::::::::::")
         var friendsRequest : FBRequest = FBRequest.requestForMyFriends()
-        //------------------------------------
-        
+       
+        //------------------------------------        
         FBRequestConnection.startWithGraphPath("me/friends?fields=name,id,picture", completionHandler: {(connection: FBRequestConnection!, result: AnyObject!, error: NSError!) -> Void in
             if (result? != nil) {
                 //println("error = \(error)")
@@ -68,7 +64,7 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
                 
                 for i in 0..<data.count {
                     println(data[i])
-                    let valueDict : NSDictionary = data[i] as NSDictionary
+                    let valueDict : NSDictionary = data[i] as NSDictionary 
                     if let friendId = valueDict.objectForKey("id") as? String {
                         localUser.facebook_id = friendId
                     }
@@ -82,40 +78,41 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
                     }
                     friendNameList.append(localUser.name)
                     friendsUserList.append(localUser)
-                    
+                    /*
                     println("*****************")
                     println(localUser.name)
-                    //println(picture)
+                    println(picture)
                     println(dataFromPicture)
                     println(localUser.profile_image_url)
                     println("*********************")
+                    */
                 }
-                var currentUser = User(name: user.name, facebook_id: user.objectID, profile_image_url: url, friends: friendNameList)
-                currentUser.save()
-                self.setCurrentUser(currentUser)
-                
-                var friendUser = User(name: "", facebook_id: "", profile_image_url: "", friends: [])
-                
-                //saves friend's name, id and img_url as User object
-                
-                println("inside SAVING IN DATABASE")
-                println(currentUser.name)
-                println(currentUser.facebook_id)
-                println(friendsUserList.count)
-                for i in 0..<friendsUserList.count {
-                    friendUser = friendsUserList[i]
-                    self.setCurrentUser(friendUser)
+
+                FBRequestConnection.startForMeWithCompletionHandler { (connection, me, error) -> Void in
+                    if (error == nil){
+                        url = me.objectForKey("link") as String
+                        //println("++++++++")
+                        println(url)
+                        //println("++++++++")
+                    var currentUser = User(name: user.name, facebook_id: user.objectID, profile_image_url: url, friends: friendNameList)
+                        currentUser.save()
+                        self.setCurrentUser(currentUser)
+                    
+                    var friendUser = User(name: "", facebook_id: "", profile_image_url: "", friends: [])
+                        
+                        //saves friend's name, id and img_url as User object
+                        println("inside.....")
+                        println(friendsUserList.count)
+                        for i in 0..<friendsUserList.count {
+                            friendUser = friendsUserList[i]
+                            self.setCurrentUser(friendUser)
+                        }
+                    }
                 }
-                //println("________")
+            //println("________")
             }
-            } as FBRequestHandler)
-        
-        FBRequestConnection.startForMeWithCompletionHandler { (connection, me, error) -> Void in
-            if (error == nil){
-                url = me.objectForKey("link") as String
-                //println(me)
-            }
-        }
+        } as FBRequestHandler)
+
         performSegueWithIdentifier("authenticationSegue", sender: nil)
     }
     
@@ -123,11 +120,11 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
     func loginViewShowingLoggedOutUser(loginView : FBLoginView!) {
         println("User Logged Out")
     }
-    
+
     func loginView(loginView : FBLoginView!, handleError:NSError) {
         println("Error: \(handleError.localizedDescription)")
     }
-    
+
     
     
     func sendTestData(){
@@ -154,7 +151,7 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
         return user
     }
     
-    
+
     func setCurrentUser(user: User){
         CurrentUser.sharedInstance.setData(user)
     }
