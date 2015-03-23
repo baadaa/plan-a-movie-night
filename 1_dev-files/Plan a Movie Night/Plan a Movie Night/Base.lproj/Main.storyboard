@@ -41,7 +41,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DOw-5a-Tfz">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="kHf-lX-XWK">
+                                <activityIndicatorView key="tableFooterView" opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="kHf-lX-XWK">
                                     <rect key="frame" x="0.0" y="130" width="320" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <rect key="contentStretch" x="0.0" y="0.5499999999999996" width="1" height="1"/>
@@ -288,7 +288,7 @@
                                                     <constraint firstAttribute="centerX" secondItem="C1Q-8k-hjZ" secondAttribute="centerX" id="nnZ-bo-mgF"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjo-8g-BYb">
+                                            <button opaque="NO" alpha="0.39999999999999963" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjo-8g-BYb">
                                                 <rect key="frame" x="8" y="153" width="106" height="30"/>
                                                 <color key="backgroundColor" red="0.47843137254901963" green="0.72156862745098038" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -359,6 +359,7 @@
                         <outlet property="saveMyInsight" destination="LdI-zb-KAe" id="chd-zb-gJo"/>
                         <outlet property="wantThisRating" destination="x8T-lo-vcN" id="zNK-b5-BEi"/>
                         <outlet property="wantToWatchThis" destination="T9z-Yu-BCb" id="Kaj-VN-eu3"/>
+                        <outlet property="watchTrailerButton" destination="gjo-8g-BYb" id="IXu-ng-tA8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2HL-QW-4fr" userLabel="First Responder" sceneMemberID="firstResponder"/>

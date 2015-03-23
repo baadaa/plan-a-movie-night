@@ -23,26 +23,34 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     
     let cellReuseID = "cell"
     
+    
     override func viewDidAppear(animated: Bool) {
-        
+        super.viewDidAppear(animated)
+ 
         activityIndicator.center = self.view.center
-        
-        
-        
+        activityIndicator.alpha = 1
+    
+    }
+    
+   override func viewDidLoad() {
+        super.viewDidLoad()
+    
+    
+    
         self.tableView.registerNib(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: self.cellReuseID)
         
         Movie.getMovies { (movieArray) -> Void in
             self.items = movieArray
             dispatch_async(dispatch_get_main_queue(), {
                 self.tableView.reloadData()
-                
+                self.activityIndicator.alpha = 0  //spinner was appearing at the bottom
                 //could put tableview loading into the closure
                 
             })
             
-        }
-        
-        
+    }
+
+    
         //      runTestStuff()
         
         
@@ -58,9 +66,7 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         return items.count
     }
     
-    
-    
-    
+
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseID, forIndexPath: indexPath) as MovieListCell
         
@@ -75,11 +81,6 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         
         
         // handle images
-        
-        
-        
-        
-        
         
         // replace with properties fromt he pulled movie object
         cell.movieTitle.text = self.items[indexPath.row].title
