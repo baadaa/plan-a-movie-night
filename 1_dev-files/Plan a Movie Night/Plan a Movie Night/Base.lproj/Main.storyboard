@@ -41,11 +41,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="DOw-5a-Tfz">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <activityIndicatorView key="tableFooterView" opaque="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="kHf-lX-XWK">
-                                    <rect key="frame" x="0.0" y="130" width="320" height="20"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <rect key="contentStretch" x="0.0" y="0.5499999999999996" width="1" height="1"/>
-                                </activityIndicatorView>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="qbk-Cg-vDf">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -74,7 +69,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="cDD-cq-eV4"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="kHf-lX-XWK" id="GqK-tw-vdU"/>
+                        <outlet property="NavBar" destination="cDD-cq-eV4" id="FcS-r8-vjJ"/>
                         <outlet property="tableView" destination="DOw-5a-Tfz" id="QRA-7E-Vp6"/>
                     </connections>
                 </viewController>

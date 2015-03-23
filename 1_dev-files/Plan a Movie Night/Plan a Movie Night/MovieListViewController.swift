@@ -11,49 +11,31 @@ import UIKit
 class MovieListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
+    @IBOutlet weak var NavBar: UINavigationItem!
+    var activInd: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0,0, 50, 50)) as UIActivityIndicatorView
     var selectedCell: NSIndexPath?
     var items = [Movie]() // MM change to array of movies
     var toPass = ""  // ID to pass to detail VC
     
-    // arrays of movies to be displayed in the table.
-    // CODE HERE
-    
     let cellReuseID = "cell"
     
-    
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
- 
-        activityIndicator.center = self.view.center
-        activityIndicator.alpha = 1
-    
-    }
-    
-   override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-    
-    
-    
+        
+        showSpinner()
+
         self.tableView.registerNib(UINib(nibName: "MovieListCell", bundle: nil), forCellReuseIdentifier: self.cellReuseID)
         
+        
+
         Movie.getMovies { (movieArray) -> Void in
             self.items = movieArray
             dispatch_async(dispatch_get_main_queue(), {
                 self.tableView.reloadData()
-                self.activityIndicator.alpha = 0  //spinner was appearing at the bottom
-                //could put tableview loading into the closure
-                
+                self.activInd.stopAnimating()
+                self.activInd.hidden = true
             })
-            
-    }
-
-    
-        //      runTestStuff()
-        
-        
+        }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -61,28 +43,14 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        
+   
         return items.count
     }
-    
-
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseID, forIndexPath: indexPath) as MovieListCell
         
         cell.selectionStyle = .None // disable cell highlight when selecting a cell
-        
-        //-------------------------------------
-        //
-        // This code block displays movie list in a TableCell
-        //
-        
-        // MM  let movie = pull a movie from my array
-        
-        
-        // handle images
-        
-        // replace with properties fromt he pulled movie object
+
         cell.movieTitle.text = self.items[indexPath.row].title
         cell.movieReleaseDate.text = self.items[indexPath.row].releaseDate
         cell.movieDirector.text = self.items[indexPath.row].director
@@ -94,21 +62,9 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         }
         cell.movieID = self.items[indexPath.row].id
         
-        // TODO: specs did not have director and running time. will need to go back and change movie class to allow for this (only availble in single movie detail call)
-        
         cell.movieChecked = UIImage(named:"movie_unchecked.png")!
         //cell.movieChecked = UIImage(named:"movie_checked.png")!
         
-        
-        // Depending on whether the user insight is already provided, display the icon here.
-        
-        
-        //
-        //
-        // Back-end data access code goes here.
-        // Retrieve movie data and update code block above.
-        //
-        //-------------------------------------
         
         return cell
     }
@@ -120,32 +76,11 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        //
-        //
-        // This code runs when user selects a movie.
-        //
-        // Back-end data access code goes here.
-        // Detailed information selected movie to be displaed after segue
-        //
-        //
-        //
-        
-        
         
         toPass = self.items[indexPath.row].id
-        
         performSegueWithIdentifier("movieDetailsFromList", sender: nil)
         
-        
     }
-    
-    
-    func runTestStuff(){
-        
-        
-        
-    }
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -157,9 +92,16 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
             destinationVc.movieID = toPass
             
             //TODO: all data is already available. Because of change to movielistvc, what we should be doing now is passing all the data to the detail view that we captured with getMovies.
-            
-            
         }
+    }
+    
+    func showSpinner(){
+
+        activInd.center = self.view.center
+        activInd.hidesWhenStopped = true
+        activInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        view.addSubview(activInd)
+        activInd.startAnimating()
         
     }
     
