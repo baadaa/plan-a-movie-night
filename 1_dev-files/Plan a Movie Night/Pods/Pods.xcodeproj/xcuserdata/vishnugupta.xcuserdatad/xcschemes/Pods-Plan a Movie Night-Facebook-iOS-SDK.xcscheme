@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "19774FC7F24FD97FF427153D"
+               BlueprintIdentifier = "06B1FA144A9B0E2C91CB2E5D"
                BuildableName = "FacebookSDK.framework"
                BlueprintName = "Pods-Plan a Movie Night-Facebook-iOS-SDK"
                ReferencedContainer = "container:Pods.xcodeproj">
