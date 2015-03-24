@@ -54,9 +54,7 @@ class Movie: Serializable {
             
             var movieGenre2: String = createMovieData["genres"][1]["name"].stringValue
             
-            if movieGenre2 != "" {  //unwrapping did not work here?
-                
-                self.genre += ", " + movieGenre2
+            if movieGenre2 != "" {  //unwrapping did not work here?                                                                                                                                                                                                 
                 
             }
             

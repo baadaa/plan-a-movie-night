@@ -1,7 +1,7 @@
 PODS:
   - Alamofire (1.1.4)
   - Bolts (1.1.4)
-  - Facebook-iOS-SDK (3.23.1):
+  - Facebook-iOS-SDK (3.23.2):
     - Bolts (~> 1.0)
   - Firebase (2.2.0)
   - SwiftyJSON (2.1.3)
@@ -15,7 +15,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: 524225da382071ee3e6d0badd0ee4b4dc36740de
   Bolts: dd9fb8433d67f5acc3b6b4d1379bbc5513d716c1
-  Facebook-iOS-SDK: 89dae50e975ebab95a01b0962d27277fc9cf08fd
+  Facebook-iOS-SDK: cd87f0b2f0c1d9574b44e8fa2baacc275524bac3
   Firebase: e7a2ea2ffeff99f9c37028b354194dcc9718d36b
   SwiftyJSON: 48be7490a3989a58a3f511cd54167f0a2b466e76
 
