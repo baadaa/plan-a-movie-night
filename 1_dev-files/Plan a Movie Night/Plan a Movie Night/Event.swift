@@ -14,6 +14,7 @@ class Event: BasePAMNModel {
     var location: String
     var event_date: String
     var creator_id: String
+    var Creator: User?
     var invitees: [Invitee] = []
     var movie_list: [MovieLineUp] = []
     
@@ -33,6 +34,7 @@ class Event: BasePAMNModel {
             self.location = location
             self.event_date = event_date
             self.creator_id = creator_id
+            self.Creator = nil
             self.invitees = invitees
             self.movie_list = movie_list
             super.init(id: id)
@@ -97,17 +99,7 @@ class Event: BasePAMNModel {
             completion(events)
         })
     }
-    
-    class func fetchAll2(){
-        println("fetching data")
-        // Get a reference to our posts
-        var ref = Firebase(url:"https://docs-examples.firebaseio.com/web/saving-data/fireblog/posts")
-        // Retrieve new posts as they are added to Firebase
-        ref.observeEventType(.ChildAdded, withBlock: { snapshot in
-            println(snapshot.value)
-        })
-    }
-//
+    //
 //    func addInvite(user_id: String) {
 //        var invite = Invitee(event_id: self.id, user_id: user_id, status: .Pending)
 //        self.invitees[user_id] = invite
@@ -137,3 +129,27 @@ class Event: BasePAMNModel {
     }
     
 }
+
+//folowing singleton implementation http://stackoverflow.com/a/24073016/372875
+class CurrentEvent {
+    var event: Event?
+    
+    init(){}
+    
+    func getData() -> Event? {
+        return self.event
+    }
+    
+    func setData(event: Event) {
+        self.event = event
+    }
+    
+    class var sharedInstance: CurrentEvent {
+        struct Singleton {
+            static let instance = CurrentEvent()
+        }
+        return Singleton.instance
+    }
+    
+}
+

@@ -19,7 +19,10 @@ class EventListViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.registerNib(UINib(nibName: "EventListCell", bundle: nil), forCellReuseIdentifier: cellReuseID)
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         Event.fetchAll({ (events: [Event]) in
             self.items = events
             self.tableView.reloadData()
@@ -44,14 +47,9 @@ class EventListViewController: UIViewController, UITableViewDataSource, UITableV
         // This code block displays movie list in a TableCell
         //
         let event = items[indexPath.row]
-        cell.RSVPStatus.text = "GOING"
-        cell.RSVPStatus.backgroundColor = UIColor(red: 122/255, green: 184/255, blue: 0, alpha: 1)
         
-        cell.RSVPStatus.text = "NOT\nGOING"
-        cell.RSVPStatus.backgroundColor = UIColor(red: 220/255, green: 80/255, blue: 52/255, alpha: 1)
         
-        cell.RSVPStatus.text = "RSVP\nNOW"
-        cell.RSVPStatus.backgroundColor = UIColor(red: 242/255, green: 175/255, blue: 0, alpha: 1)
+        
             // RSVP status is color coded as well as text-labeled. Depending on given event's RSVP status, choose one of the three above for text and background color
         
         
@@ -60,6 +58,34 @@ class EventListViewController: UIViewController, UITableViewDataSource, UITableV
         cell.eventLocation.text = event.location
         cell.creatorName.text = event.creator_id
         
+        var status = "going"
+        
+        switch status {
+        case "going":
+            
+            cell.RSVPStatus.text = "GOING"
+            cell.RSVPStatus.backgroundColor = UIColor(red: 122/255, green: 184/255, blue: 0, alpha: 1)
+
+            case "not going":
+            
+                cell.RSVPStatus.text = "NOT\nGOING"
+                cell.RSVPStatus.backgroundColor = UIColor(red: 220/255, green: 80/255, blue: 52/255, alpha: 1)
+            
+            case "maybe":
+            
+                cell.RSVPStatus.text = "MAYBE"
+                cell.RSVPStatus.backgroundColor = UIColor(red: 220/255, green: 80/255, blue: 52/255, alpha: 1)
+            
+            case "":
+                
+                cell.RSVPStatus.text = "RSVP\nNOW"
+                cell.RSVPStatus.backgroundColor = UIColor(red: 242/255, green: 175/255, blue: 0, alpha: 1)
+        default:
+            
+            cell.RSVPStatus.text = "IDK"
+            cell.RSVPStatus.backgroundColor = UIColor(red: 242/255, green: 175/255, blue: 0, alpha: 1)
+            break
+        }
         //
         //
         // Back-end data access code goes here.
@@ -85,7 +111,8 @@ class EventListViewController: UIViewController, UITableViewDataSource, UITableV
         //
         //
         //
-        
+        let event = items[indexPath.row]
+        CurrentEvent.sharedInstance.setData(event)
         performSegueWithIdentifier("eventDetailsFromList", sender: nil)
     }
     
