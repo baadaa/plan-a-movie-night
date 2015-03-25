@@ -37,7 +37,6 @@ class AuthenticationViewController: UIViewController, FBLoginViewDelegate {
     }
     
     func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser) {
-        
         /*
         println("User: \(user)")
         println("User ID: \(user.objectID)")
